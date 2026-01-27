@@ -1,4 +1,4 @@
-[gd_scene load_steps=164 format=3 uid="uid://b0e0ltstsuy1v"]
+[gd_scene format=3 uid="uid://b0e0ltstsuy1v"]
 
 [ext_resource type="Texture2D" uid="uid://wogrmscw5xse" path="res://RESOURCES/SPRITES/HEALTH/heart.png0001.png" id="2_6yd6b"]
 [ext_resource type="Texture2D" uid="uid://d3egysble34bs" path="res://RESOURCES/SPRITES/HEALTH/heart.png0002.png" id="3_4dwq4"]
@@ -1593,16 +1593,16 @@ _data = {
 &"RESET": SubResource("Animation_n3kih")
 }
 
-[node name="MAIN" type="Node2D"]
+[node name="MAIN" type="Node2D" unique_id=1936290998]
 
-[node name="DARKEN" type="CanvasModulate" parent="."]
+[node name="DARKEN" type="CanvasModulate" parent="." unique_id=694864604]
 unique_name_in_owner = true
 process_mode = 3
 color = Color(0.39308554, 0.3930855, 0.39308548, 1)
 
-[node name="HUD" type="CanvasLayer" parent="."]
+[node name="HUD" type="CanvasLayer" parent="." unique_id=709259277]
 
-[node name="GLOBALIZATION" type="ColorRect" parent="HUD"]
+[node name="GLOBALIZATION" type="ColorRect" parent="HUD" unique_id=1053284373]
 unique_name_in_owner = true
 process_mode = 3
 visible = false
@@ -1614,14 +1614,12 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="IN AND OUT" type="AnimationPlayer" parent="HUD/GLOBALIZATION"]
+[node name="IN AND OUT" type="AnimationPlayer" parent="HUD/GLOBALIZATION" unique_id=559533760]
 unique_name_in_owner = true
 process_mode = 3
-libraries = {
-&"": SubResource("AnimationLibrary_30nge")
-}
+libraries/ = SubResource("AnimationLibrary_30nge")
 
-[node name="HEALTH" type="AnimatedSprite2D" parent="HUD"]
+[node name="HEALTH" type="AnimatedSprite2D" parent="HUD" unique_id=1976298568]
 visible = false
 z_index = 5
 position = Vector2(110, 966)
@@ -1631,7 +1629,7 @@ animation = &"PULSE"
 frame = 5
 frame_progress = 0.6754763
 
-[node name="KADOOSH" type="CPUParticles2D" parent="HUD/HEALTH"]
+[node name="KADOOSH" type="CPUParticles2D" parent="HUD/HEALTH" unique_id=1551402855]
 z_index = -1
 emitting = false
 amount = 20
@@ -1647,14 +1645,14 @@ angular_velocity_max = 720.0
 scale_amount_min = 0.25
 scale_amount_max = 0.35
 
-[node name="NUMBER" type="AnimatedSprite2D" parent="HUD/HEALTH"]
+[node name="NUMBER" type="AnimatedSprite2D" parent="HUD/HEALTH" unique_id=233079178]
 z_index = 10
 position = Vector2(-10, 26)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_3eytw")
 animation = &"NUMBERCYCLE"
 
-[node name="GUI" type="Control" parent="HUD" node_paths=PackedStringArray("TABBER", "VOLSLIDER", "SVOLSLIDER", "MVOLSLIDER", "YESSOUND", "NOSOUND", "MYESSOUND", "MNOSOUND", "SYESSOUND", "SNOSOUND", "CHEKBOX", "MCHEKBOX", "SFXCHEKBOX", "CLICKDOWN", "CLICKUP")]
+[node name="GUI" type="Control" parent="HUD" unique_id=272777203 node_paths=PackedStringArray("TABBER", "VOLSLIDER", "SVOLSLIDER", "MVOLSLIDER", "YESSOUND", "NOSOUND", "MYESSOUND", "MNOSOUND", "SYESSOUND", "SNOSOUND", "CHEKBOX", "MCHEKBOX", "SFXCHEKBOX", "CLICKDOWN", "CLICKUP")]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 15
@@ -1680,7 +1678,7 @@ CLICKDOWN = NodePath("CLICKDOWN")
 CLICKUP = NodePath("CLICKUP")
 metadata/_edit_lock_ = true
 
-[node name="DEATH" type="Panel" parent="HUD/GUI"]
+[node name="DEATH" type="Panel" parent="HUD/GUI" unique_id=2114876430]
 unique_name_in_owner = true
 process_mode = 2
 visible = false
@@ -1693,10 +1691,10 @@ grow_vertical = 2
 mouse_filter = 2
 theme = SubResource("Theme_30nge")
 
-[node name="INTERATION" type="Timer" parent="HUD/GUI/DEATH"]
+[node name="INTERATION" type="Timer" parent="HUD/GUI/DEATH" unique_id=907695221]
 autostart = true
 
-[node name="RETR" type="TextureButton" parent="HUD/GUI/DEATH"]
+[node name="RETR" type="TextureButton" parent="HUD/GUI/DEATH" unique_id=1608886170]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -1717,7 +1715,7 @@ texture_hover = ExtResource("56_epw0l")
 texture_disabled = ExtResource("56_epw0l")
 texture_focused = ExtResource("56_epw0l")
 
-[node name="TABBER" type="TabContainer" parent="HUD/GUI"]
+[node name="TABBER" type="TabContainer" parent="HUD/GUI" unique_id=1013913766]
 unique_name_in_owner = true
 visible = false
 z_index = 1000
@@ -1732,13 +1730,13 @@ theme_override_font_sizes/font_size = 30
 current_tab = 2
 deselect_enabled = true
 
-[node name="GENERAL" type="Panel" parent="HUD/GUI/TABBER"]
+[node name="GENERAL" type="Panel" parent="HUD/GUI/TABBER" unique_id=1718992596]
 visible = false
 layout_mode = 2
 theme = SubResource("Theme_8pg5w")
 metadata/_tab_index = 0
 
-[node name="SUPERPOWERSBOX" type="CheckBox" parent="HUD/GUI/TABBER/GENERAL"]
+[node name="SUPERPOWERSBOX" type="CheckBox" parent="HUD/GUI/TABBER/GENERAL" unique_id=406983995]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 122.0
@@ -1747,7 +1745,7 @@ offset_right = 330.0
 offset_bottom = 333.0
 theme = ExtResource("25_odkja")
 
-[node name="CRAZY POWERS" type="TextureRect" parent="HUD/GUI/TABBER/GENERAL"]
+[node name="CRAZY POWERS" type="TextureRect" parent="HUD/GUI/TABBER/GENERAL" unique_id=1007458967]
 layout_mode = 0
 offset_left = 373.0
 offset_top = 72.0
@@ -1755,17 +1753,17 @@ offset_right = 973.0
 offset_bottom = 372.0
 texture = ExtResource("26_pkcf4")
 
-[node name="SOUND SETTINGS" type="PanelContainer" parent="HUD/GUI/TABBER"]
+[node name="SOUND SETTINGS" type="PanelContainer" parent="HUD/GUI/TABBER" unique_id=1837592996]
 visible = false
 layout_mode = 2
 theme = SubResource("Theme_mvtnu")
 metadata/_tab_index = 1
 
-[node name="NOISEBACK" type="Panel" parent="HUD/GUI/TABBER/SOUND SETTINGS"]
+[node name="NOISEBACK" type="Panel" parent="HUD/GUI/TABBER/SOUND SETTINGS" unique_id=214589788]
 layout_mode = 2
 theme = SubResource("Theme_vlh0m")
 
-[node name="SCROLLING" type="ScrollContainer" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK"]
+[node name="SCROLLING" type="ScrollContainer" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK" unique_id=2052159116]
 z_index = 100
 custom_minimum_size = Vector2(1600, 800)
 layout_mode = 0
@@ -1774,38 +1772,38 @@ offset_top = 22.0
 offset_right = 1683.0
 offset_bottom = 852.0
 
-[node name="VBCONT" type="VBoxContainer" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING"]
+[node name="VBCONT" type="VBoxContainer" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING" unique_id=892707000]
 custom_minimum_size = Vector2(1650, 800)
 layout_mode = 2
 theme_override_constants/separation = 90
 
-[node name="HBCONT" type="HBoxContainer" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT"]
+[node name="HBCONT" type="HBoxContainer" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT" unique_id=204477420]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
 theme_override_constants/separation = 50
 alignment = 1
 
-[node name="CHEKBOX" type="CheckBox" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBCONT"]
+[node name="CHEKBOX" type="CheckBox" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBCONT" unique_id=343422448]
 custom_minimum_size = Vector2(100, 200)
 layout_mode = 2
 size_flags_horizontal = 2
 theme = ExtResource("25_odkja")
 button_pressed = true
 
-[node name="YESSOUND" type="TextureRect" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBCONT"]
+[node name="YESSOUND" type="TextureRect" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBCONT" unique_id=1783835965]
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 size_flags_horizontal = 2
 texture = ExtResource("26_lxyh6")
 
-[node name="NO SOUND" type="TextureRect" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBCONT"]
+[node name="NO SOUND" type="TextureRect" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBCONT" unique_id=776785141]
 visible = false
 custom_minimum_size = Vector2(250, 200)
 layout_mode = 2
 size_flags_horizontal = 2
 texture = ExtResource("27_jysiq")
 
-[node name="VOL SLIDER" type="HSlider" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBCONT"]
+[node name="VOL SLIDER" type="HSlider" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBCONT" unique_id=1788808528]
 custom_minimum_size = Vector2(1000, 200)
 layout_mode = 2
 theme = SubResource("Theme_d21e3")
@@ -1814,33 +1812,33 @@ max_value = 50.0
 tick_count = 25
 ticks_position = 1
 
-[node name="HBSFX" type="HBoxContainer" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT"]
+[node name="HBSFX" type="HBoxContainer" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT" unique_id=1095647480]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
 theme_override_constants/separation = 50
 alignment = 1
 
-[node name="SCHEKBOX" type="CheckBox" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBSFX"]
+[node name="SCHEKBOX" type="CheckBox" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBSFX" unique_id=1033165385]
 custom_minimum_size = Vector2(100, 200)
 layout_mode = 2
 size_flags_horizontal = 2
 theme = ExtResource("25_odkja")
 button_pressed = true
 
-[node name="YESSOUND" type="TextureRect" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBSFX"]
+[node name="YESSOUND" type="TextureRect" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBSFX" unique_id=142489581]
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 size_flags_horizontal = 2
 texture = ExtResource("32_kgo5c")
 
-[node name="NO SOUND" type="TextureRect" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBSFX"]
+[node name="NO SOUND" type="TextureRect" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBSFX" unique_id=610697701]
 visible = false
 custom_minimum_size = Vector2(250, 200)
 layout_mode = 2
 size_flags_horizontal = 2
 texture = ExtResource("33_30nge")
 
-[node name="SVOL SLIDER" type="HSlider" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBSFX"]
+[node name="SVOL SLIDER" type="HSlider" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBSFX" unique_id=1852894923]
 custom_minimum_size = Vector2(1000, 200)
 layout_mode = 2
 theme = SubResource("Theme_d21e3")
@@ -1849,33 +1847,33 @@ max_value = 50.0
 tick_count = 25
 ticks_position = 1
 
-[node name="HBMUSIC" type="HBoxContainer" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT"]
+[node name="HBMUSIC" type="HBoxContainer" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT" unique_id=765280150]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
 theme_override_constants/separation = 50
 alignment = 1
 
-[node name="MCHEKBOX" type="CheckBox" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBMUSIC"]
+[node name="MCHEKBOX" type="CheckBox" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBMUSIC" unique_id=63226946]
 custom_minimum_size = Vector2(100, 200)
 layout_mode = 2
 size_flags_horizontal = 2
 theme = ExtResource("25_odkja")
 button_pressed = true
 
-[node name="YESSOUND" type="TextureRect" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBMUSIC"]
+[node name="YESSOUND" type="TextureRect" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBMUSIC" unique_id=1902698648]
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 size_flags_horizontal = 2
 texture = ExtResource("30_8cl8t")
 
-[node name="NO SOUND" type="TextureRect" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBMUSIC"]
+[node name="NO SOUND" type="TextureRect" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBMUSIC" unique_id=815329108]
 visible = false
 custom_minimum_size = Vector2(250, 200)
 layout_mode = 2
 size_flags_horizontal = 2
 texture = ExtResource("31_mvtnu")
 
-[node name="MVOL SLIDER" type="HSlider" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBMUSIC"]
+[node name="MVOL SLIDER" type="HSlider" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBMUSIC" unique_id=547572689]
 custom_minimum_size = Vector2(1000, 200)
 layout_mode = 2
 theme = SubResource("Theme_d21e3")
@@ -1884,12 +1882,12 @@ max_value = 50.0
 tick_count = 25
 ticks_position = 1
 
-[node name="CREDITS" type="Panel" parent="HUD/GUI/TABBER"]
+[node name="CREDITS" type="Panel" parent="HUD/GUI/TABBER" unique_id=145029221]
 layout_mode = 2
 theme = SubResource("Theme_pkcf4")
 metadata/_tab_index = 2
 
-[node name="BACKTEN" type="Panel" parent="HUD/GUI/TABBER/CREDITS"]
+[node name="BACKTEN" type="Panel" parent="HUD/GUI/TABBER/CREDITS" unique_id=2120455570]
 modulate = Color(1, 1, 1, 0.59607846)
 layout_mode = 0
 offset_left = 50.0
@@ -1898,7 +1896,7 @@ offset_right = 1750.0
 offset_bottom = 904.0
 theme = SubResource("Theme_rsfmd")
 
-[node name="PENCIL2D" type="TextureRect" parent="HUD/GUI/TABBER/CREDITS"]
+[node name="PENCIL2D" type="TextureRect" parent="HUD/GUI/TABBER/CREDITS" unique_id=2070132413]
 layout_mode = 0
 offset_left = 1453.0
 offset_top = 360.0
@@ -1906,7 +1904,7 @@ offset_right = 1703.0
 offset_bottom = 610.0
 texture = ExtResource("34_bktiv")
 
-[node name="FL STUDIO" type="TextureRect" parent="HUD/GUI/TABBER/CREDITS"]
+[node name="FL STUDIO" type="TextureRect" parent="HUD/GUI/TABBER/CREDITS" unique_id=1282712903]
 layout_mode = 0
 offset_left = 1182.0
 offset_top = 80.0
@@ -1914,7 +1912,7 @@ offset_right = 1432.0
 offset_bottom = 330.0
 texture = ExtResource("36_muqnu")
 
-[node name="GODOT" type="TextureRect" parent="HUD/GUI/TABBER/CREDITS"]
+[node name="GODOT" type="TextureRect" parent="HUD/GUI/TABBER/CREDITS" unique_id=113622129]
 layout_mode = 0
 offset_left = 95.0
 offset_top = 80.0
@@ -1922,7 +1920,7 @@ offset_right = 345.0
 offset_bottom = 330.0
 texture = ExtResource("35_xahew")
 
-[node name="DISCORD" type="TextureRect" parent="HUD/GUI/TABBER/CREDITS"]
+[node name="DISCORD" type="TextureRect" parent="HUD/GUI/TABBER/CREDITS" unique_id=210915978]
 layout_mode = 0
 offset_left = 95.0
 offset_top = 614.0
@@ -1930,7 +1928,7 @@ offset_right = 345.0
 offset_bottom = 864.0
 texture = ExtResource("38_n3kih")
 
-[node name="AUDACITY" type="TextureRect" parent="HUD/GUI/TABBER/CREDITS"]
+[node name="AUDACITY" type="TextureRect" parent="HUD/GUI/TABBER/CREDITS" unique_id=1404932854]
 layout_mode = 0
 offset_left = 898.0
 offset_top = 80.0
@@ -1938,7 +1936,7 @@ offset_right = 1148.0
 offset_bottom = 330.0
 texture = ExtResource("39_rsfmd")
 
-[node name="OBS" type="TextureRect" parent="HUD/GUI/TABBER/CREDITS"]
+[node name="OBS" type="TextureRect" parent="HUD/GUI/TABBER/CREDITS" unique_id=1298564031]
 layout_mode = 0
 offset_left = 1463.0
 offset_top = 80.0
@@ -1946,7 +1944,7 @@ offset_right = 1713.0
 offset_bottom = 330.0
 texture = ExtResource("40_rsfmd")
 
-[node name="TCM" type="TextureRect" parent="HUD/GUI/TABBER/CREDITS"]
+[node name="TCM" type="TextureRect" parent="HUD/GUI/TABBER/CREDITS" unique_id=447076208]
 layout_mode = 0
 offset_left = 373.0
 offset_top = 610.0
@@ -1954,7 +1952,7 @@ offset_right = 623.0
 offset_bottom = 860.0
 texture = ExtResource("41_1nbh2")
 
-[node name="THEFOX" type="TextureRect" parent="HUD/GUI/TABBER/CREDITS"]
+[node name="THEFOX" type="TextureRect" parent="HUD/GUI/TABBER/CREDITS" unique_id=940480743]
 layout_mode = 0
 offset_left = 95.0
 offset_top = 333.0
@@ -1962,7 +1960,7 @@ offset_right = 345.0
 offset_bottom = 583.0
 texture = ExtResource("42_l8bs8")
 
-[node name="CTB" type="TextureRect" parent="HUD/GUI/TABBER/CREDITS"]
+[node name="CTB" type="TextureRect" parent="HUD/GUI/TABBER/CREDITS" unique_id=632726194]
 layout_mode = 0
 offset_left = 648.0
 offset_top = 614.0
@@ -1970,7 +1968,7 @@ offset_right = 898.0
 offset_bottom = 864.0
 texture = ExtResource("43_vgd1i")
 
-[node name="THOSEWHOKNOW" type="TextureRect" parent="HUD/GUI/TABBER/CREDITS"]
+[node name="THOSEWHOKNOW" type="TextureRect" parent="HUD/GUI/TABBER/CREDITS" unique_id=565232848]
 layout_mode = 0
 offset_left = 1453.0
 offset_top = 620.0
@@ -1978,7 +1976,7 @@ offset_right = 1703.0
 offset_bottom = 870.0
 texture = ExtResource("44_vgd1i")
 
-[node name="CLICKUP" type="AudioStreamPlayer2D" parent="HUD/GUI"]
+[node name="CLICKUP" type="AudioStreamPlayer2D" parent="HUD/GUI" unique_id=255012322]
 position = Vector2(-799, -416)
 stream = ExtResource("32_7dn5o")
 volume_db = 12.0
@@ -1986,24 +1984,24 @@ pitch_scale = 1.1
 max_polyphony = 100
 bus = &"SFX"
 
-[node name="CLICKDOWN" type="AudioStreamPlayer2D" parent="HUD/GUI"]
+[node name="CLICKDOWN" type="AudioStreamPlayer2D" parent="HUD/GUI" unique_id=2144245934]
 position = Vector2(-799, -416)
 stream = ExtResource("33_cmijj")
 volume_db = 12.0
 max_polyphony = 100
 bus = &"SFX"
 
-[node name="ANGEL" type="AudioStreamPlayer2D" parent="HUD/GUI"]
+[node name="ANGEL" type="AudioStreamPlayer2D" parent="HUD/GUI" unique_id=88725397]
 stream = ExtResource("35_8cl8t")
 volume_db = 7.0
 bus = &"SFX"
 
-[node name="BEGIN" type="AudioStreamPlayer2D" parent="HUD/GUI"]
+[node name="BEGIN" type="AudioStreamPlayer2D" parent="HUD/GUI" unique_id=2005507699]
 stream = ExtResource("38_e1d10")
 volume_db = 5.0
 bus = &"SFX"
 
-[node name="TITLE" type="Panel" parent="HUD/GUI"]
+[node name="TITLE" type="Panel" parent="HUD/GUI" unique_id=1908720848]
 process_mode = 3
 visible = false
 layout_mode = 1
@@ -2012,7 +2010,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 theme = SubResource("Theme_rmyap")
 
-[node name="COVERER" type="PanelContainer" parent="HUD/GUI/TITLE"]
+[node name="COVERER" type="PanelContainer" parent="HUD/GUI/TITLE" unique_id=1631365490]
 modulate = Color(1, 1, 1, 0.78431374)
 layout_mode = 0
 offset_left = 1.0
@@ -2020,15 +2018,15 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 theme = SubResource("Theme_a5vu4")
 
-[node name="MOVEYMOVEY" type="Timer" parent="HUD/GUI/TITLE/COVERER"]
+[node name="MOVEYMOVEY" type="Timer" parent="HUD/GUI/TITLE/COVERER" unique_id=942364813]
 wait_time = 0.1
 autostart = true
 
-[node name="SHAKEWAVE" type="Timer" parent="HUD/GUI/TITLE"]
+[node name="SHAKEWAVE" type="Timer" parent="HUD/GUI/TITLE" unique_id=368146288]
 wait_time = 5.0
 autostart = true
 
-[node name="XALIAZONE" type="TextureRect" parent="HUD/GUI/TITLE"]
+[node name="XALIAZONE" type="TextureRect" parent="HUD/GUI/TITLE" unique_id=593918803]
 texture_filter = 1
 custom_minimum_size = Vector2(1000, 500)
 layout_direction = 2
@@ -2043,7 +2041,7 @@ offset_bottom = -493.94006
 pivot_offset = Vector2(870, 250)
 texture = ExtResource("40_e1d10")
 
-[node name="EXITBTN" type="TextureButton" parent="HUD/GUI/TITLE"]
+[node name="EXITBTN" type="TextureButton" parent="HUD/GUI/TITLE" unique_id=407431447]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 0
 offset_left = 1805.0
@@ -2057,7 +2055,7 @@ texture_hover = ExtResource("26_30nge")
 texture_disabled = ExtResource("25_kgo5c")
 texture_focused = ExtResource("26_30nge")
 
-[node name="SKIPPITY SKIP" type="TextureButton" parent="HUD/GUI/TITLE"]
+[node name="SKIPPITY SKIP" type="TextureButton" parent="HUD/GUI/TITLE" unique_id=1904349950]
 layout_mode = 0
 offset_left = 1697.0
 offset_top = 966.0
@@ -2070,7 +2068,7 @@ texture_hover = ExtResource("40_7aklr")
 texture_disabled = ExtResource("40_7aklr")
 texture_focused = ExtResource("40_7aklr")
 
-[node name="BEPLAY" type="TextureButton" parent="HUD/GUI/TITLE"]
+[node name="BEPLAY" type="TextureButton" parent="HUD/GUI/TITLE" unique_id=1344584733]
 layout_mode = 0
 offset_left = 663.0
 offset_top = 613.0
@@ -2083,13 +2081,11 @@ texture_hover = ExtResource("44_xahew")
 texture_disabled = ExtResource("44_xahew")
 texture_focused = ExtResource("44_xahew")
 
-[node name="BETWIXT" type="AnimationPlayer" parent="HUD/GUI/TITLE/BEPLAY"]
+[node name="BETWIXT" type="AnimationPlayer" parent="HUD/GUI/TITLE/BEPLAY" unique_id=140628417]
 unique_name_in_owner = true
-libraries = {
-&"": SubResource("AnimationLibrary_pkcf4")
-}
+libraries/ = SubResource("AnimationLibrary_pkcf4")
 
-[node name="WAVEDISPLAY" type="Control" parent="HUD/GUI"]
+[node name="WAVEDISPLAY" type="Control" parent="HUD/GUI" unique_id=1608751234]
 unique_name_in_owner = true
 visible = false
 anchors_preset = 0
@@ -2097,7 +2093,7 @@ offset_top = -200.0
 offset_right = 40.0
 offset_bottom = -160.0
 
-[node name="SKULL" type="TextureRect" parent="HUD/GUI/WAVEDISPLAY"]
+[node name="SKULL" type="TextureRect" parent="HUD/GUI/WAVEDISPLAY" unique_id=1907395849]
 z_index = 1
 layout_mode = 0
 offset_left = 540.0
@@ -2108,7 +2104,7 @@ scale = Vector2(0.75, 0.75)
 pivot_offset = Vector2(100, 100)
 texture = ExtResource("42_ts8vc")
 
-[node name="BAR" type="TextureRect" parent="HUD/GUI/WAVEDISPLAY"]
+[node name="BAR" type="TextureRect" parent="HUD/GUI/WAVEDISPLAY" unique_id=1300121146]
 z_index = -1
 layout_mode = 0
 offset_left = 566.0
@@ -2117,14 +2113,14 @@ offset_right = 1366.0
 offset_bottom = 160.0
 texture = ExtResource("43_3ewym")
 
-[node name="WAVEPROGRESS" type="AnimatedSprite2D" parent="HUD/GUI/WAVEDISPLAY"]
+[node name="WAVEPROGRESS" type="AnimatedSprite2D" parent="HUD/GUI/WAVEDISPLAY" unique_id=1913736491]
 unique_name_in_owner = true
 position = Vector2(994, 112)
 scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_muqnu")
 frame_progress = 0.8296765
 
-[node name="DESERT SELECT" type="TextureButton" parent="HUD/GUI"]
+[node name="DESERT SELECT" type="TextureButton" parent="HUD/GUI" unique_id=1704796125]
 unique_name_in_owner = true
 visible = false
 z_index = 101
@@ -2144,20 +2140,18 @@ scale = Vector2(1.25, 1.25)
 pivot_offset = Vector2(100, 100)
 texture_normal = ExtResource("54_hm2yv")
 
-[node name="ENTRANCE" type="AnimationPlayer" parent="HUD/GUI/DESERT SELECT"]
+[node name="ENTRANCE" type="AnimationPlayer" parent="HUD/GUI/DESERT SELECT" unique_id=1447349439]
 unique_name_in_owner = true
-libraries = {
-&"": SubResource("AnimationLibrary_v2biw")
-}
+libraries/ = SubResource("AnimationLibrary_v2biw")
 
-[node name="DESERT" type="AudioStreamPlayer2D" parent="HUD/GUI/DESERT SELECT"]
+[node name="DESERT" type="AudioStreamPlayer2D" parent="HUD/GUI/DESERT SELECT" unique_id=1718151369]
 unique_name_in_owner = true
 stream = ExtResource("55_epw0l")
 max_distance = 10000.0
 attenuation = 0.0035205013
 bus = &"MUSIC"
 
-[node name="YOU WIN!" type="TextureRect" parent="HUD/GUI"]
+[node name="YOU WIN!" type="TextureRect" parent="HUD/GUI" unique_id=1620746282]
 unique_name_in_owner = true
 process_mode = 3
 visible = false
@@ -2166,7 +2160,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("55_hbavt")
 
-[node name="GOBACK" type="TextureButton" parent="HUD/GUI/YOU WIN!"]
+[node name="GOBACK" type="TextureButton" parent="HUD/GUI/YOU WIN!" unique_id=518119694]
 process_mode = 3
 layout_mode = 1
 anchors_preset = 8
@@ -2187,7 +2181,7 @@ texture_hover = ExtResource("56_epw0l")
 texture_disabled = ExtResource("56_epw0l")
 texture_focused = ExtResource("56_epw0l")
 
-[node name="DIE!" type="TextureButton" parent="HUD/GUI/YOU WIN!"]
+[node name="DIE!" type="TextureButton" parent="HUD/GUI/YOU WIN!" unique_id=163342364]
 process_mode = 3
 layout_mode = 0
 offset_left = 1083.0
@@ -2201,7 +2195,7 @@ texture_hover = ExtResource("26_30nge")
 texture_disabled = ExtResource("25_kgo5c")
 texture_focused = ExtResource("25_kgo5c")
 
-[node name="MAIN BODY" type="CharacterBody2D" parent="." node_paths=PackedStringArray("HURTAUDIO1", "HURTAUDIO2", "HURTAUDIO3", "DEATHAUDIO", "PARRYIMPACT", "DEATHGUI") groups=["ALLY", "PLAYER"]]
+[node name="MAIN BODY" type="CharacterBody2D" parent="." unique_id=168044443 node_paths=PackedStringArray("HURTAUDIO1", "HURTAUDIO2", "HURTAUDIO3", "DEATHAUDIO", "PARRYIMPACT", "DEATHGUI") groups=["ALLY", "PLAYER"]]
 unique_name_in_owner = true
 process_mode = 1
 script = ExtResource("3_gxfrp")
@@ -2213,7 +2207,7 @@ PARRYIMPACT = NodePath("PARRYIMPACT")
 DEATHGUI = NodePath("../HUD/GUI/DEATH")
 metadata/_edit_lock_ = true
 
-[node name="AURA" type="PointLight2D" parent="MAIN BODY"]
+[node name="AURA" type="PointLight2D" parent="MAIN BODY" unique_id=37722723]
 unique_name_in_owner = true
 position = Vector2(4.0000153, -4.0000153)
 scale = Vector2(3, 3)
@@ -2221,13 +2215,13 @@ energy = 0.5
 texture = ExtResource("27_3eytw")
 metadata/_edit_lock_ = true
 
-[node name="COLLIDE" type="CollisionShape2D" parent="MAIN BODY"]
+[node name="COLLIDE" type="CollisionShape2D" parent="MAIN BODY" unique_id=1784549976]
 unique_name_in_owner = true
 position = Vector2(0.99999994, 8)
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("CapsuleShape2D_t0o36")
 
-[node name="CAMERA" type="Camera2D" parent="MAIN BODY"]
+[node name="CAMERA" type="Camera2D" parent="MAIN BODY" unique_id=1863208300]
 position_smoothing_enabled = true
 position_smoothing_speed = 2.0
 rotation_smoothing_enabled = true
@@ -2240,23 +2234,23 @@ drag_right_margin = 0.05
 drag_bottom_margin = 0.05
 script = ExtResource("28_hhnbx")
 
-[node name="ATK COOLDOWN" type="Timer" parent="MAIN BODY"]
+[node name="ATK COOLDOWN" type="Timer" parent="MAIN BODY" unique_id=2058045706]
 wait_time = 0.75
 one_shot = true
 
-[node name="PARRY COOLDOWN" type="Timer" parent="MAIN BODY"]
+[node name="PARRY COOLDOWN" type="Timer" parent="MAIN BODY" unique_id=1329341890]
 wait_time = 0.5
 one_shot = true
 
-[node name="HITSTOP TIMER" type="Timer" parent="MAIN BODY"]
+[node name="HITSTOP TIMER" type="Timer" parent="MAIN BODY" unique_id=389316952]
 process_mode = 2
 wait_time = 0.4
 one_shot = true
 
-[node name="BASE SKELETON" type="Node2D" parent="MAIN BODY"]
+[node name="BASE SKELETON" type="Node2D" parent="MAIN BODY" unique_id=1269913272]
 position = Vector2(-155, 0)
 
-[node name="LEFT FOOT" type="Polygon2D" parent="MAIN BODY/BASE SKELETON"]
+[node name="LEFT FOOT" type="Polygon2D" parent="MAIN BODY/BASE SKELETON" unique_id=616155322]
 position = Vector2(59, -75)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("6_ojerm")
@@ -2266,7 +2260,7 @@ uv = PackedVector2Array(185.31192, 685.84845, 249.74109, 675.5256, 289.2529, 654
 bones = ["HIP", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/HEAD", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/RIGHT ARM", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/RIGHT ARM/RIGHT HAND", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/LEFT ARM", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/LEFT ARM/LEFT HAND", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/LEFT LEG", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/LEFT LEG/LEFT FOOT", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/RIGHT LEG", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/RIGHT LEG/RIGHT FOOT", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)]
 metadata/_edit_lock_ = true
 
-[node name="RIGHT FOOT" type="Polygon2D" parent="MAIN BODY/BASE SKELETON"]
+[node name="RIGHT FOOT" type="Polygon2D" parent="MAIN BODY/BASE SKELETON" unique_id=229792857]
 position = Vector2(62, -73)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("6_ojerm")
@@ -2276,7 +2270,7 @@ uv = PackedVector2Array(414.04102, 627.2494, 407.78702, 645.4902, 408.82935, 653
 bones = ["HIP", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/HEAD", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/RIGHT ARM", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/RIGHT ARM/RIGHT HAND", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/LEFT ARM", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/LEFT ARM/LEFT HAND", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/LEFT LEG", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/LEFT LEG/LEFT FOOT", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "HIP/RIGHT LEG", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/RIGHT LEG/RIGHT FOOT", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
 metadata/_edit_lock_ = true
 
-[node name="TORSO" type="Polygon2D" parent="MAIN BODY/BASE SKELETON"]
+[node name="TORSO" type="Polygon2D" parent="MAIN BODY/BASE SKELETON" unique_id=2041934876]
 position = Vector2(64, -73)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("6_ojerm")
@@ -2286,7 +2280,7 @@ uv = PackedVector2Array(193.77147, 551.907, 199.59781, 503.36606, 217.39981, 444
 bones = ["HIP", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "HIP/CHEST/HEAD", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/RIGHT ARM", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/RIGHT ARM/RIGHT HAND", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/LEFT ARM", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/LEFT ARM/LEFT HAND", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/LEFT LEG", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/LEFT LEG/LEFT FOOT", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/RIGHT LEG", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/RIGHT LEG/RIGHT FOOT", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
 metadata/_edit_lock_ = true
 
-[node name="HEAD" type="Polygon2D" parent="MAIN BODY/BASE SKELETON"]
+[node name="HEAD" type="Polygon2D" parent="MAIN BODY/BASE SKELETON" unique_id=104055519]
 position = Vector2(71, -63)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("6_ojerm")
@@ -2296,7 +2290,7 @@ uv = PackedVector2Array(292.94647, 294.75906, 369.16684, 295.56137, 463.50317, 2
 bones = ["HIP", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/HEAD", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "HIP/CHEST/RIGHT ARM", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/RIGHT ARM/RIGHT HAND", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/LEFT ARM", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/LEFT ARM/LEFT HAND", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/LEFT LEG", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/LEFT LEG/LEFT FOOT", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/RIGHT LEG", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/RIGHT LEG/RIGHT FOOT", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
 metadata/_edit_lock_ = true
 
-[node name="LEFT HAND" type="Polygon2D" parent="MAIN BODY/BASE SKELETON"]
+[node name="LEFT HAND" type="Polygon2D" parent="MAIN BODY/BASE SKELETON" unique_id=424103847]
 position = Vector2(68, -68)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("6_ojerm")
@@ -2306,7 +2300,7 @@ uv = PackedVector2Array(46.49048, 466.52142, 45.651154, 500.09503, 57.401917, 52
 bones = ["HIP", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/HEAD", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/RIGHT ARM", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/RIGHT ARM/RIGHT HAND", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/LEFT ARM", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/LEFT ARM/LEFT HAND", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "HIP/LEFT LEG", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/LEFT LEG/LEFT FOOT", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/RIGHT LEG", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/RIGHT LEG/RIGHT FOOT", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
 metadata/_edit_lock_ = true
 
-[node name="RIGHT HAND" type="Polygon2D" parent="MAIN BODY/BASE SKELETON"]
+[node name="RIGHT HAND" type="Polygon2D" parent="MAIN BODY/BASE SKELETON" unique_id=211822880]
 position = Vector2(68, -70)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("6_ojerm")
@@ -2316,22 +2310,22 @@ uv = PackedVector2Array(544.07324, 499.71, 540.25806, 530.9945, 553.2297, 559.22
 bones = ["HIP", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/HEAD", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/RIGHT ARM", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/RIGHT ARM/RIGHT HAND", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "HIP/CHEST/LEFT ARM", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/LEFT ARM/LEFT HAND", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/LEFT LEG", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/LEFT LEG/LEFT FOOT", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/RIGHT LEG", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/RIGHT LEG/RIGHT FOOT", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
 metadata/_edit_lock_ = true
 
-[node name="SKELETON" type="Skeleton2D" parent="MAIN BODY"]
+[node name="SKELETON" type="Skeleton2D" parent="MAIN BODY" unique_id=638673627]
 position = Vector2(-155, 0)
 
-[node name="HIP" type="Bone2D" parent="MAIN BODY/SKELETON"]
+[node name="HIP" type="Bone2D" parent="MAIN BODY/SKELETON" unique_id=971856221]
 position = Vector2(150, 71)
 rotation = -1.5707964
 rest = Transform2D(-4.371139e-08, -1, 1, -4.371139e-08, 150, 71)
 editor_settings/show_bone_gizmo = false
 
-[node name="CHEST" type="Bone2D" parent="MAIN BODY/SKELETON/HIP"]
+[node name="CHEST" type="Bone2D" parent="MAIN BODY/SKELETON/HIP" unique_id=498301385]
 position = Vector2(15, 1.0000007)
 scale = Vector2(0.9999996, 0.9999996)
 rest = Transform2D(1, 0, 0, 1, 15, 0.99999833)
 editor_settings/show_bone_gizmo = false
 
-[node name="HEAD" type="Bone2D" parent="MAIN BODY/SKELETON/HIP/CHEST"]
+[node name="HEAD" type="Bone2D" parent="MAIN BODY/SKELETON/HIP/CHEST" unique_id=184973934]
 position = Vector2(48, 1.9999999)
 scale = Vector2(0.999998, 0.999998)
 rest = Transform2D(1, 0, 0, 1, 48, 1.9999999)
@@ -2340,13 +2334,13 @@ length = 16.0
 bone_angle = 60.0
 editor_settings/show_bone_gizmo = false
 
-[node name="RIGHT ARM" type="Bone2D" parent="MAIN BODY/SKELETON/HIP/CHEST"]
+[node name="RIGHT ARM" type="Bone2D" parent="MAIN BODY/SKELETON/HIP/CHEST" unique_id=909523702]
 position = Vector2(30, 30)
 scale = Vector2(0.99999964, 0.99999964)
 rest = Transform2D(1, 0, 0, 1, 30, 30)
 editor_settings/show_bone_gizmo = false
 
-[node name="RIGHT HAND" type="Bone2D" parent="MAIN BODY/SKELETON/HIP/CHEST/RIGHT ARM"]
+[node name="RIGHT HAND" type="Bone2D" parent="MAIN BODY/SKELETON/HIP/CHEST/RIGHT ARM" unique_id=317426415]
 position = Vector2(-30, 24)
 scale = Vector2(0.9999997, 0.9999997)
 rest = Transform2D(1, 0, 0, 1, -35, 37.5)
@@ -2355,13 +2349,13 @@ length = 16.0
 bone_angle = 90.0
 editor_settings/show_bone_gizmo = false
 
-[node name="LEFT ARM" type="Bone2D" parent="MAIN BODY/SKELETON/HIP/CHEST"]
+[node name="LEFT ARM" type="Bone2D" parent="MAIN BODY/SKELETON/HIP/CHEST" unique_id=1333284193]
 position = Vector2(29.000002, -27)
 scale = Vector2(0.9999989, 0.9999989)
 rest = Transform2D(1, 0, 0, 1, 30, -30)
 editor_settings/show_bone_gizmo = false
 
-[node name="LEFT HAND" type="Bone2D" parent="MAIN BODY/SKELETON/HIP/CHEST/LEFT ARM"]
+[node name="LEFT HAND" type="Bone2D" parent="MAIN BODY/SKELETON/HIP/CHEST/LEFT ARM" unique_id=1035732129]
 position = Vector2(-25, -27.5)
 rest = Transform2D(1, 0, 0, 1, -25, -27.5)
 auto_calculate_length_and_angle = false
@@ -2369,13 +2363,13 @@ length = 16.0
 bone_angle = -90.0
 editor_settings/show_bone_gizmo = false
 
-[node name="LEFT LEG" type="Bone2D" parent="MAIN BODY/SKELETON/HIP"]
+[node name="LEFT LEG" type="Bone2D" parent="MAIN BODY/SKELETON/HIP" unique_id=1827804681]
 position = Vector2(0, 25)
 rotation = 1.5707964
 rest = Transform2D(-4.371139e-08, 1, -1, -4.371139e-08, 0, 25)
 editor_settings/show_bone_gizmo = false
 
-[node name="LEFT FOOT" type="Bone2D" parent="MAIN BODY/SKELETON/HIP/LEFT LEG"]
+[node name="LEFT FOOT" type="Bone2D" parent="MAIN BODY/SKELETON/HIP/LEFT LEG" unique_id=1217904829]
 position = Vector2(0, 15)
 rest = Transform2D(1, 0, 0, 1, 0, 15)
 auto_calculate_length_and_angle = false
@@ -2383,14 +2377,14 @@ length = 20.0
 bone_angle = 0.0
 editor_settings/show_bone_gizmo = false
 
-[node name="RIGHT LEG" type="Bone2D" parent="MAIN BODY/SKELETON/HIP"]
+[node name="RIGHT LEG" type="Bone2D" parent="MAIN BODY/SKELETON/HIP" unique_id=1969100388]
 position = Vector2(0, -25)
 rotation = -1.5707964
 scale = Vector2(0.99999976, 0.99999976)
 rest = Transform2D(-4.371139e-08, -1, 1, -4.371139e-08, 0, -25)
 editor_settings/show_bone_gizmo = false
 
-[node name="RIGHT FOOT" type="Bone2D" parent="MAIN BODY/SKELETON/HIP/RIGHT LEG"]
+[node name="RIGHT FOOT" type="Bone2D" parent="MAIN BODY/SKELETON/HIP/RIGHT LEG" unique_id=188936347]
 position = Vector2(0, -15)
 rest = Transform2D(1, 0, 0, 1, 0, -15)
 auto_calculate_length_and_angle = false
@@ -2398,42 +2392,40 @@ length = 20.0
 bone_angle = 0.0
 editor_settings/show_bone_gizmo = false
 
-[node name="SKELE-ANIM" type="AnimationPlayer" parent="MAIN BODY/SKELETON"]
-libraries = {
-&"": SubResource("AnimationLibrary_txfpl")
-}
+[node name="SKELE-ANIM" type="AnimationPlayer" parent="MAIN BODY/SKELETON" unique_id=2111682894]
+libraries/ = SubResource("AnimationLibrary_txfpl")
 
-[node name="DEATHAUDIO2D" type="AudioStreamPlayer2D" parent="MAIN BODY"]
+[node name="DEATHAUDIO2D" type="AudioStreamPlayer2D" parent="MAIN BODY" unique_id=1180249632]
 stream = ExtResource("26_0eqxm")
 bus = &"SFX"
 
-[node name="HURTAUDIO1" type="AudioStreamPlayer2D" parent="MAIN BODY"]
+[node name="HURTAUDIO1" type="AudioStreamPlayer2D" parent="MAIN BODY" unique_id=1234703084]
 stream = ExtResource("27_b3h56")
 bus = &"SFX"
 
-[node name="HURTAUDIO2" type="AudioStreamPlayer2D" parent="MAIN BODY"]
+[node name="HURTAUDIO2" type="AudioStreamPlayer2D" parent="MAIN BODY" unique_id=1210480789]
 stream = ExtResource("28_inhu6")
 bus = &"SFX"
 
-[node name="HURTAUDIO3" type="AudioStreamPlayer2D" parent="MAIN BODY"]
+[node name="HURTAUDIO3" type="AudioStreamPlayer2D" parent="MAIN BODY" unique_id=1149669246]
 stream = ExtResource("29_3eytw")
 bus = &"SFX"
 
-[node name="PARRYIMPACT" type="AudioStreamPlayer2D" parent="MAIN BODY"]
+[node name="PARRYIMPACT" type="AudioStreamPlayer2D" parent="MAIN BODY" unique_id=373099440]
 stream = ExtResource("64_3mokl")
 bus = &"SFX"
 
-[node name="HITSTOP" type="AudioStreamPlayer2D" parent="MAIN BODY"]
+[node name="HITSTOP" type="AudioStreamPlayer2D" parent="MAIN BODY" unique_id=942435866]
 unique_name_in_owner = true
 process_mode = 2
 stream = ExtResource("65_3mokl")
 bus = &"SFX"
 
-[node name="HEARTGROW" type="AudioStreamPlayer2D" parent="MAIN BODY"]
+[node name="HEARTGROW" type="AudioStreamPlayer2D" parent="MAIN BODY" unique_id=897350635]
 stream = ExtResource("37_ff0op")
 bus = &"SFX"
 
-[node name="BUTTON" type="AnimatedSprite2D" parent="."]
+[node name="BUTTON" type="AnimatedSprite2D" parent="." unique_id=215533487]
 unique_name_in_owner = true
 z_index = -5
 position = Vector2(445, 37)
@@ -2441,14 +2433,14 @@ scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_hneaw")
 metadata/_edit_lock_ = true
 
-[node name="INTERACTAREA" type="Area2D" parent="BUTTON"]
+[node name="INTERACTAREA" type="Area2D" parent="BUTTON" unique_id=1082539722]
 
-[node name="INTERACTQUERY" type="CollisionShape2D" parent="BUTTON/INTERACTAREA"]
+[node name="INTERACTQUERY" type="CollisionShape2D" parent="BUTTON/INTERACTAREA" unique_id=1722422492]
 position = Vector2(0, -74)
 shape = SubResource("CircleShape2D_hm2yv")
 metadata/_edit_lock_ = true
 
-[node name="E KEY" type="Sprite2D" parent="BUTTON"]
+[node name="E KEY" type="Sprite2D" parent="BUTTON" unique_id=25938760]
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0)
 position = Vector2(0, -300)
@@ -2456,12 +2448,12 @@ scale = Vector2(0.25, 0.25)
 texture = ExtResource("59_wpjku")
 metadata/_edit_lock_ = true
 
-[node name="CLICKLACK" type="AudioStreamPlayer2D" parent="BUTTON"]
+[node name="CLICKLACK" type="AudioStreamPlayer2D" parent="BUTTON" unique_id=1946064560]
 stream = ExtResource("60_a5vu4")
 max_polyphony = 100
 bus = &"SFX"
 
-[node name="WINEER" type="AudioStreamPlayer2D" parent="." groups=["MUSIC"]]
+[node name="WINEER" type="AudioStreamPlayer2D" parent="." unique_id=353509992 groups=["MUSIC"]]
 unique_name_in_owner = true
 process_mode = 2
 stream = ExtResource("74_bktiv")
@@ -2469,13 +2461,11 @@ max_distance = 10000.0
 panning_strength = 0.0
 bus = &"MUSIC"
 
-[node name="FADE" type="AnimationPlayer" parent="WINEER"]
+[node name="FADE" type="AnimationPlayer" parent="WINEER" unique_id=431489429]
 unique_name_in_owner = true
-libraries = {
-&"": SubResource("AnimationLibrary_48wk5")
-}
+libraries/ = SubResource("AnimationLibrary_48wk5")
 
-[node name="TITLE" type="AudioStreamPlayer2D" parent="." groups=["MUSIC"]]
+[node name="TITLE" type="AudioStreamPlayer2D" parent="." unique_id=820638440 groups=["MUSIC"]]
 unique_name_in_owner = true
 process_mode = 2
 stream = ExtResource("75_xahew")
@@ -2483,12 +2473,10 @@ max_distance = 10000.0
 panning_strength = 0.0
 bus = &"MUSIC"
 
-[node name="FADED" type="AnimationPlayer" parent="TITLE"]
+[node name="FADED" type="AnimationPlayer" parent="TITLE" unique_id=733590258]
 unique_name_in_owner = true
 root_node = NodePath("../../WINEER")
-libraries = {
-&"": SubResource("AnimationLibrary_muqnu")
-}
+libraries/ = SubResource("AnimationLibrary_muqnu")
 
 [connection signal="timeout" from="HUD/GUI/DEATH/INTERATION" to="HUD/GUI" method="_on_interation_timeout"]
 [connection signal="pressed" from="HUD/GUI/DEATH/RETR" to="MAIN BODY" method="DOITAGAIN"]
