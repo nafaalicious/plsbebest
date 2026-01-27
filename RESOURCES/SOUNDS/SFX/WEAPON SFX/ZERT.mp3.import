@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bjtl0boufc1sq"
+path="res://.godot/imported/ZERT.mp3-8e27674b8c456b7e9b0fd10c8df318cd.mp3str"
+
+[deps]
+
+source_file="res://RESOURCES/SOUNDS/SFX/WEAPON SFX/ZERT.mp3"
+dest_files=["res://.godot/imported/ZERT.mp3-8e27674b8c456b7e9b0fd10c8df318cd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

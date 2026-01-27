@@ -1,0 +1,2139 @@
+[gd_scene load_steps=155 format=4 uid="uid://b0e0ltstsuy1v"]
+
+[ext_resource type="Texture2D" uid="uid://wogrmscw5xse" path="res://RESOURCES/SPRITES/HEALTH/heart.png0001.png" id="2_6yd6b"]
+[ext_resource type="Texture2D" uid="uid://d3egysble34bs" path="res://RESOURCES/SPRITES/HEALTH/heart.png0002.png" id="3_4dwq4"]
+[ext_resource type="Script" uid="uid://dhgtiaguc5x7n" path="res://SCRIPTS/CHARBODY.gd" id="3_gxfrp"]
+[ext_resource type="Texture2D" uid="uid://cns1wflqaxqgv" path="res://RESOURCES/SPRITES/HEALTH/heart.png0003.png" id="4_ufexj"]
+[ext_resource type="Texture2D" uid="uid://7qg1j4q2q4fd" path="res://RESOURCES/SPRITES/HEALTH/heart.png0004.png" id="5_8mrg3"]
+[ext_resource type="Texture2D" uid="uid://bn8kum5rmmr06" path="res://RESOURCES/SPRITES/HEALTH/heart.png0005.png" id="6_ifkx2"]
+[ext_resource type="Texture2D" uid="uid://dy33wjvoi40br" path="res://RESOURCES/SPRITES/CHARACTERS/base skeleton.png" id="6_ojerm"]
+[ext_resource type="Texture2D" uid="uid://dv4nmde26kwve" path="res://RESOURCES/SPRITES/HEALTH/heart.png0006.png" id="7_nm0eg"]
+[ext_resource type="Texture2D" uid="uid://2uosv186tj4i" path="res://RESOURCES/SPRITES/HEALTH/heart.png0007.png" id="8_nek65"]
+[ext_resource type="Texture2D" uid="uid://bq5ghppuy0h38" path="res://RESOURCES/SPRITES/HEALTH/heart.png0008.png" id="9_okng0"]
+[ext_resource type="Texture2D" uid="uid://bbvfpasluswv4" path="res://RESOURCES/SPRITES/HEALTH/heart.png0009.png" id="10_oydfy"]
+[ext_resource type="Texture2D" uid="uid://bcn7pkagv3ros" path="res://RESOURCES/SPRITES/HEALTH/truehart.png" id="11_6l3ec"]
+[ext_resource type="Texture2D" uid="uid://cjna6ywkc3b7l" path="res://RESOURCES/SPRITES/HEALTH/heart.png0010.png" id="11_xx1lq"]
+[ext_resource type="Texture2D" uid="uid://cr7616vmej71s" path="res://RESOURCES/SPRITES/NUMBERS/1.png" id="12_k0h54"]
+[ext_resource type="Texture2D" uid="uid://bja2alrv1o5d0" path="res://RESOURCES/SPRITES/NUMBERS/2.png" id="13_yg6hn"]
+[ext_resource type="Texture2D" uid="uid://gsfwpvx1grnx" path="res://RESOURCES/SPRITES/NUMBERS/3.png" id="14_l1kgn"]
+[ext_resource type="Texture2D" uid="uid://du1si385pocv2" path="res://RESOURCES/SPRITES/NUMBERS/4.png" id="15_6h43u"]
+[ext_resource type="Texture2D" uid="uid://cmpa7sjo00bqv" path="res://RESOURCES/SPRITES/NUMBERS/5.png" id="16_0eqxm"]
+[ext_resource type="Texture2D" uid="uid://dranqf6yrb5x3" path="res://RESOURCES/SPRITES/NUMBERS/6.png" id="17_hhnbx"]
+[ext_resource type="Texture2D" uid="uid://bg2olg3eo6i0u" path="res://RESOURCES/SPRITES/NUMBERS/7.png" id="18_jiqqi"]
+[ext_resource type="Texture2D" uid="uid://5iasph5romj8" path="res://RESOURCES/SPRITES/NUMBERS/8.png" id="19_q35a7"]
+[ext_resource type="Texture2D" uid="uid://ct6rlbarbig11" path="res://RESOURCES/SPRITES/NUMBERS/9.png" id="20_b3h56"]
+[ext_resource type="Texture2D" uid="uid://c15ebrv1eht3l" path="res://RESOURCES/SPRITES/NUMBERS/0.png" id="21_inhu6"]
+[ext_resource type="Texture2D" uid="uid://cl7hrtc6i635d" path="res://RESOURCES/SPRITES/TERRAIN/skygrid.png" id="23_l1kgn"]
+[ext_resource type="Texture2D" uid="uid://cmqbrulwqucxj" path="res://RESOURCES/SPRITES/TERRAIN/groundly earth smaller.png" id="23_yg6hn"]
+[ext_resource type="Texture2D" uid="uid://dtnd6rk27b0c6" path="res://RESOURCES/SPRITES/TERRAIN/BOUNDARY.png" id="24_6h43u"]
+[ext_resource type="FontFile" uid="uid://ma3xujgm4m1i" path="res://RESOURCES/ETC/Quicksand-Bold.ttf" id="24_8cl8t"]
+[ext_resource type="Script" uid="uid://cle1p0lq7a7ev" path="res://SCRIPTS/GUI.gd" id="24_jsr6u"]
+[ext_resource type="Texture2D" uid="uid://da0ogwusulhq8" path="res://RESOURCES/SPRITES/GUI/SETTINGS/EXITBUTTON.png" id="25_kgo5c"]
+[ext_resource type="Theme" uid="uid://u2s0ltwcsuf7" path="res://RESOURCES/ETC/CHECKBOX.tres" id="25_odkja"]
+[ext_resource type="AudioStream" uid="uid://d3ij7gc3lsi6y" path="res://RESOURCES/SOUNDS/SFX/DEATH SFX/PIG DEATH.mp3" id="26_0eqxm"]
+[ext_resource type="Texture2D" uid="uid://hkv40h4ddvxj" path="res://RESOURCES/SPRITES/GUI/SETTINGS/dont do it.png" id="26_30nge"]
+[ext_resource type="Texture2D" uid="uid://dcql7al26mowj" path="res://RESOURCES/SPRITES/GUI/SETTINGS/sound.png" id="26_lxyh6"]
+[ext_resource type="Texture2D" uid="uid://c3fnhmtq32onr" path="res://RESOURCES/SPRITES/ETC/light texture.webp" id="27_3eytw"]
+[ext_resource type="AudioStream" uid="uid://bdwcpcfm6lknl" path="res://RESOURCES/SOUNDS/SFX/CHAR SFX/creature1.ogg" id="27_b3h56"]
+[ext_resource type="Texture2D" uid="uid://diqtikn7h42n8" path="res://RESOURCES/SPRITES/GUI/SETTINGS/blorb.png" id="27_d21e3"]
+[ext_resource type="Texture2D" uid="uid://cx3lhxq4k16fj" path="res://RESOURCES/SPRITES/GUI/SETTINGS/mute.png" id="27_jysiq"]
+[ext_resource type="Script" uid="uid://ubiteenqga0g" path="res://SCRIPTS/CAMCONTROL.gd" id="28_hhnbx"]
+[ext_resource type="AudioStream" uid="uid://cp88lqpwce8p2" path="res://RESOURCES/SOUNDS/SFX/CHAR SFX/creature2.ogg" id="28_inhu6"]
+[ext_resource type="AudioStream" uid="uid://mv8efxyusskg" path="res://RESOURCES/SOUNDS/SFX/CHAR SFX/creature5.ogg" id="29_3eytw"]
+[ext_resource type="Texture2D" uid="uid://b1o6cjeht40mn" path="res://RESOURCES/SPRITES/GUI/SETTINGS/music.png" id="30_8cl8t"]
+[ext_resource type="Texture2D" uid="uid://bd1fccedvyueo" path="res://RESOURCES/SPRITES/GUI/SETTINGS/nomusic.png" id="31_mvtnu"]
+[ext_resource type="Texture2D" uid="uid://c8fep4yo7cexh" path="res://RESOURCES/SPRITES/GUI/SETTINGS/blorbl WRONGX.png" id="31_odkja"]
+[ext_resource type="AudioStream" uid="uid://qemm2gilier5" path="res://RESOURCES/SOUNDS/SFX/GUI/clickup.mp3" id="32_7dn5o"]
+[ext_resource type="Texture2D" uid="uid://bd17h0ft7h6mx" path="res://RESOURCES/SPRITES/GUI/SETTINGS/sfx.png" id="32_kgo5c"]
+[ext_resource type="Texture2D" uid="uid://plqnhjv74etj" path="res://RESOURCES/SPRITES/GUI/SETTINGS/nosfx.png" id="33_30nge"]
+[ext_resource type="AudioStream" uid="uid://culu3vtp40rxc" path="res://RESOURCES/SOUNDS/SFX/GUI/clickdown.mp3" id="33_cmijj"]
+[ext_resource type="AudioStream" uid="uid://bu3uhpxjyrluo" path="res://RESOURCES/SOUNDS/SFX/ETC/fuwah.mp3" id="35_8cl8t"]
+[ext_resource type="AudioStream" uid="uid://cbybo8pk48m0b" path="res://RESOURCES/SOUNDS/SFX/ETC/SFX plantgrow.mp3" id="37_ff0op"]
+[ext_resource type="AudioStream" uid="uid://brjowf7g86e1e" path="res://RESOURCES/SOUNDS/SFX/ETC/69. ...But Who Are You.mp3" id="38_e1d10"]
+[ext_resource type="Texture2D" uid="uid://rvgrrpi35whw" path="res://RESOURCES/SPRITES/GUI/PLAY.png" id="39_e0knu"]
+[ext_resource type="Texture2D" uid="uid://lmb2vgrax2im" path="res://RESOURCES/SPRITES/GUI/XALIAZONE.png" id="40_e1d10"]
+[ext_resource type="StyleBox" uid="uid://5h3ilk4fivq4" path="res://RESOURCES/ETC/BASICSTYLE.tres" id="40_pid3g"]
+[ext_resource type="Texture2D" uid="uid://db7047rnfofqp" path="res://RESOURCES/SPRITES/GUI/skull.png" id="42_ts8vc"]
+[ext_resource type="Texture2D" uid="uid://dyk8dgrk43axj" path="res://RESOURCES/SPRITES/GUI/PBAR.png" id="43_3ewym"]
+[ext_resource type="Texture2D" uid="uid://y7d71idrs731" path="res://RESOURCES/SPRITES/GUI/WAVE PROGRESS/NNN.png" id="44_3mokl"]
+[ext_resource type="Texture2D" uid="uid://bx46vd75uu64i" path="res://RESOURCES/SPRITES/GUI/WAVE PROGRESS/NNX.png" id="45_hbavt"]
+[ext_resource type="Texture2D" uid="uid://ba2v5hluxnc8w" path="res://RESOURCES/SPRITES/GUI/WAVE PROGRESS/NXX.png" id="46_epw0l"]
+[ext_resource type="Texture2D" uid="uid://d2rwlsxjppww4" path="res://RESOURCES/SPRITES/GUI/WAVE PROGRESS/YNN.png" id="47_v2biw"]
+[ext_resource type="Texture2D" uid="uid://45hjy2xt42ih" path="res://RESOURCES/SPRITES/GUI/WAVE PROGRESS/YNX.png" id="48_bktiv"]
+[ext_resource type="Texture2D" uid="uid://btieo5mf7r28m" path="res://RESOURCES/SPRITES/GUI/WAVE PROGRESS/YXX.png" id="49_xahew"]
+[ext_resource type="Texture2D" uid="uid://ht78bacumer5" path="res://RESOURCES/SPRITES/GUI/WAVE PROGRESS/YYN.png" id="50_pkcf4"]
+[ext_resource type="Texture2D" uid="uid://b4c3inpwvxwj5" path="res://RESOURCES/SPRITES/GUI/WAVE PROGRESS/YYX.png" id="51_48wk5"]
+[ext_resource type="Texture2D" uid="uid://crb2xlupvjdxy" path="res://RESOURCES/SPRITES/GUI/WAVE PROGRESS/YYY.png" id="52_8pg5w"]
+[ext_resource type="Texture2D" uid="uid://ksv1prwstt47" path="res://RESOURCES/SPRITES/ETC/YES ELEV BUTTON.png" id="56_ky2ai"]
+[ext_resource type="Texture2D" uid="uid://b2bpmmfqf7ojw" path="res://RESOURCES/SPRITES/ETC/NO ELEV BUTTON.png" id="57_wpjku"]
+[ext_resource type="Texture2D" uid="uid://giaogj51w0br" path="res://RESOURCES/SPRITES/ETC/DISABLED ELEV BUTTON.png" id="58_a5vu4"]
+[ext_resource type="Texture2D" uid="uid://cdh8fp3qoxoh" path="res://RESOURCES/SPRITES/GUI/E.png" id="59_wpjku"]
+[ext_resource type="AudioStream" uid="uid://bgfyoltwhmkcs" path="res://RESOURCES/SOUNDS/SFX/GUI/CLICKCLACK.mp3" id="60_a5vu4"]
+[ext_resource type="AudioStream" uid="uid://xr77nd2ikhb8" path="res://RESOURCES/SOUNDS/SFX/WEAPON SFX/TEST PARRY RESPONSE 234.mp3" id="64_3mokl"]
+[ext_resource type="AudioStream" uid="uid://4a6mw1e45egl" path="res://RESOURCES/SOUNDS/SFX/WEAPON SFX/ROSINGA3.mp3" id="65_3mokl"]
+
+[sub_resource type="Animation" id="Animation_8cl8t"]
+resource_name = "FADE IN"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_kgo5c"]
+resource_name = "FADE OUTS"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_e0knu"]
+resource_name = "FULL FLUSH"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_mvtnu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_30nge"]
+_data = {
+&"FADE IN": SubResource("Animation_8cl8t"),
+&"FADE OUTS": SubResource("Animation_kgo5c"),
+&"FULL FLUSH": SubResource("Animation_e0knu"),
+&"RESET": SubResource("Animation_mvtnu")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k0h54"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6yd6b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4dwq4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ufexj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8mrg3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ifkx2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_nm0eg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_nek65")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_okng0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_oydfy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_xx1lq")
+}],
+"loop": true,
+"name": &"PULSE",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3eytw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_inhu6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_k0h54")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_yg6hn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_l1kgn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_6h43u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_0eqxm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_hhnbx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_jiqqi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_q35a7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_b3h56")
+}],
+"loop": true,
+"name": &"NUMBERCYCLE",
+"speed": 5.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_cmijj"]
+colors = PackedColorArray(0.19607843, 0, 0, 1, 0.39215687, 0, 0, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_8cl8t"]
+noise_type = 3
+fractal_type = 3
+fractal_ping_pong_strength = 5.0
+domain_warp_enabled = true
+domain_warp_type = 2
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_mvtnu"]
+height = 300
+noise = SubResource("FastNoiseLite_8cl8t")
+color_ramp = SubResource("Gradient_cmijj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kgo5c"]
+texture = SubResource("NoiseTexture2D_mvtnu")
+
+[sub_resource type="Theme" id="Theme_30nge"]
+Panel/styles/panel = SubResource("StyleBoxTexture_kgo5c")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_30nge"]
+bg_color = Color(0.39732742, 0.3104378, 0, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0.1705738, 0.12775686, 1.2032688e-08, 1)
+border_blend = true
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cmijj"]
+bg_color = Color(0.18558332, 0.19754714, 0.19515947, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kgo5c"]
+bg_color = Color(0.025069203, 0.39368924, 0.17662412, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0.0038124232, 0.1496979, 0.05109016, 1)
+border_blend = true
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[sub_resource type="Theme" id="Theme_yg6hn"]
+Button/font_sizes/font_size = 100
+Button/fonts/font = ExtResource("24_8cl8t")
+Button/styles/hover = SubResource("StyleBoxFlat_30nge")
+Button/styles/normal = SubResource("StyleBoxFlat_cmijj")
+Button/styles/pressed = SubResource("StyleBoxFlat_kgo5c")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mvtnu"]
+bg_color = Color(0.39106372, 5.8358535e-07, 2.1658838e-07, 1)
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[sub_resource type="Gradient" id="Gradient_8cl8t"]
+colors = PackedColorArray(0, 0.43584347, 5.7756904e-07, 1, 2.8577634e-07, 0.19598228, 0.0023990532, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_mvtnu"]
+noise_type = 3
+frequency = 0.0179
+fractal_gain = 0.0
+fractal_weighted_strength = 1.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_kgo5c"]
+width = 32
+height = 32
+noise = SubResource("FastNoiseLite_mvtnu")
+color_ramp = SubResource("Gradient_8cl8t")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_30nge"]
+texture = SubResource("NoiseTexture2D_kgo5c")
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[sub_resource type="Gradient" id="Gradient_mvtnu"]
+colors = PackedColorArray(0, 0, 0, 1, 0.19793725, 0.19793722, 0.19793722, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_kgo5c"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_30nge"]
+height = 20
+noise = SubResource("FastNoiseLite_kgo5c")
+color_ramp = SubResource("Gradient_mvtnu")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e0knu"]
+texture = SubResource("NoiseTexture2D_30nge")
+
+[sub_resource type="Theme" id="Theme_e0knu"]
+default_font_size = 0
+TabContainer/constants/icon_separation = 10
+TabContainer/constants/side_margin = 25
+TabContainer/constants/tab_separation = 40
+TabContainer/fonts/font = ExtResource("24_8cl8t")
+TabContainer/styles/tab_hovered = SubResource("StyleBoxFlat_mvtnu")
+TabContainer/styles/tab_selected = SubResource("StyleBoxTexture_30nge")
+TabContainer/styles/tab_unselected = SubResource("StyleBoxFlat_mvtnu")
+TabContainer/styles/tabbar_background = SubResource("StyleBoxTexture_e0knu")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e0knu"]
+bg_color = Color(1.0107458e-06, 0.40767205, 0.37804544, 1)
+border_width_left = 50
+border_width_top = 50
+border_width_right = 50
+border_width_bottom = 50
+border_color = Color(5.4147097e-07, 0.2748047, 0.2524498, 1)
+
+[sub_resource type="Theme" id="Theme_e1d10"]
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_e0knu")
+
+[sub_resource type="Gradient" id="Gradient_kgo5c"]
+colors = PackedColorArray(0, 0.69018507, 0.7093602, 1, 1.02277845e-07, 0.2413882, 0.18765104, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_30nge"]
+frequency = 0.0001
+fractal_octaves = 4
+fractal_lacunarity = 3.0
+fractal_gain = 1.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_e0knu"]
+width = 1000
+noise = SubResource("FastNoiseLite_30nge")
+color_ramp = SubResource("Gradient_kgo5c")
+seamless = true
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e1d10"]
+texture = SubResource("NoiseTexture2D_e0knu")
+modulate_color = Color(1, 1, 1, 0.38431373)
+
+[sub_resource type="Theme" id="Theme_pid3g"]
+Panel/styles/panel = SubResource("StyleBoxTexture_e1d10")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wpjku"]
+bg_color = Color(0, 0.6379727, 0.94101566, 1)
+border_width_left = 25
+border_width_top = 25
+border_width_right = 25
+border_width_bottom = 25
+border_color = Color(0, 0.35677707, 0.6547453, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+expand_margin_left = 20.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="Theme" id="Theme_ts8vc"]
+Label/colors/font_outline_color = Color(0, 0.35686275, 0.654902, 1)
+Label/constants/outline_size = 25
+Label/font_sizes/font_size = 100
+Label/fonts/font = ExtResource("24_8cl8t")
+Label/styles/normal = SubResource("StyleBoxFlat_wpjku")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vlh0m"]
+bg_color = Color(0, 0.35213664, 0.64269066, 1)
+border_width_left = 50
+border_width_top = 50
+border_width_right = 50
+border_width_bottom = 50
+border_color = Color(0.13673681, 0.29562208, 0.5094185, 1)
+
+[sub_resource type="Theme" id="Theme_mvtnu"]
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_vlh0m")
+
+[sub_resource type="Gradient" id="Gradient_vlh0m"]
+colors = PackedColorArray(0.13725491, 0.59607846, 0.50980395, 1, 0.13559037, 0.23354504, 0.049012512, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_pid3g"]
+frequency = 0.0014
+fractal_lacunarity = 3.0
+fractal_gain = 1.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_rmyap"]
+width = 1000
+noise = SubResource("FastNoiseLite_pid3g")
+color_ramp = SubResource("Gradient_vlh0m")
+seamless = true
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rmyap"]
+texture = SubResource("NoiseTexture2D_rmyap")
+modulate_color = Color(1, 1, 1, 0.2)
+
+[sub_resource type="Theme" id="Theme_vlh0m"]
+Panel/styles/panel = SubResource("StyleBoxTexture_rmyap")
+
+[sub_resource type="Gradient" id="Gradient_odkja"]
+colors = PackedColorArray(0.6842587, 0.80837846, 1, 1, 0.47843137, 0.5529412, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_u0fpb"]
+seed = 3
+frequency = 0.0001
+fractal_lacunarity = 0.0
+fractal_gain = 0.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_7dn5o"]
+noise = SubResource("FastNoiseLite_u0fpb")
+color_ramp = SubResource("Gradient_odkja")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cmijj"]
+texture = SubResource("NoiseTexture2D_7dn5o")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8cl8t"]
+texture = SubResource("NoiseTexture2D_7dn5o")
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_ur5gq"]
+color = Color(0.3137656, 0.31945777, 0.31945735, 1)
+thickness = 10
+
+[sub_resource type="Theme" id="Theme_d21e3"]
+HSlider/icons/grabber = ExtResource("27_d21e3")
+HSlider/icons/grabber_disabled = ExtResource("31_odkja")
+HSlider/icons/grabber_highlight = ExtResource("27_d21e3")
+HSlider/styles/grabber_area = SubResource("StyleBoxTexture_cmijj")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxTexture_8cl8t")
+HSlider/styles/slider = SubResource("StyleBoxLine_ur5gq")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e1d10"]
+bg_color = Color(0.47555125, 0.30031455, 1, 1)
+border_width_left = 50
+border_width_top = 50
+border_width_right = 50
+border_width_bottom = 50
+border_color = Color(0.39700538, 0.0018903834, 0.8404184, 1)
+
+[sub_resource type="Theme" id="Theme_rmyap"]
+Panel/styles/panel = SubResource("StyleBoxFlat_e1d10")
+
+[sub_resource type="Gradient" id="Gradient_pid3g"]
+colors = PackedColorArray(0.35686275, 0, 0.84313726, 1, 0.17254902, 0.003921569, 0.92941177, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_rmyap"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ky2ai"]
+noise = SubResource("FastNoiseLite_rmyap")
+color_ramp = SubResource("Gradient_pid3g")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wpjku"]
+texture = SubResource("NoiseTexture2D_ky2ai")
+
+[sub_resource type="Theme" id="Theme_a5vu4"]
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_wpjku")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pid3g"]
+bg_color = Color(0, 0.6059046, 3.85046e-07, 1)
+border_width_left = 25
+border_width_top = 25
+border_width_right = 25
+border_width_bottom = 25
+border_color = Color(0, 0.49803922, 0, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+expand_margin_right = 20.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rmyap"]
+bg_color = Color(0, 0.6059046, 3.85046e-07, 1)
+border_width_left = 25
+border_width_top = 25
+border_width_right = 25
+border_width_bottom = 25
+border_color = Color(0, 0.49803922, 0, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+expand_margin_right = 20.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ky2ai"]
+bg_color = Color(1.4559553e-06, 0.38402578, 0.20500821, 1)
+border_width_left = 25
+border_width_top = 25
+border_width_right = 25
+border_width_bottom = 25
+border_color = Color(0, 0.30579457, 0.16709399, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+expand_margin_right = 20.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a5vu4"]
+bg_color = Color(0, 0.6059046, 3.85046e-07, 1)
+border_width_left = 25
+border_width_top = 25
+border_width_right = 25
+border_width_bottom = 25
+border_color = Color(0, 0.49803922, 0, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+expand_margin_right = 20.0
+
+[sub_resource type="Theme" id="Theme_yol2c"]
+Button/colors/font_outline_color = Color(0, 0.40010792, 0, 1)
+Button/constants/outline_size = 30
+Button/fonts/font = ExtResource("24_8cl8t")
+Button/styles/disabled = SubResource("StyleBoxFlat_pid3g")
+Button/styles/focus = SubResource("StyleBoxFlat_rmyap")
+Button/styles/hover = SubResource("StyleBoxFlat_ky2ai")
+Button/styles/normal = ExtResource("40_pid3g")
+Button/styles/pressed = SubResource("StyleBoxFlat_a5vu4")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_muqnu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("46_epw0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_xahew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_hbavt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_bktiv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_48wk5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_3mokl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_v2biw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_pkcf4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_8pg5w")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6h43u"]
+texture = ExtResource("23_l1kgn")
+texture_region_size = Vector2i(100, 100)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_hhnbx"]
+tile_size = Vector2i(100, 100)
+sources/2 = SubResource("TileSetAtlasSource_6h43u")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0eqxm"]
+texture = ExtResource("24_6h43u")
+texture_region_size = Vector2i(100, 100)
+0:0/0 = 0
+0:0/0/modulate = Color(0.34781694, 0.34781697, 0.3478169, 1)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -50, 50, -50, 50, 50, -50, 50)
+1:0/0 = 0
+1:0/0/modulate = Color(0.34781694, 0.34781697, 0.3478169, 1)
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -50, 50, -50, 50, 50, -50, 50)
+2:0/0 = 0
+2:0/0/modulate = Color(0.34781694, 0.34781697, 0.3478169, 1)
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -50, 50, -50, 50, 50, -50, 50)
+0:1/0 = 0
+0:1/0/modulate = Color(0.5609549, 0.5609549, 0.5609549, 1)
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -50, 50, -50, 50, 50, -50, 50)
+1:1/0 = 0
+1:1/0/modulate = Color(0.5609549, 0.5609549, 0.5609549, 1)
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -50, 50, -50, 50, 50, -50, 50)
+2:1/0 = 0
+2:1/0/modulate = Color(0.5609549, 0.5609549, 0.5609549, 1)
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -50, 50, -50, 50, 50, -50, 50)
+0:2/0 = 0
+0:2/0/modulate = Color(0.5649617, 0.5649616, 0.5649616, 1)
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -50, 50, -50, 50, 50, -50, 50)
+1:2/0 = 0
+1:2/0/modulate = Color(0.5649617, 0.5649616, 0.5649616, 1)
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -50, 50, -50, 50, 50, -50, 50)
+2:2/0 = 0
+2:2/0/modulate = Color(0.5649617, 0.5649616, 0.5649616, 1)
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -50, 50, -50, 50, 50, -50, 50)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l1kgn"]
+texture = ExtResource("23_yg6hn")
+texture_region_size = Vector2i(100, 100)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -50, 50, -50, 50, 50, -50, 50)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -50, 50, -50, 50, 50, -50, 50)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -50, 50, -50, 50, 50, -50, 50)
+2:1/0 = 0
+2:1/0/modulate = Color(0.7581918, 0.7581918, 0.7581917, 1)
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -50, 50, -50, 50, 50, -50, 50)
+1:1/0 = 0
+1:1/0/modulate = Color(0.7581918, 0.7581918, 0.7581917, 1)
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -50, 50, -50, 50, 50, -50, 50)
+0:1/0 = 0
+0:1/0/modulate = Color(0.7581918, 0.7581918, 0.7581917, 1)
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -50, 50, -50, 50, 50, -50, 50)
+0:0/0 = 0
+0:0/0/modulate = Color(0.7581918, 0.7581918, 0.7581917, 1)
+1:0/0 = 0
+1:0/0/modulate = Color(0.7581918, 0.7581918, 0.7581917, 1)
+2:0/0 = 0
+2:0/0/modulate = Color(0.7581918, 0.7581918, 0.7581917, 1)
+
+[sub_resource type="TileSet" id="TileSet_0eqxm"]
+tile_size = Vector2i(100, 100)
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_l1kgn")
+sources/0 = SubResource("TileSetAtlasSource_0eqxm")
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t0o36"]
+radius = 51.0
+height = 162.0
+
+[sub_resource type="Animation" id="Animation_nhwg7"]
+resource_name = "ATTACK-STIM"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HIP/CHEST/RIGHT ARM/RIGHT HAND:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.6, 1),
+"transitions": PackedFloat32Array(0.5, 0.37, 0.6, 2.3784146),
+"update": 0,
+"values": [Vector2(-30, 24), Vector2(20, 40), Vector2(-30, 60), Vector2(-30, 24)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HIP/CHEST/RIGHT ARM/RIGHT HAND:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.6, 1),
+"transitions": PackedFloat32Array(0.5, 0.4, 0.757, 1),
+"update": 0,
+"values": [0.0, 0.17453292519943295, 1.1344640137963142, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_6h43u"]
+resource_name = "DEATH"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HIP:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(4.594795, 1),
+"update": 0,
+"values": [-1.5707964, -3.141592653589793]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1.5157167, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ojerm"]
+resource_name = "IDLE"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HIP/CHEST:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(2.0000005, 1.0717739),
+"update": 0,
+"values": [Vector2(15, 1.0000007), Vector2(20, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HIP/CHEST:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1.9318733, 2.0000002),
+"update": 0,
+"values": [0.0, 0.05235987755982989]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HIP/CHEST/HEAD:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1.2745607, 1.4640859),
+"update": 0,
+"values": [Vector2(48, 1.9999999), Vector2(50, 2)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HIP/CHEST/HEAD:rotation")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1.4142138, 1.4142138),
+"update": 0,
+"values": [0.0, -0.17453292519943295]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HIP/CHEST/LEFT ARM:position")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.01),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(29.000002, -27), Vector2(20, -35)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HIP/CHEST/LEFT ARM:rotation")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.01),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.11519173063162616]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("HIP/CHEST/RIGHT ARM:position")
+tracks/6/interp = 2
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1.01),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(30, 30), Vector2(20, 40)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("HIP/CHEST/RIGHT ARM:rotation")
+tracks/7/interp = 2
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1.01),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.17453292519943295]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("HIP/LEFT LEG:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 25)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("HIP/RIGHT LEG:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -25)]
+}
+
+[sub_resource type="Animation" id="Animation_txfpl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HIP/CHEST/RIGHT ARM/RIGHT HAND:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-30, 24)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HIP/CHEST/RIGHT ARM/RIGHT HAND:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HIP/CHEST/LEFT ARM/LEFT HAND:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HIP/CHEST/LEFT ARM/LEFT HAND:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-25, -27.5)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../BASE SKELETON/LEFT HAND:z_index")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../BASE SKELETON/RIGHT HAND:z_index")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("HIP/CHEST:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(15, 1.0000007)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("HIP/CHEST:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("HIP/CHEST/HEAD:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(48, 1.9999999)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("HIP/CHEST/HEAD:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("HIP/LEFT LEG:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 25)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("HIP/LEFT LEG:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.5707964]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("HIP/RIGHT LEG:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -25)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("HIP/RIGHT LEG:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.5707964]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../BASE SKELETON/RIGHT FOOT:z_index")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../BASE SKELETON/LEFT FOOT:z_index")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../BASE SKELETON/RIGHT HAND:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("HIP/CHEST/LEFT ARM:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(29.000002, -27)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("HIP/CHEST/LEFT ARM:rotation")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("HIP/CHEST/RIGHT ARM:position")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(30, 30)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("HIP/CHEST/RIGHT ARM:rotation")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("HIP/RIGHT LEG/RIGHT FOOT:position")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -15)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("HIP/RIGHT LEG/RIGHT FOOT:rotation")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("HIP/LEFT LEG/LEFT FOOT:position")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 15)]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("HIP/LEFT LEG/LEFT FOOT:rotation")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("HIP:rotation")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.5707964]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("..:modulate")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_eevsv"]
+resource_name = "WALK"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HIP/CHEST/RIGHT ARM/RIGHT HAND:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1.4640858, 1.3660402, 1),
+"update": 0,
+"values": [Vector2(-30, 24), Vector2(-28, -75), Vector2(-30, 24)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HIP/CHEST/RIGHT ARM/RIGHT HAND:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(3.8637443, 2.219139, 1),
+"update": 0,
+"values": [0.0, -0.5235987755982988, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HIP/CHEST/LEFT ARM/LEFT HAND:rotation")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1.2745608, 1.4640858, 1),
+"update": 0,
+"values": [0.0, 0.7853981633974483, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HIP/CHEST/LEFT ARM/LEFT HAND:position")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1.624505, 1.624505, 1),
+"update": 0,
+"values": [Vector2(-25, -27.5), Vector2(-26.000004, 60), Vector2(-25, -27.5)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../BASE SKELETON/LEFT HAND:z_index")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../BASE SKELETON/RIGHT HAND:z_index")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [-1, -1]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("HIP/CHEST:position")
+tracks/6/interp = 2
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(0.8408966, 1.4142137, 1),
+"update": 0,
+"values": [Vector2(15, 1.0000007), Vector2(30, 2), Vector2(15, 1.0000007)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("HIP/CHEST:rotation")
+tracks/7/interp = 2
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(2.219139, 1.2745608, 1),
+"update": 0,
+"values": [0.0, 0.08726646, 0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("HIP/CHEST/HEAD:position")
+tracks/8/interp = 2
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(3.7321315, 3.1383357, 1),
+"update": 0,
+"values": [Vector2(48, 1.9999999), Vector2(50, 2), Vector2(48, 1.9999999)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("HIP/CHEST/HEAD:rotation")
+tracks/9/interp = 2
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1.9318726, 0.8122523, 1),
+"update": 0,
+"values": [0.0, -0.17453292519943295, 0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("HIP/LEFT LEG:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 1, 1.5, 2),
+"transitions": PackedFloat32Array(0.59460354, 1.4142137, 1.4640859, 1),
+"update": 0,
+"values": [Vector2(0, 25), Vector2(-0.99999964, -41), Vector2(29, -10.999999), Vector2(0, 25)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("HIP/LEFT LEG:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.5707964, 1.5707964]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("HIP/RIGHT LEG:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 2),
+"transitions": PackedFloat32Array(1.3660402, 1.3195077, 0.59460354, 1),
+"update": 0,
+"values": [Vector2(0, -25), Vector2(20.999998, 4), Vector2(1, 50), Vector2(0, -25)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("HIP/RIGHT LEG:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(4.756827, 1),
+"update": 0,
+"values": [-1.5707964, -1.5707964]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../BASE SKELETON/RIGHT FOOT:z_index")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 1, 1.25, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [-1, -1, 1, -1]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../BASE SKELETON/LEFT FOOT:z_index")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 1, 1.25, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [1, 1, -1, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_txfpl"]
+_data = {
+&"ATTACK-STIM": SubResource("Animation_nhwg7"),
+&"DEATH": SubResource("Animation_6h43u"),
+&"IDLE": SubResource("Animation_ojerm"),
+&"RESET": SubResource("Animation_txfpl"),
+&"WALK": SubResource("Animation_eevsv")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nhwg7"]
+animation = &"ATTACK-STIM"
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_t0o36"]
+
+[sub_resource type="AnimationNodeTimeSeek" id="AnimationNodeTimeSeek_nhwg7"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ojerm"]
+animation = &"IDLE"
+
+[sub_resource type="AnimationNodeTimeSeek" id="AnimationNodeTimeSeek_2a5m4"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_nhwg7"]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_eevsv"]
+nodes/output/position = Vector2(700, 140)
+nodes/ATTACK/node = SubResource("AnimationNodeAnimation_nhwg7")
+nodes/ATTACK/position = Vector2(-340, 120)
+nodes/IDLE/node = SubResource("AnimationNodeAnimation_ojerm")
+nodes/IDLE/position = Vector2(-120, 340)
+nodes/Add2/node = SubResource("AnimationNodeAdd2_t0o36")
+nodes/Add2/position = Vector2(300, 120)
+"nodes/IDLE PROGRESS/node" = SubResource("AnimationNodeTimeSeek_nhwg7")
+"nodes/IDLE PROGRESS/position" = Vector2(120, 280)
+nodes/ONESHOT/node = SubResource("AnimationNodeTimeSeek_2a5m4")
+nodes/ONESHOT/position = Vector2(100, 60)
+nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_nhwg7")
+nodes/TimeScale/position = Vector2(-100, 120)
+node_connections = [&"output", 0, &"Add2", &"Add2", 0, &"ONESHOT", &"Add2", 1, &"IDLE PROGRESS", &"IDLE PROGRESS", 0, &"IDLE", &"ONESHOT", 0, &"TimeScale", &"TimeScale", 0, &"ATTACK"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ts8vc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("56_ky2ai")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_wpjku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_a5vu4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3ewym"]
+radius = 490.10202
+
+[node name="MAIN" type="Node2D"]
+
+[node name="DARKEN" type="CanvasModulate" parent="."]
+process_mode = 3
+color = Color(0.39215687, 0.39215687, 0.39215687, 1)
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="GLOBALIZATION" type="ColorRect" parent="HUD"]
+process_mode = 3
+visible = false
+z_index = 100
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="IN AND OUT" type="AnimationPlayer" parent="HUD/GLOBALIZATION"]
+libraries = {
+&"": SubResource("AnimationLibrary_30nge")
+}
+
+[node name="HEALTH" type="AnimatedSprite2D" parent="HUD"]
+visible = false
+z_index = 5
+position = Vector2(110, 966)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_k0h54")
+animation = &"PULSE"
+frame = 5
+frame_progress = 0.6754763
+
+[node name="KADOOSH" type="CPUParticles2D" parent="HUD/HEALTH"]
+z_index = -1
+emitting = false
+amount = 20
+texture = ExtResource("11_6l3ec")
+lifetime = 1.3
+one_shot = true
+explosiveness = 1.0
+spread = 180.0
+initial_velocity_min = 1000.0
+initial_velocity_max = 1000.0
+angular_velocity_min = -720.0
+angular_velocity_max = 720.0
+scale_amount_min = 0.25
+scale_amount_max = 0.35
+
+[node name="NUMBER" type="AnimatedSprite2D" parent="HUD/HEALTH"]
+z_index = 10
+position = Vector2(-10, 26)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_3eytw")
+animation = &"NUMBERCYCLE"
+
+[node name="GUI" type="Control" parent="HUD" node_paths=PackedStringArray("TABBER", "VOLSLIDER", "SVOLSLIDER", "MVOLSLIDER", "YESSOUND", "NOSOUND", "MYESSOUND", "MNOSOUND", "SYESSOUND", "SNOSOUND", "CHEKBOX", "MCHEKBOX", "SFXCHEKBOX", "CLICKDOWN", "CLICKUP")]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("24_jsr6u")
+TABBER = NodePath("TABBER")
+VOLSLIDER = NodePath("TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBCONT/VOL SLIDER")
+SVOLSLIDER = NodePath("TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBMUSIC/MVOL SLIDER")
+MVOLSLIDER = NodePath("TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBSFX/SVOL SLIDER")
+YESSOUND = NodePath("TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBCONT/YESSOUND")
+NOSOUND = NodePath("TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBCONT/NO SOUND")
+MYESSOUND = NodePath("TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBMUSIC/YESSOUND")
+MNOSOUND = NodePath("TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBMUSIC/NO SOUND")
+SYESSOUND = NodePath("TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBSFX/YESSOUND")
+SNOSOUND = NodePath("TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBSFX/NO SOUND")
+CHEKBOX = NodePath("TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBCONT/CHEKBOX")
+MCHEKBOX = NodePath("TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBMUSIC/MCHEKBOX")
+SFXCHEKBOX = NodePath("TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBSFX/SCHEKBOX")
+CLICKDOWN = NodePath("CLICKDOWN")
+CLICKUP = NodePath("CLICKUP")
+metadata/_edit_lock_ = true
+
+[node name="DEATH" type="Panel" parent="HUD/GUI"]
+process_mode = 2
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = SubResource("Theme_30nge")
+
+[node name="INTERATION" type="Timer" parent="HUD/GUI/DEATH"]
+autostart = true
+
+[node name="RETRY" type="Button" parent="HUD/GUI/DEATH"]
+layout_mode = 0
+offset_left = 783.0
+offset_top = 866.0
+offset_right = 1191.0
+offset_bottom = 1031.0
+theme = SubResource("Theme_yg6hn")
+text = "RETRY?"
+
+[node name="TABBER" type="TabContainer" parent="HUD/GUI"]
+visible = false
+custom_minimum_size = Vector2(1800, 1000)
+layout_mode = 0
+offset_left = 60.0
+offset_top = 30.0
+offset_right = 1860.0
+offset_bottom = 1030.0
+theme = SubResource("Theme_e0knu")
+theme_override_font_sizes/font_size = 30
+current_tab = 0
+deselect_enabled = true
+
+[node name="GENERAL" type="PanelContainer" parent="HUD/GUI/TABBER"]
+layout_mode = 2
+theme = SubResource("Theme_e1d10")
+metadata/_tab_index = 0
+
+[node name="IN THE NOISE" type="Panel" parent="HUD/GUI/TABBER/GENERAL"]
+layout_mode = 2
+theme = SubResource("Theme_pid3g")
+
+[node name="CENTRA" type="CenterContainer" parent="HUD/GUI/TABBER/GENERAL/IN THE NOISE"]
+layout_mode = 0
+offset_left = 1430.0
+offset_top = 604.0
+offset_right = 1702.0
+offset_bottom = 852.0
+
+[node name="EXITBTN" type="TextureButton" parent="HUD/GUI/TABBER/GENERAL/IN THE NOISE/CENTRA"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+texture_normal = ExtResource("25_kgo5c")
+texture_pressed = ExtResource("26_30nge")
+texture_hover = ExtResource("26_30nge")
+texture_disabled = ExtResource("25_kgo5c")
+texture_focused = ExtResource("26_30nge")
+
+[node name="SKIPCHECK" type="CheckBox" parent="HUD/GUI/TABBER/GENERAL/IN THE NOISE"]
+layout_mode = 0
+offset_left = 748.0
+offset_top = 19.0
+offset_right = 956.0
+offset_bottom = 227.0
+theme = ExtResource("25_odkja")
+
+[node name="SKIPINTO" type="Label" parent="HUD/GUI/TABBER/GENERAL/IN THE NOISE"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 35.0
+offset_right = 696.0
+offset_bottom = 210.0
+theme = SubResource("Theme_ts8vc")
+text = "SKIP MENU?"
+
+[node name="SOUND SETTINGS" type="PanelContainer" parent="HUD/GUI/TABBER"]
+visible = false
+layout_mode = 2
+theme = SubResource("Theme_mvtnu")
+metadata/_tab_index = 1
+
+[node name="NOISEBACK" type="Panel" parent="HUD/GUI/TABBER/SOUND SETTINGS"]
+layout_mode = 2
+theme = SubResource("Theme_vlh0m")
+
+[node name="SCROLLING" type="ScrollContainer" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK"]
+z_index = 100
+custom_minimum_size = Vector2(1600, 800)
+layout_mode = 0
+offset_left = 23.0
+offset_top = 22.0
+offset_right = 1683.0
+offset_bottom = 852.0
+
+[node name="VBCONT" type="VBoxContainer" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING"]
+custom_minimum_size = Vector2(1650, 800)
+layout_mode = 2
+theme_override_constants/separation = 90
+
+[node name="HBCONT" type="HBoxContainer" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="CHEKBOX" type="CheckBox" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBCONT"]
+custom_minimum_size = Vector2(100, 200)
+layout_mode = 2
+size_flags_horizontal = 2
+theme = ExtResource("25_odkja")
+button_pressed = true
+
+[node name="YESSOUND" type="TextureRect" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBCONT"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+texture = ExtResource("26_lxyh6")
+
+[node name="NO SOUND" type="TextureRect" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBCONT"]
+visible = false
+custom_minimum_size = Vector2(250, 200)
+layout_mode = 2
+size_flags_horizontal = 2
+texture = ExtResource("27_jysiq")
+
+[node name="VOL SLIDER" type="HSlider" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBCONT"]
+custom_minimum_size = Vector2(1000, 200)
+layout_mode = 2
+theme = SubResource("Theme_d21e3")
+min_value = -50.0
+max_value = 50.0
+tick_count = 25
+ticks_position = 1
+
+[node name="HBSFX" type="HBoxContainer" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="SCHEKBOX" type="CheckBox" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBSFX"]
+custom_minimum_size = Vector2(100, 200)
+layout_mode = 2
+size_flags_horizontal = 2
+theme = ExtResource("25_odkja")
+button_pressed = true
+
+[node name="YESSOUND" type="TextureRect" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBSFX"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+texture = ExtResource("32_kgo5c")
+
+[node name="NO SOUND" type="TextureRect" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBSFX"]
+visible = false
+custom_minimum_size = Vector2(250, 200)
+layout_mode = 2
+size_flags_horizontal = 2
+texture = ExtResource("33_30nge")
+
+[node name="SVOL SLIDER" type="HSlider" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBSFX"]
+custom_minimum_size = Vector2(1000, 200)
+layout_mode = 2
+theme = SubResource("Theme_d21e3")
+min_value = -50.0
+max_value = 50.0
+tick_count = 25
+ticks_position = 1
+
+[node name="HBMUSIC" type="HBoxContainer" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="MCHEKBOX" type="CheckBox" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBMUSIC"]
+custom_minimum_size = Vector2(100, 200)
+layout_mode = 2
+size_flags_horizontal = 2
+theme = ExtResource("25_odkja")
+button_pressed = true
+
+[node name="YESSOUND" type="TextureRect" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBMUSIC"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+texture = ExtResource("30_8cl8t")
+
+[node name="NO SOUND" type="TextureRect" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBMUSIC"]
+visible = false
+custom_minimum_size = Vector2(250, 200)
+layout_mode = 2
+size_flags_horizontal = 2
+texture = ExtResource("31_mvtnu")
+
+[node name="MVOL SLIDER" type="HSlider" parent="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBMUSIC"]
+custom_minimum_size = Vector2(1000, 200)
+layout_mode = 2
+theme = SubResource("Theme_d21e3")
+min_value = -50.0
+max_value = 50.0
+tick_count = 25
+ticks_position = 1
+
+[node name="CLICKUP" type="AudioStreamPlayer2D" parent="HUD/GUI"]
+position = Vector2(-799, -416)
+stream = ExtResource("32_7dn5o")
+volume_db = 12.0
+pitch_scale = 1.1
+max_polyphony = 100
+bus = &"SFX"
+
+[node name="CLICKDOWN" type="AudioStreamPlayer2D" parent="HUD/GUI"]
+position = Vector2(-799, -416)
+stream = ExtResource("33_cmijj")
+volume_db = 12.0
+max_polyphony = 100
+bus = &"SFX"
+
+[node name="ANGEL" type="AudioStreamPlayer2D" parent="HUD/GUI"]
+stream = ExtResource("35_8cl8t")
+volume_db = 7.0
+bus = &"SFX"
+
+[node name="BEGIN" type="AudioStreamPlayer2D" parent="HUD/GUI"]
+stream = ExtResource("38_e1d10")
+volume_db = 5.0
+bus = &"SFX"
+
+[node name="TITLE" type="Panel" parent="HUD/GUI"]
+process_mode = 3
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = SubResource("Theme_rmyap")
+
+[node name="COVERER" type="PanelContainer" parent="HUD/GUI/TITLE"]
+modulate = Color(1, 1, 1, 0.78431374)
+layout_mode = 0
+offset_left = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme = SubResource("Theme_a5vu4")
+
+[node name="MOVEYMOVEY" type="Timer" parent="HUD/GUI/TITLE/COVERER"]
+wait_time = 0.1
+autostart = true
+
+[node name="SHAKEWAVE" type="Timer" parent="HUD/GUI/TITLE"]
+wait_time = 5.0
+autostart = true
+
+[node name="XALIAZONE" type="TextureRect" parent="HUD/GUI/TITLE"]
+texture_filter = 1
+custom_minimum_size = Vector2(1000, 500)
+layout_direction = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.99200004
+anchor_bottom = 0.98700005
+offset_left = 85.0
+offset_top = 49.0
+offset_right = -76.30713
+offset_bottom = -493.94006
+pivot_offset = Vector2(870, 250)
+texture = ExtResource("40_e1d10")
+
+[node name="EXITBTN" type="TextureButton" parent="HUD/GUI/TITLE"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 0
+offset_left = 1805.0
+offset_top = 966.0
+offset_right = 2005.0
+offset_bottom = 1166.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("25_kgo5c")
+texture_pressed = ExtResource("26_30nge")
+texture_hover = ExtResource("26_30nge")
+texture_disabled = ExtResource("25_kgo5c")
+texture_focused = ExtResource("26_30nge")
+
+[node name="PLAY" type="Button" parent="HUD/GUI/TITLE"]
+layout_mode = 0
+offset_left = 636.0
+offset_top = 641.0
+offset_right = 1273.0
+offset_bottom = 891.0
+theme = SubResource("Theme_yol2c")
+theme_override_font_sizes/font_size = 150
+text = "PLAY"
+icon = ExtResource("39_e0knu")
+
+[node name="WAVEDISPLAY" type="Control" parent="HUD/GUI"]
+anchors_preset = 0
+offset_top = -200.0
+offset_right = 40.0
+offset_bottom = -160.0
+
+[node name="SKULL" type="TextureRect" parent="HUD/GUI/WAVEDISPLAY"]
+z_index = 1
+layout_mode = 0
+offset_left = 539.0
+offset_top = 30.0
+offset_right = 739.0
+offset_bottom = 230.0
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("42_ts8vc")
+
+[node name="BAR" type="TextureRect" parent="HUD/GUI/WAVEDISPLAY"]
+z_index = -1
+layout_mode = 0
+offset_left = 566.0
+offset_top = 60.0
+offset_right = 1366.0
+offset_bottom = 160.0
+texture = ExtResource("43_3ewym")
+
+[node name="WAVEPROGRESS" type="AnimatedSprite2D" parent="HUD/GUI/WAVEDISPLAY"]
+position = Vector2(994, 112)
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_muqnu")
+frame_progress = 0.8296765
+
+[node name="BG TILEMAP" type="TileMapLayer" parent="."]
+modulate = Color(0.11764706, 0.49019608, 0.6862745, 0.59607846)
+z_index = -100
+tile_map_data = PackedByteArray("AADx//n/AgABAAEAAADx//r/AgABAAIAAADx//v/AgAAAAIAAADx//z/AgACAAAAAADx//3/AgAAAAIAAADx//7/AgABAAAAAADx////AgABAAAAAADx/wAAAgABAAIAAADy//n/AgABAAAAAADy//r/AgABAAEAAADy//v/AgACAAAAAADy//z/AgACAAAAAADy//3/AgABAAEAAADy//7/AgABAAAAAADy////AgAAAAIAAADy/wAAAgAAAAAAAADz//n/AgAAAAEAAADz//r/AgABAAAAAADz//v/AgACAAEAAADz//z/AgACAAIAAADz//3/AgACAAIAAADz//7/AgACAAEAAADz////AgAAAAAAAADz/wAAAgACAAIAAAD0//n/AgAAAAIAAAD0//r/AgACAAEAAAD0//v/AgAAAAIAAAD0//z/AgABAAAAAAD0//3/AgABAAIAAAD0//7/AgABAAIAAAD0////AgABAAEAAAD0/wAAAgACAAAAAAD1//n/AgAAAAAAAAD1//r/AgABAAEAAAD1//v/AgACAAAAAAD1//z/AgACAAAAAAD1//3/AgABAAEAAAD1//7/AgACAAAAAAD1////AgACAAEAAAD1/wAAAgAAAAIAAAD2//n/AgACAAAAAAD2//r/AgAAAAEAAAD2//v/AgACAAAAAAD2//z/AgACAAAAAAD2//3/AgACAAAAAAD2//7/AgACAAEAAAD2////AgAAAAAAAAD2/wAAAgABAAIAAAD3//n/AgAAAAEAAAD3//r/AgACAAEAAAD3//v/AgACAAIAAAD3//z/AgACAAEAAAD3//3/AgACAAEAAAD3//7/AgACAAEAAAD3////AgAAAAAAAAD3/wAAAgACAAIAAAD4//n/AgABAAAAAAD4//r/AgAAAAAAAAD4//v/AgABAAAAAAD4//z/AgABAAEAAAD4//3/AgACAAIAAAD4//7/AgACAAIAAAD4////AgACAAAAAAD4/wAAAgACAAEAAAD5//n/AgAAAAEAAAD5//r/AgACAAIAAAD5//v/AgABAAIAAAD5//z/AgABAAAAAAD5//3/AgACAAAAAAD5//7/AgABAAAAAAD5////AgAAAAIAAAD5/wAAAgACAAIAAAD6//n/AgABAAEAAAD6//r/AgAAAAAAAAD6//v/AgABAAIAAAD6//z/AgACAAEAAAD6//3/AgABAAIAAAD6//7/AgACAAIAAAD6////AgABAAAAAAD6/wAAAgABAAIAAAD7//n/AgABAAAAAAD7//r/AgAAAAIAAAD7//v/AgABAAAAAAD7//z/AgAAAAEAAAD7//3/AgACAAEAAAD7//7/AgACAAIAAAD7////AgABAAEAAAD7/wAAAgABAAIAAAD8//n/AgABAAEAAAD8//r/AgAAAAIAAAD8//v/AgACAAAAAAD8//z/AgABAAEAAAD8//3/AgACAAAAAAD8//7/AgAAAAIAAAD8////AgABAAIAAAD8/wAAAgACAAAAAAD9//n/AgABAAEAAAD9//r/AgACAAAAAAD9//v/AgACAAAAAAD9//z/AgAAAAEAAAD9//3/AgACAAAAAAD9//7/AgACAAIAAAD9////AgAAAAIAAAD9/wAAAgABAAAAAAD+//n/AgABAAAAAAD+//r/AgACAAIAAAD+//v/AgACAAIAAAD+//z/AgAAAAIAAAD+//3/AgACAAAAAAD+//7/AgACAAEAAAD+////AgABAAIAAAD+/wAAAgAAAAIAAAD///n/AgABAAAAAAD///r/AgACAAIAAAD///v/AgACAAEAAAD///z/AgACAAEAAAD///3/AgACAAIAAAD///7/AgAAAAEAAAD/////AgACAAAAAAD//wAAAgACAAEAAAAAAPn/AgABAAAAAAAAAPr/AgABAAIAAAAAAPv/AgABAAAAAAAAAPz/AgACAAAAAAAAAP3/AgAAAAEAAAAAAP7/AgAAAAAAAAAAAP//AgABAAIAAAAAAAAAAgABAAEAAAABAPn/AgABAAAAAAABAPr/AgACAAAAAAABAPv/AgACAAEAAAABAPz/AgABAAAAAAABAP3/AgABAAAAAAABAP7/AgABAAEAAAABAP//AgABAAAAAAABAAAAAgAAAAEAAAACAPn/AgACAAEAAAACAPr/AgABAAIAAAACAPv/AgABAAAAAAACAPz/AgABAAIAAAACAP3/AgAAAAEAAAACAP7/AgAAAAAAAAACAP//AgABAAAAAAACAAAAAgABAAEAAAADAPn/AgACAAIAAAADAPr/AgACAAEAAAADAPv/AgACAAIAAAADAPz/AgACAAAAAAADAP3/AgABAAEAAAADAP7/AgAAAAEAAAADAP//AgABAAEAAAADAAAAAgABAAAAAAAEAPn/AgAAAAEAAAAEAPr/AgACAAEAAAAEAPv/AgACAAIAAAAEAPz/AgABAAIAAAAEAP3/AgACAAEAAAAEAP7/AgACAAEAAAAEAP//AgAAAAAAAAAEAAAAAgACAAAAAAAFAPn/AgACAAIAAAAFAPr/AgACAAEAAAAFAPv/AgACAAIAAAAFAPz/AgACAAEAAAAFAP3/AgABAAAAAAAFAP7/AgAAAAAAAAAFAP//AgABAAIAAAAFAAAAAgABAAAAAAAGAPn/AgABAAAAAAAGAPr/AgAAAAAAAAAGAPv/AgABAAIAAAAGAPz/AgACAAIAAAAGAP3/AgABAAEAAAAGAP7/AgABAAAAAAAGAP//AgACAAIAAAAGAAAAAgABAAAAAAAHAPn/AgAAAAEAAAAHAPr/AgABAAEAAAAHAPv/AgAAAAIAAAAHAPz/AgAAAAAAAAAHAP3/AgABAAEAAAAHAP7/AgABAAEAAAAHAP//AgACAAEAAAAHAAAAAgAAAAIAAAAIAPn/AgAAAAEAAAAIAPr/AgAAAAEAAAAIAPv/AgACAAIAAAAIAPz/AgABAAIAAAAIAP3/AgAAAAEAAAAIAP7/AgABAAIAAAAIAP//AgABAAIAAAAIAAAAAgAAAAAAAAAJAPn/AgAAAAAAAAAJAPr/AgABAAEAAAAJAPv/AgAAAAAAAAAJAPz/AgAAAAAAAAAJAP3/AgABAAEAAAAJAP7/AgABAAAAAAAJAP//AgABAAAAAAAJAAAAAgAAAAIAAAAKAPn/AgABAAIAAAAKAPr/AgABAAIAAAAKAPv/AgAAAAIAAAAKAPz/AgABAAEAAAAKAP3/AgACAAAAAAAKAP7/AgACAAIAAAAKAP//AgACAAIAAAAKAAAAAgABAAIAAAALAPn/AgABAAIAAAALAPr/AgAAAAIAAAALAPv/AgABAAAAAAALAPz/AgAAAAIAAAALAP3/AgAAAAAAAAALAP7/AgAAAAEAAAALAP//AgAAAAAAAAALAAAAAgAAAAAAAAAMAPn/AgAAAAAAAAAMAPr/AgACAAEAAAAMAPv/AgAAAAEAAAAMAPz/AgAAAAIAAAAMAP3/AgACAAAAAAAMAP7/AgACAAEAAAAMAP//AgABAAIAAAAMAAAAAgAAAAEAAAANAPn/AgACAAAAAAANAPr/AgABAAEAAAANAPv/AgACAAIAAAANAPz/AgABAAAAAAANAP3/AgACAAEAAAANAP7/AgACAAIAAAANAP//AgAAAAAAAAANAAAAAgAAAAAAAAAOAPn/AgACAAEAAAAOAPr/AgACAAIAAAAOAPv/AgAAAAEAAAAOAPz/AgAAAAIAAAAOAP3/AgACAAEAAAAOAP7/AgABAAIAAAAOAP//AgAAAAIAAAAOAAAAAgAAAAAAAAA=")
+tile_set = SubResource("TileSet_hhnbx")
+metadata/_edit_lock_ = true
+
+[node name="GROUNDWORK TILEMAP" type="TileMapLayer" parent="."]
+z_index = 5
+tile_map_data = PackedByteArray("AAD+/wEAAQAAAAEAAAABAAEAAQAAAAEAAAD7/wEAAQAAAAEAAAACAAEAAQABAAEAAAD9/wEAAQABAAEAAAD8/wEAAQACAAEAAAAEAAEAAQABAAEAAAAGAAEAAQABAAEAAAD4/wEAAQABAAEAAAADAAEAAQAAAAEAAAAHAAEAAQABAAEAAAD5/wEAAQACAAEAAAAFAAEAAQACAAEAAAD6/wEAAQABAAEAAAAEAAAAAQACAAAAAAACAAAAAQAAAAAAAAADAAAAAQAAAAAAAAD//wEAAQAAAAEAAAAAAAEAAQABAAEAAAD5/wAAAQAAAAAAAAD8/wAAAQABAAAAAAAGAAAAAQAAAAAAAAAFAAAAAQABAAAAAAD6/wAAAQACAAAAAAD4/wAAAQABAAAAAAD7/wAAAQAAAAAAAAD9/wAAAQACAAAAAAD+/wAAAQAAAAAAAAAHAAAAAQACAAAAAAD9/wIAAQABAAIAAAD+/wMAAAABAAIAAAD//wIAAQABAAIAAAABAAMAAAACAAIAAAADAAMAAAABAAIAAAAFAAMAAAABAAIAAAAGAAQAAAACAAAAAAACAAQAAAAAAAAAAAADAAIAAQABAAIAAAD4/wIAAQABAAIAAAD4/wMAAAAAAAIAAAD6/wQAAAABAAAAAAD5/wQAAAABAAAAAAD6/wIAAQABAAIAAAD7/wMAAAACAAIAAAD8/wQAAAABAAAAAAD9/wMAAAAAAAIAAAD//wQAAAACAAAAAAD+/wQAAAAAAAAAAAAGAAIAAQABAAIAAAAAAAIAAQACAAIAAAAAAAMAAAAAAAIAAAD//wMAAAACAAIAAAAAAAQAAAAAAAAAAAAFAAQAAAAAAAAAAAAEAAMAAAACAAIAAAAEAAIAAQACAAIAAAAHAAMAAAAAAAIAAAAHAAQAAAAAAAAAAAD5/wMAAAAAAAIAAAD5/wIAAQACAAIAAAD4/wQAAAABAAAAAAD8/wIAAQACAAIAAAD6/wMAAAAAAAIAAAD7/wIAAQAAAAIAAAD8/wMAAAAAAAIAAAD7/wQAAAACAAAAAAD9/wQAAAAAAAAAAAD+/wIAAQAAAAIAAAABAAIAAQAAAAIAAAACAAIAAQAAAAIAAAACAAMAAAAAAAIAAAABAAQAAAACAAAAAAADAAQAAAACAAAAAAAEAAQAAAAAAAAAAAAFAAIAAQAAAAIAAAAGAAMAAAABAAIAAAAHAAIAAQACAAIAAAAIAAEAAQABAAEAAAAJAAEAAQACAAEAAAAKAAEAAQACAAEAAAALAAEAAQABAAEAAAAMAAEAAQAAAAEAAAANAAEAAQAAAAEAAADx/wEAAQABAAEAAADy/wEAAQAAAAEAAADz/wEAAQABAAEAAAD0/wEAAQACAAEAAAD1/wEAAQAAAAEAAAD2/wEAAQACAAEAAAD3/wEAAQAAAAEAAAAOAAEAAQAAAAEAAADx/wIAAQACAAIAAADx/wMAAAACAAIAAADx/wQAAAABAAAAAADy/wQAAAAAAAAAAADz/wQAAAACAAAAAAD0/wQAAAABAAAAAAD1/wQAAAABAAAAAAD2/wQAAAACAAAAAAD3/wQAAAABAAAAAAD3/wMAAAABAAIAAAD3/wIAAQAAAAIAAAD2/wIAAQAAAAIAAAD1/wIAAQAAAAIAAAD0/wIAAQAAAAIAAADz/wIAAQACAAIAAADy/wIAAQACAAIAAADy/wMAAAAAAAIAAADz/wMAAAABAAIAAAD0/wMAAAAAAAIAAAD1/wMAAAAAAAIAAAD2/wMAAAACAAIAAAAIAAMAAAAAAAIAAAAJAAMAAAABAAIAAAAKAAMAAAAAAAIAAAALAAMAAAACAAIAAAAMAAMAAAABAAIAAAAMAAQAAAACAAAAAAANAAQAAAABAAAAAAANAAMAAAAAAAIAAAAOAAMAAAACAAIAAAAOAAQAAAAAAAAAAAAOAAIAAQAAAAIAAAANAAIAAQAAAAIAAAAMAAIAAQAAAAIAAAALAAIAAQABAAIAAAAKAAIAAQACAAIAAAAJAAIAAQABAAIAAAAIAAIAAQACAAIAAAAKAAQAAAACAAAAAAAJAAQAAAABAAAAAAAIAAQAAAACAAAAAAALAAQAAAACAAAAAAAIAAAAAQABAAAAAAAJAAAAAQABAAAAAAAKAAAAAQAAAAAAAAALAAAAAQACAAAAAAAMAAAAAQACAAAAAAANAAAAAQACAAAAAAAOAAAAAQAAAAAAAADx/wAAAQABAAAAAADy/wAAAQABAAAAAADz/wAAAQAAAAAAAAD0/wAAAQABAAAAAAD1/wAAAQACAAAAAAD2/wAAAQAAAAAAAAD3/wAAAQACAAAAAADx/wUAAAACAAEAAADy/wUAAAABAAEAAADz/wUAAAABAAEAAAD0/wUAAAABAAEAAAD1/wUAAAABAAEAAAD2/wUAAAAAAAEAAAD3/wUAAAABAAEAAAD4/wUAAAABAAEAAAD5/wUAAAABAAEAAAD6/wUAAAABAAEAAAD7/wUAAAAAAAEAAAD8/wUAAAAAAAEAAAD9/wUAAAABAAEAAAD+/wUAAAACAAEAAAD//wUAAAABAAEAAAAAAAUAAAAAAAEAAAABAAUAAAABAAEAAAACAAUAAAABAAEAAAADAAUAAAABAAEAAAAEAAUAAAAAAAEAAAAFAAUAAAACAAEAAAAGAAUAAAACAAEAAAAHAAUAAAAAAAEAAAAIAAUAAAABAAEAAAAJAAUAAAABAAEAAAAKAAUAAAAAAAEAAAALAAUAAAABAAEAAAAMAAUAAAABAAEAAAANAAUAAAACAAEAAAAOAAUAAAABAAEAAAD//wAAAQACAAAAAAAAAAAAAQACAAAAAAABAAAAAQABAAAAAAAPAPf/AAABAAEAAAAPAPj/AAAAAAEAAAAPAPn/AAAAAAEAAAAPAPr/AAAAAAEAAAAPAPv/AAABAAEAAAAPAPz/AAACAAEAAAAPAP3/AAABAAEAAAAPAP7/AAABAAEAAAAPAP//AAABAAEAAAAPAAAAAAACAAEAAAAPAAEAAAABAAEAAAAPAAIAAAABAAEAAAAPAAMAAAACAAEAAAAPAAQAAAAAAAEAAAAPAAUAAAABAAEAAAAQAPf/AAABAAEAAAAQAPj/AAAAAAEAAAAQAPn/AAACAAEAAAAQAPr/AAABAAEAAAAQAPv/AAACAAEAAAAQAPz/AAAAAAEAAAAQAP3/AAAAAAEAAAAQAP7/AAABAAEAAAAQAP//AAACAAEAAAAQAAAAAAACAAEAAAAQAAEAAAABAAEAAAAQAAIAAAAAAAEAAAAQAAMAAAAAAAEAAAAQAAQAAAAAAAEAAAAQAAUAAAAAAAEAAADv//f/AAABAAEAAADv//j/AAAAAAEAAADw//f/AAABAAEAAADw//j/AAACAAEAAADx//f/AAABAAEAAADx//j/AAABAAEAAADy//f/AAABAAEAAADy//j/AAACAAEAAADz//f/AAAAAAEAAADz//j/AAABAAEAAAD0//f/AAABAAEAAAD0//j/AAABAAEAAAD1//f/AAACAAEAAAD1//j/AAAAAAEAAAD2//f/AAABAAEAAAD2//j/AAACAAEAAAD3//f/AAACAAEAAAD3//j/AAAAAAEAAAD4//f/AAACAAEAAAD4//j/AAAAAAEAAAD5//f/AAACAAEAAAD5//j/AAABAAEAAAD6//f/AAABAAEAAAD6//j/AAABAAEAAAD7//f/AAAAAAEAAAD7//j/AAACAAEAAAD8//f/AAAAAAEAAAD8//j/AAAAAAEAAAD9//f/AAAAAAEAAAD9//j/AAACAAEAAAD+//f/AAAAAAEAAAD+//j/AAABAAEAAAD///f/AAAAAAEAAAD///j/AAAAAAEAAAAAAPf/AAABAAEAAAAAAPj/AAABAAEAAAABAPf/AAABAAEAAAABAPj/AAAAAAEAAAACAPf/AAABAAEAAAACAPj/AAACAAEAAAADAPf/AAABAAEAAAADAPj/AAABAAEAAAAEAPf/AAAAAAEAAAAEAPj/AAAAAAEAAAAFAPf/AAAAAAEAAAAFAPj/AAACAAEAAAAGAPf/AAABAAEAAAAGAPj/AAABAAEAAAAHAPf/AAACAAEAAAAHAPj/AAABAAEAAAAIAPf/AAAAAAEAAAAIAPj/AAABAAEAAAAJAPf/AAABAAEAAAAJAPj/AAABAAEAAAAKAPf/AAABAAEAAAAKAPj/AAAAAAEAAAALAPf/AAABAAEAAAALAPj/AAAAAAEAAAAMAPf/AAACAAEAAAAMAPj/AAACAAEAAAANAPf/AAABAAEAAAANAPj/AAABAAEAAAAOAPf/AAABAAEAAAAOAPj/AAACAAEAAADv//n/AAAAAAEAAADv//r/AAAAAAEAAADv//v/AAABAAEAAADv//z/AAACAAEAAADv//3/AAABAAEAAADv//7/AAACAAEAAADv////AAAAAAEAAADv/wAAAAABAAEAAADv/wEAAAABAAEAAADv/wIAAAAAAAEAAADv/wMAAAAAAAEAAADv/wQAAAABAAEAAADv/wUAAAACAAEAAADw//n/AAACAAEAAADw//r/AAAAAAEAAADw//v/AAABAAEAAADw//z/AAACAAEAAADw//3/AAAAAAEAAADw//7/AAAAAAEAAADw////AAABAAEAAADw/wAAAAACAAEAAADw/wEAAAAAAAEAAADw/wIAAAAAAAEAAADw/wMAAAABAAEAAADw/wQAAAACAAEAAADw/wUAAAACAAEAAAARAPf/AAABAAEAAAARAPj/AAACAAEAAAARAPn/AAABAAEAAAARAPr/AAACAAEAAAARAPv/AAABAAEAAAARAPz/AAABAAEAAAARAP3/AAABAAEAAAARAP7/AAABAAEAAAARAP//AAAAAAEAAAARAAAAAAAAAAEAAAARAAEAAAABAAEAAAARAAIAAAAAAAEAAAARAAMAAAABAAEAAAARAAQAAAAAAAEAAAARAAUAAAABAAEAAAASAPf/AAACAAEAAAASAPj/AAABAAEAAAASAPn/AAAAAAEAAAASAPr/AAAAAAEAAAASAPv/AAAAAAEAAAASAPz/AAAAAAEAAAASAP3/AAACAAEAAAASAP7/AAAAAAEAAAASAP//AAAAAAEAAAASAAAAAAABAAEAAAASAAEAAAABAAEAAAASAAIAAAACAAEAAAASAAMAAAACAAEAAAASAAQAAAABAAEAAAASAAUAAAACAAEAAAATAPf/AAACAAEAAAATAPj/AAACAAEAAAATAPn/AAACAAEAAAATAPr/AAACAAEAAAATAPv/AAACAAEAAAATAPz/AAABAAEAAAATAP3/AAABAAEAAAATAP7/AAACAAEAAAATAP//AAAAAAEAAAATAAAAAAABAAEAAAATAAEAAAACAAEAAAATAAIAAAABAAEAAAATAAMAAAACAAEAAAATAAQAAAABAAEAAAATAAUAAAABAAEAAAAUAPf/AAACAAEAAAAUAPj/AAACAAEAAAAUAPn/AAAAAAEAAAAUAPr/AAACAAEAAAAUAPv/AAABAAEAAAAUAPz/AAAAAAEAAAAUAP3/AAAAAAEAAAAUAP7/AAACAAEAAAAUAP//AAABAAEAAAAUAAAAAAABAAEAAAAUAAEAAAACAAEAAAAUAAIAAAAAAAEAAAAUAAMAAAAAAAEAAAAUAAQAAAAAAAEAAAAUAAUAAAABAAEAAAAVAPf/AAABAAEAAAAVAPj/AAABAAEAAAAVAPn/AAACAAEAAAAVAPr/AAACAAEAAAAVAPv/AAAAAAEAAAAVAPz/AAACAAEAAAAVAP3/AAABAAEAAAAVAP7/AAACAAEAAAAVAP//AAAAAAEAAAAVAAAAAAABAAEAAAAVAAEAAAABAAEAAAAVAAIAAAABAAEAAAAVAAMAAAACAAEAAAAVAAQAAAACAAEAAAAVAAUAAAACAAEAAADq//f/AAAAAAEAAADq//j/AAAAAAEAAADq//n/AAABAAEAAADq//r/AAACAAEAAADq//v/AAACAAEAAADq//z/AAACAAEAAADq//3/AAAAAAEAAADq//7/AAAAAAEAAADq////AAAAAAEAAADq/wAAAAAAAAEAAADq/wEAAAAAAAEAAADq/wIAAAACAAEAAADq/wMAAAAAAAEAAADq/wQAAAAAAAEAAADq/wUAAAAAAAEAAADr//f/AAABAAEAAADr//j/AAAAAAEAAADr//n/AAABAAEAAADr//r/AAACAAEAAADr//v/AAACAAEAAADr//z/AAAAAAEAAADr//3/AAAAAAEAAADr//7/AAACAAEAAADr////AAACAAEAAADr/wAAAAABAAEAAADr/wEAAAABAAEAAADr/wIAAAACAAEAAADr/wMAAAABAAEAAADr/wQAAAAAAAEAAADr/wUAAAABAAEAAADs//f/AAABAAEAAADs//j/AAAAAAEAAADs//n/AAACAAEAAADs//r/AAAAAAEAAADs//v/AAABAAEAAADs//z/AAACAAEAAADs//3/AAAAAAEAAADs//7/AAABAAEAAADs////AAABAAEAAADs/wAAAAACAAEAAADs/wEAAAAAAAEAAADs/wIAAAABAAEAAADs/wMAAAABAAEAAADs/wQAAAACAAEAAADs/wUAAAAAAAEAAADt//f/AAACAAEAAADt//j/AAAAAAEAAADt//n/AAABAAEAAADt//r/AAABAAEAAADt//v/AAAAAAEAAADt//z/AAABAAEAAADt//3/AAAAAAEAAADt//7/AAABAAEAAADt////AAAAAAEAAADt/wAAAAABAAEAAADt/wEAAAACAAEAAADt/wIAAAAAAAEAAADt/wMAAAACAAEAAADt/wQAAAAAAAEAAADt/wUAAAAAAAEAAADu//f/AAABAAEAAADu//j/AAABAAEAAADu//n/AAAAAAEAAADu//r/AAAAAAEAAADu//v/AAAAAAEAAADu//z/AAAAAAEAAADu//3/AAAAAAEAAADu//7/AAAAAAEAAADu////AAAAAAEAAADu/wAAAAABAAEAAADu/wEAAAACAAEAAADu/wIAAAACAAEAAADu/wMAAAABAAEAAADu/wQAAAABAAEAAADu/wUAAAACAAEAAADq//H/AAACAAEAAADq//L/AAACAAEAAADq//P/AAACAAEAAADq//T/AAAAAAEAAADq//X/AAABAAEAAADq//b/AAABAAEAAADr//H/AAACAAEAAADr//L/AAACAAEAAADr//P/AAABAAEAAADr//T/AAABAAEAAADr//X/AAACAAEAAADr//b/AAAAAAEAAADs//H/AAABAAEAAADs//L/AAABAAEAAADs//P/AAABAAEAAADs//T/AAABAAEAAADs//X/AAACAAEAAADs//b/AAACAAEAAADt//H/AAAAAAEAAADt//L/AAABAAEAAADt//P/AAABAAEAAADt//T/AAACAAEAAADt//X/AAABAAEAAADt//b/AAAAAAEAAADu//H/AAAAAAEAAADu//L/AAACAAEAAADu//P/AAACAAEAAADu//T/AAAAAAEAAADu//X/AAACAAEAAADu//b/AAAAAAEAAADv//H/AAABAAEAAADv//L/AAAAAAEAAADv//P/AAACAAEAAADv//T/AAACAAEAAADv//X/AAAAAAEAAADv//b/AAABAAEAAADw//H/AAABAAEAAADw//L/AAACAAEAAADw//P/AAABAAEAAADw//T/AAAAAAEAAADw//X/AAACAAEAAADw//b/AAABAAEAAADx//H/AAABAAEAAADx//L/AAABAAEAAADx//P/AAABAAEAAADx//T/AAAAAAEAAADx//X/AAAAAAEAAADx//b/AAAAAAEAAADy//H/AAAAAAEAAADy//L/AAAAAAEAAADy//P/AAAAAAEAAADy//T/AAACAAEAAADy//X/AAACAAEAAADy//b/AAABAAEAAADz//H/AAAAAAEAAADz//L/AAABAAEAAADz//P/AAAAAAEAAADz//T/AAAAAAEAAADz//X/AAACAAEAAADz//b/AAABAAEAAAD0//H/AAAAAAEAAAD0//L/AAAAAAEAAAD0//P/AAAAAAEAAAD0//T/AAABAAEAAAD0//X/AAACAAEAAAD0//b/AAABAAEAAAD1//H/AAABAAEAAAD1//L/AAABAAEAAAD1//P/AAAAAAEAAAD1//T/AAACAAEAAAD1//X/AAABAAEAAAD1//b/AAAAAAEAAAD2//H/AAAAAAEAAAD2//L/AAAAAAEAAAD2//P/AAABAAEAAAD2//T/AAABAAEAAAD2//X/AAACAAEAAAD2//b/AAABAAEAAAD3//H/AAAAAAEAAAD3//L/AAAAAAEAAAD3//P/AAAAAAEAAAD3//T/AAAAAAEAAAD3//X/AAAAAAEAAAD3//b/AAABAAEAAAD4//H/AAAAAAEAAAD4//L/AAACAAEAAAD4//P/AAABAAEAAAD4//T/AAAAAAEAAAD4//X/AAACAAEAAAD4//b/AAABAAEAAAD5//H/AAACAAEAAAD5//L/AAACAAEAAAD5//P/AAAAAAEAAAD5//T/AAACAAEAAAD5//X/AAAAAAEAAAD5//b/AAACAAEAAAD6//H/AAAAAAEAAAD6//L/AAAAAAEAAAD6//P/AAABAAEAAAD6//T/AAAAAAEAAAD6//X/AAAAAAEAAAD6//b/AAACAAEAAAD7//H/AAAAAAEAAAD7//L/AAABAAEAAAD7//P/AAABAAEAAAD7//T/AAABAAEAAAD7//X/AAAAAAEAAAD7//b/AAACAAEAAAD8//H/AAACAAEAAAD8//L/AAABAAEAAAD8//P/AAABAAEAAAD8//T/AAACAAEAAAD8//X/AAABAAEAAAD8//b/AAAAAAEAAAD9//H/AAACAAEAAAD9//L/AAABAAEAAAD9//P/AAABAAEAAAD9//T/AAABAAEAAAD9//X/AAACAAEAAAD9//b/AAABAAEAAAD+//H/AAAAAAEAAAD+//L/AAACAAEAAAD+//P/AAAAAAEAAAD+//T/AAACAAEAAAD+//X/AAACAAEAAAD+//b/AAABAAEAAAD///H/AAACAAEAAAD///L/AAACAAEAAAD///P/AAACAAEAAAD///T/AAAAAAEAAAD///X/AAABAAEAAAD///b/AAABAAEAAAAAAPH/AAACAAEAAAAAAPL/AAABAAEAAAAAAPP/AAAAAAEAAAAAAPT/AAACAAEAAAAAAPX/AAAAAAEAAAAAAPb/AAAAAAEAAAABAPH/AAACAAEAAAABAPL/AAABAAEAAAABAPP/AAAAAAEAAAABAPT/AAAAAAEAAAABAPX/AAABAAEAAAABAPb/AAABAAEAAAACAPH/AAAAAAEAAAACAPL/AAACAAEAAAACAPP/AAACAAEAAAACAPT/AAACAAEAAAACAPX/AAAAAAEAAAACAPb/AAABAAEAAAADAPH/AAABAAEAAAADAPL/AAAAAAEAAAADAPP/AAACAAEAAAADAPT/AAAAAAEAAAADAPX/AAACAAEAAAADAPb/AAACAAEAAAAEAPH/AAACAAEAAAAEAPL/AAABAAEAAAAEAPP/AAABAAEAAAAEAPT/AAACAAEAAAAEAPX/AAABAAEAAAAEAPb/AAAAAAEAAAAFAPH/AAABAAEAAAAFAPL/AAAAAAEAAAAFAPP/AAACAAEAAAAFAPT/AAABAAEAAAAFAPX/AAAAAAEAAAAFAPb/AAAAAAEAAAAGAPH/AAAAAAEAAAAGAPL/AAAAAAEAAAAGAPP/AAAAAAEAAAAGAPT/AAABAAEAAAAGAPX/AAACAAEAAAAGAPb/AAABAAEAAAAHAPH/AAABAAEAAAAHAPL/AAABAAEAAAAHAPP/AAABAAEAAAAHAPT/AAABAAEAAAAHAPX/AAAAAAEAAAAHAPb/AAABAAEAAAAIAPH/AAACAAEAAAAIAPL/AAABAAEAAAAIAPP/AAAAAAEAAAAIAPT/AAACAAEAAAAIAPX/AAACAAEAAAAIAPb/AAACAAEAAAAJAPH/AAAAAAEAAAAJAPL/AAABAAEAAAAJAPP/AAACAAEAAAAJAPT/AAAAAAEAAAAJAPX/AAACAAEAAAAJAPb/AAAAAAEAAAAKAPH/AAABAAEAAAAKAPL/AAABAAEAAAAKAPP/AAABAAEAAAAKAPT/AAABAAEAAAAKAPX/AAACAAEAAAAKAPb/AAACAAEAAAALAPH/AAAAAAEAAAALAPL/AAACAAEAAAALAPP/AAABAAEAAAALAPT/AAAAAAEAAAALAPX/AAAAAAEAAAALAPb/AAACAAEAAAAMAPH/AAABAAEAAAAMAPL/AAAAAAEAAAAMAPP/AAACAAEAAAAMAPT/AAAAAAEAAAAMAPX/AAAAAAEAAAAMAPb/AAAAAAEAAAANAPH/AAACAAEAAAANAPL/AAAAAAEAAAANAPP/AAAAAAEAAAANAPT/AAABAAEAAAANAPX/AAABAAEAAAANAPb/AAACAAEAAAAOAPH/AAAAAAEAAAAOAPL/AAABAAEAAAAOAPP/AAAAAAEAAAAOAPT/AAAAAAEAAAAOAPX/AAABAAEAAAAOAPb/AAAAAAEAAAAPAPH/AAACAAEAAAAPAPL/AAAAAAEAAAAPAPP/AAACAAEAAAAPAPT/AAABAAEAAAAPAPX/AAABAAEAAAAPAPb/AAAAAAEAAAAQAPH/AAACAAEAAAAQAPL/AAACAAEAAAAQAPP/AAAAAAEAAAAQAPT/AAACAAEAAAAQAPX/AAABAAEAAAAQAPb/AAACAAEAAAARAPH/AAACAAEAAAARAPL/AAACAAEAAAARAPP/AAACAAEAAAARAPT/AAABAAEAAAARAPX/AAABAAEAAAARAPb/AAABAAEAAAASAPH/AAAAAAEAAAASAPL/AAABAAEAAAASAPP/AAACAAEAAAASAPT/AAAAAAEAAAASAPX/AAACAAEAAAASAPb/AAABAAEAAAATAPH/AAABAAEAAAATAPL/AAABAAEAAAATAPP/AAAAAAEAAAATAPT/AAAAAAEAAAATAPX/AAABAAEAAAATAPb/AAABAAEAAAAUAPH/AAACAAEAAAAUAPL/AAACAAEAAAAUAPP/AAAAAAEAAAAUAPT/AAACAAEAAAAUAPX/AAAAAAEAAAAUAPb/AAAAAAEAAAAVAPH/AAABAAEAAAAVAPL/AAABAAEAAAAVAPP/AAAAAAEAAAAVAPT/AAAAAAEAAAAVAPX/AAABAAEAAAAVAPb/AAABAAEAAADq/wYAAAACAAEAAADq/wcAAAAAAAEAAADq/wgAAAACAAEAAADq/wkAAAACAAEAAADq/woAAAAAAAEAAADr/wYAAAACAAEAAADr/wcAAAAAAAEAAADr/wgAAAACAAEAAADr/wkAAAACAAEAAADr/woAAAABAAEAAADs/wYAAAAAAAEAAADs/wcAAAACAAEAAADs/wgAAAAAAAEAAADs/wkAAAACAAEAAADs/woAAAACAAEAAADt/wYAAAABAAEAAADt/wcAAAABAAEAAADt/wgAAAABAAEAAADt/wkAAAACAAEAAADt/woAAAAAAAEAAADu/wYAAAABAAEAAADu/wcAAAACAAEAAADu/wgAAAACAAEAAADu/wkAAAAAAAEAAADu/woAAAAAAAEAAADv/wYAAAAAAAEAAADv/wcAAAACAAEAAADv/wgAAAACAAEAAADv/wkAAAAAAAEAAADv/woAAAABAAEAAADw/wYAAAAAAAEAAADw/wcAAAACAAEAAADw/wgAAAABAAEAAADw/wkAAAAAAAEAAADw/woAAAAAAAEAAADx/wYAAAABAAEAAADx/wcAAAACAAEAAADx/wgAAAABAAEAAADx/wkAAAACAAEAAADx/woAAAAAAAEAAADy/wYAAAABAAEAAADy/wcAAAABAAEAAADy/wgAAAABAAEAAADy/wkAAAABAAEAAADy/woAAAACAAEAAADz/wYAAAACAAEAAADz/wcAAAACAAEAAADz/wgAAAAAAAEAAADz/wkAAAAAAAEAAADz/woAAAAAAAEAAAD0/wYAAAAAAAEAAAD0/wcAAAABAAEAAAD0/wgAAAABAAEAAAD0/wkAAAABAAEAAAD0/woAAAABAAEAAAD1/wYAAAACAAEAAAD1/wcAAAAAAAEAAAD1/wgAAAAAAAEAAAD1/wkAAAABAAEAAAD1/woAAAABAAEAAAD2/wYAAAAAAAEAAAD2/wcAAAABAAEAAAD2/wgAAAABAAEAAAD2/wkAAAAAAAEAAAD2/woAAAACAAEAAAD3/wYAAAABAAEAAAD3/wcAAAAAAAEAAAD3/wgAAAACAAEAAAD3/wkAAAAAAAEAAAD3/woAAAACAAEAAAD4/wYAAAACAAEAAAD4/wcAAAACAAEAAAD4/wgAAAABAAEAAAD4/wkAAAAAAAEAAAD4/woAAAACAAEAAAD5/wYAAAACAAEAAAD5/wcAAAAAAAEAAAD5/wgAAAACAAEAAAD5/wkAAAABAAEAAAD5/woAAAABAAEAAAD6/wYAAAACAAEAAAD6/wcAAAAAAAEAAAD6/wgAAAACAAEAAAD6/wkAAAABAAEAAAD6/woAAAAAAAEAAAD7/wYAAAAAAAEAAAD7/wcAAAABAAEAAAD7/wgAAAACAAEAAAD7/wkAAAAAAAEAAAD7/woAAAABAAEAAAD8/wYAAAABAAEAAAD8/wcAAAACAAEAAAD8/wgAAAABAAEAAAD8/wkAAAABAAEAAAD8/woAAAACAAEAAAD9/wYAAAABAAEAAAD9/wcAAAACAAEAAAD9/wgAAAAAAAEAAAD9/wkAAAAAAAEAAAD9/woAAAABAAEAAAD+/wYAAAACAAEAAAD+/wcAAAACAAEAAAD+/wgAAAABAAEAAAD+/wkAAAABAAEAAAD+/woAAAAAAAEAAAD//wYAAAACAAEAAAD//wcAAAABAAEAAAD//wgAAAACAAEAAAD//wkAAAABAAEAAAD//woAAAAAAAEAAAAAAAYAAAAAAAEAAAAAAAcAAAAAAAEAAAAAAAgAAAABAAEAAAAAAAkAAAAAAAEAAAAAAAoAAAAAAAEAAAABAAYAAAAAAAEAAAABAAcAAAABAAEAAAABAAgAAAACAAEAAAABAAkAAAACAAEAAAABAAoAAAABAAEAAAACAAYAAAABAAEAAAACAAcAAAACAAEAAAACAAgAAAACAAEAAAACAAkAAAACAAEAAAACAAoAAAABAAEAAAADAAYAAAABAAEAAAADAAcAAAABAAEAAAADAAgAAAABAAEAAAADAAkAAAABAAEAAAADAAoAAAAAAAEAAAAEAAYAAAAAAAEAAAAEAAcAAAABAAEAAAAEAAgAAAAAAAEAAAAEAAkAAAABAAEAAAAEAAoAAAAAAAEAAAAFAAYAAAAAAAEAAAAFAAcAAAABAAEAAAAFAAgAAAAAAAEAAAAFAAkAAAAAAAEAAAAFAAoAAAACAAEAAAAGAAYAAAAAAAEAAAAGAAcAAAABAAEAAAAGAAgAAAAAAAEAAAAGAAkAAAACAAEAAAAGAAoAAAAAAAEAAAAHAAYAAAABAAEAAAAHAAcAAAAAAAEAAAAHAAgAAAAAAAEAAAAHAAkAAAAAAAEAAAAHAAoAAAAAAAEAAAAIAAYAAAABAAEAAAAIAAcAAAABAAEAAAAIAAgAAAACAAEAAAAIAAkAAAAAAAEAAAAIAAoAAAABAAEAAAAJAAYAAAABAAEAAAAJAAcAAAACAAEAAAAJAAgAAAAAAAEAAAAJAAkAAAAAAAEAAAAJAAoAAAAAAAEAAAAKAAYAAAABAAEAAAAKAAcAAAAAAAEAAAAKAAgAAAACAAEAAAAKAAkAAAAAAAEAAAAKAAoAAAAAAAEAAAALAAYAAAACAAEAAAALAAcAAAABAAEAAAALAAgAAAABAAEAAAALAAkAAAABAAEAAAALAAoAAAABAAEAAAAMAAYAAAABAAEAAAAMAAcAAAABAAEAAAAMAAgAAAACAAEAAAAMAAkAAAACAAEAAAAMAAoAAAAAAAEAAAANAAYAAAAAAAEAAAANAAcAAAABAAEAAAANAAgAAAAAAAEAAAANAAkAAAAAAAEAAAANAAoAAAAAAAEAAAAOAAYAAAAAAAEAAAAOAAcAAAABAAEAAAAOAAgAAAABAAEAAAAOAAkAAAACAAEAAAAOAAoAAAACAAEAAAAPAAYAAAAAAAEAAAAPAAcAAAACAAEAAAAPAAgAAAACAAEAAAAPAAkAAAABAAEAAAAPAAoAAAABAAEAAAAQAAYAAAAAAAEAAAAQAAcAAAABAAEAAAAQAAgAAAAAAAEAAAAQAAkAAAAAAAEAAAAQAAoAAAABAAEAAAARAAYAAAABAAEAAAARAAcAAAACAAEAAAARAAgAAAACAAEAAAARAAkAAAABAAEAAAARAAoAAAABAAEAAAASAAYAAAAAAAEAAAASAAcAAAACAAEAAAASAAgAAAABAAEAAAASAAkAAAAAAAEAAAASAAoAAAACAAEAAAATAAYAAAAAAAEAAAATAAcAAAACAAEAAAATAAgAAAACAAEAAAATAAkAAAABAAEAAAATAAoAAAABAAEAAAAUAAYAAAACAAEAAAAUAAcAAAACAAEAAAAUAAgAAAAAAAEAAAAUAAkAAAAAAAEAAAAUAAoAAAAAAAEAAAAVAAYAAAAAAAEAAAAVAAcAAAAAAAEAAAAVAAgAAAAAAAEAAAAVAAkAAAABAAEAAAAVAAoAAAACAAEAAAAWAPH/AAACAAEAAAAWAPL/AAABAAEAAAAWAPP/AAACAAEAAAAWAPT/AAABAAEAAAAWAPX/AAAAAAEAAAAWAPb/AAACAAEAAAAWAPf/AAAAAAEAAAAWAPj/AAABAAEAAAAWAPn/AAACAAEAAAAWAPr/AAAAAAEAAAAWAPv/AAAAAAEAAAAWAPz/AAABAAEAAAAWAP3/AAAAAAEAAAAWAP7/AAABAAEAAAAWAP//AAAAAAEAAAAWAAAAAAAAAAEAAAAWAAEAAAABAAEAAAAWAAIAAAABAAEAAAAWAAMAAAAAAAEAAAAWAAQAAAABAAEAAAAWAAUAAAACAAEAAAAWAAYAAAAAAAEAAAAWAAcAAAACAAEAAAAWAAgAAAACAAEAAAAWAAkAAAABAAEAAAAWAAoAAAABAAEAAAAXAPH/AAABAAEAAAAXAPL/AAACAAEAAAAXAPP/AAACAAEAAAAXAPT/AAACAAEAAAAXAPX/AAAAAAEAAAAXAPb/AAABAAEAAAAXAPf/AAACAAEAAAAXAPj/AAABAAEAAAAXAPn/AAAAAAEAAAAXAPr/AAABAAEAAAAXAPv/AAABAAEAAAAXAPz/AAACAAEAAAAXAP3/AAABAAEAAAAXAP7/AAACAAEAAAAXAP//AAABAAEAAAAXAAAAAAAAAAEAAAAXAAEAAAAAAAEAAAAXAAIAAAABAAEAAAAXAAMAAAABAAEAAAAXAAQAAAABAAEAAAAXAAUAAAACAAEAAAAXAAYAAAAAAAEAAAAXAAcAAAAAAAEAAAAXAAgAAAABAAEAAAAXAAkAAAACAAEAAAAXAAoAAAACAAEAAAAYAPH/AAABAAEAAAAYAPL/AAAAAAEAAAAYAPP/AAAAAAEAAAAYAPT/AAACAAEAAAAYAPX/AAACAAEAAAAYAPb/AAACAAEAAAAYAPf/AAABAAEAAAAYAPj/AAAAAAEAAAAYAPn/AAACAAEAAAAYAPr/AAAAAAEAAAAYAPv/AAABAAEAAAAYAPz/AAACAAEAAAAYAP3/AAAAAAEAAAAYAP7/AAAAAAEAAAAYAP//AAAAAAEAAAAYAAAAAAACAAEAAAAYAAEAAAAAAAEAAAAYAAIAAAABAAEAAAAYAAMAAAACAAEAAAAYAAQAAAACAAEAAAAYAAUAAAACAAEAAAAYAAYAAAAAAAEAAAAYAAcAAAAAAAEAAAAYAAgAAAABAAEAAAAYAAkAAAAAAAEAAAAYAAoAAAABAAEAAAAZAPH/AAABAAEAAAAZAPL/AAABAAEAAAAZAPP/AAAAAAEAAAAZAPT/AAACAAEAAAAZAPX/AAAAAAEAAAAZAPb/AAAAAAEAAAAZAPf/AAAAAAEAAAAZAPj/AAABAAEAAAAZAPn/AAAAAAEAAAAZAPr/AAACAAEAAAAZAPv/AAABAAEAAAAZAPz/AAABAAEAAAAZAP3/AAABAAEAAAAZAP7/AAAAAAEAAAAZAP//AAABAAEAAAAZAAAAAAABAAEAAAAZAAEAAAAAAAEAAAAZAAIAAAACAAEAAAAZAAMAAAABAAEAAAAZAAQAAAAAAAEAAAAZAAUAAAAAAAEAAAAZAAYAAAAAAAEAAAAZAAcAAAABAAEAAAAZAAgAAAACAAEAAAAZAAkAAAACAAEAAAAZAAoAAAACAAEAAAAaAPH/AAAAAAEAAAAaAPL/AAAAAAEAAAAaAPP/AAACAAEAAAAaAPT/AAACAAEAAAAaAPX/AAAAAAEAAAAaAPb/AAACAAEAAAAaAPf/AAABAAEAAAAaAPj/AAACAAEAAAAaAPn/AAABAAEAAAAaAPr/AAAAAAEAAAAaAPv/AAACAAEAAAAaAPz/AAABAAEAAAAaAP3/AAACAAEAAAAaAP7/AAAAAAEAAAAaAP//AAAAAAEAAAAaAAAAAAAAAAEAAAAaAAEAAAAAAAEAAAAaAAIAAAAAAAEAAAAaAAMAAAABAAEAAAAaAAQAAAAAAAEAAAAaAAUAAAAAAAEAAAAaAAYAAAABAAEAAAAaAAcAAAABAAEAAAAaAAgAAAAAAAEAAAAaAAkAAAABAAEAAAAaAAoAAAACAAEAAADk//H/AAABAAEAAADk//L/AAACAAEAAADk//P/AAAAAAEAAADk//T/AAAAAAEAAADk//X/AAAAAAEAAADk//b/AAAAAAEAAADk//f/AAAAAAEAAADk//j/AAACAAEAAADk//n/AAAAAAEAAADk//r/AAAAAAEAAADk//v/AAABAAEAAADk//z/AAABAAEAAADk//3/AAABAAEAAADk//7/AAABAAEAAADk////AAACAAEAAADk/wAAAAACAAEAAADk/wEAAAABAAEAAADk/wIAAAABAAEAAADk/wMAAAACAAEAAADk/wQAAAACAAEAAADk/wUAAAACAAEAAADk/wYAAAABAAEAAADk/wcAAAABAAEAAADk/wgAAAACAAEAAADk/wkAAAACAAEAAADk/woAAAABAAEAAADl//H/AAACAAEAAADl//L/AAACAAEAAADl//P/AAAAAAEAAADl//T/AAACAAEAAADl//X/AAAAAAEAAADl//b/AAAAAAEAAADl//f/AAAAAAEAAADl//j/AAAAAAEAAADl//n/AAABAAEAAADl//r/AAAAAAEAAADl//v/AAACAAEAAADl//z/AAACAAEAAADl//3/AAACAAEAAADl//7/AAACAAEAAADl////AAAAAAEAAADl/wAAAAACAAEAAADl/wEAAAACAAEAAADl/wIAAAABAAEAAADl/wMAAAACAAEAAADl/wQAAAACAAEAAADl/wUAAAABAAEAAADl/wYAAAACAAEAAADl/wcAAAACAAEAAADl/wgAAAABAAEAAADl/wkAAAAAAAEAAADl/woAAAABAAEAAADm//H/AAAAAAEAAADm//L/AAACAAEAAADm//P/AAAAAAEAAADm//T/AAACAAEAAADm//X/AAAAAAEAAADm//b/AAACAAEAAADm//f/AAAAAAEAAADm//j/AAAAAAEAAADm//n/AAACAAEAAADm//r/AAABAAEAAADm//v/AAACAAEAAADm//z/AAACAAEAAADm//3/AAABAAEAAADm//7/AAAAAAEAAADm////AAABAAEAAADm/wAAAAACAAEAAADm/wEAAAACAAEAAADm/wIAAAABAAEAAADm/wMAAAABAAEAAADm/wQAAAACAAEAAADm/wUAAAABAAEAAADm/wYAAAACAAEAAADm/wcAAAABAAEAAADm/wgAAAAAAAEAAADm/wkAAAABAAEAAADm/woAAAAAAAEAAADn//H/AAACAAEAAADn//L/AAAAAAEAAADn//P/AAAAAAEAAADn//T/AAABAAEAAADn//X/AAACAAEAAADn//b/AAACAAEAAADn//f/AAAAAAEAAADn//j/AAAAAAEAAADn//n/AAAAAAEAAADn//r/AAABAAEAAADn//v/AAABAAEAAADn//z/AAACAAEAAADn//3/AAAAAAEAAADn//7/AAABAAEAAADn////AAAAAAEAAADn/wAAAAABAAEAAADn/wEAAAACAAEAAADn/wIAAAACAAEAAADn/wMAAAAAAAEAAADn/wQAAAAAAAEAAADn/wUAAAAAAAEAAADn/wYAAAACAAEAAADn/wcAAAABAAEAAADn/wgAAAABAAEAAADn/wkAAAAAAAEAAADn/woAAAACAAEAAADo//H/AAACAAEAAADo//L/AAACAAEAAADo//P/AAAAAAEAAADo//T/AAAAAAEAAADo//X/AAACAAEAAADo//b/AAAAAAEAAADo//f/AAABAAEAAADo//j/AAABAAEAAADo//n/AAACAAEAAADo//r/AAACAAEAAADo//v/AAAAAAEAAADo//z/AAABAAEAAADo//3/AAABAAEAAADo//7/AAAAAAEAAADo////AAABAAEAAADo/wAAAAABAAEAAADo/wEAAAACAAEAAADo/wIAAAACAAEAAADo/wMAAAAAAAEAAADo/wQAAAAAAAEAAADo/wUAAAAAAAEAAADo/wYAAAAAAAEAAADo/wcAAAABAAEAAADo/wgAAAACAAEAAADo/wkAAAAAAAEAAADo/woAAAACAAEAAADp//H/AAABAAEAAADp//L/AAAAAAEAAADp//P/AAAAAAEAAADp//T/AAACAAEAAADp//X/AAABAAEAAADp//b/AAAAAAEAAADp//f/AAACAAEAAADp//j/AAACAAEAAADp//n/AAAAAAEAAADp//r/AAABAAEAAADp//v/AAABAAEAAADp//z/AAACAAEAAADp//3/AAAAAAEAAADp//7/AAAAAAEAAADp////AAAAAAEAAADp/wAAAAACAAEAAADp/wEAAAABAAEAAADp/wIAAAAAAAEAAADp/wMAAAACAAEAAADp/wQAAAACAAEAAADp/wUAAAABAAEAAADp/wYAAAACAAEAAADp/wcAAAABAAEAAADp/wgAAAABAAEAAADp/wkAAAABAAEAAADp/woAAAACAAEAAAA=")
+tile_set = SubResource("TileSet_0eqxm")
+metadata/_edit_lock_ = true
+
+[node name="MAIN BODY" type="CharacterBody2D" parent="." node_paths=PackedStringArray("HURTAUDIO1", "HURTAUDIO2", "HURTAUDIO3", "DEATHAUDIO", "PARRYIMPACT", "DEATHGUI") groups=["ALLY", "PLAYER"]]
+unique_name_in_owner = true
+process_mode = 1
+script = ExtResource("3_gxfrp")
+HURTAUDIO1 = NodePath("HURTAUDIO1")
+HURTAUDIO2 = NodePath("HURTAUDIO2")
+HURTAUDIO3 = NodePath("HURTAUDIO3")
+DEATHAUDIO = NodePath("DEATHAUDIO2D")
+PARRYIMPACT = NodePath("PARRYIMPACT")
+DEATHGUI = NodePath("../HUD/GUI/DEATH")
+metadata/_edit_lock_ = true
+
+[node name="AURA" type="PointLight2D" parent="MAIN BODY"]
+position = Vector2(4.0000153, -4.0000153)
+scale = Vector2(2.9492188, 2.9492188)
+energy = 0.5
+texture = ExtResource("27_3eytw")
+metadata/_edit_lock_ = true
+
+[node name="COLLIDE" type="CollisionShape2D" parent="MAIN BODY"]
+position = Vector2(0.99999994, 8)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("CapsuleShape2D_t0o36")
+
+[node name="CAMERA" type="Camera2D" parent="MAIN BODY"]
+position_smoothing_enabled = true
+position_smoothing_speed = 2.0
+rotation_smoothing_enabled = true
+rotation_smoothing_speed = 3.0
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.05
+drag_top_margin = 0.05
+drag_right_margin = 0.05
+drag_bottom_margin = 0.05
+script = ExtResource("28_hhnbx")
+
+[node name="ATK COOLDOWN" type="Timer" parent="MAIN BODY"]
+wait_time = 0.75
+one_shot = true
+
+[node name="PARRY COOLDOWN" type="Timer" parent="MAIN BODY"]
+wait_time = 0.5
+one_shot = true
+
+[node name="HITSTOP TIMER" type="Timer" parent="MAIN BODY"]
+process_mode = 2
+wait_time = 0.4
+one_shot = true
+
+[node name="BASE SKELETON" type="Node2D" parent="MAIN BODY"]
+position = Vector2(-155, 0)
+
+[node name="LEFT FOOT" type="Polygon2D" parent="MAIN BODY/BASE SKELETON"]
+position = Vector2(59, -75)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("6_ojerm")
+skeleton = NodePath("../../SKELETON")
+polygon = PackedVector2Array(185.31192, 685.84845, 249.74109, 675.5256, 289.2529, 654.16785, 294.94916, 627.4688, 287.47394, 615.7221, 230.51999, 609.31476, 172.14218, 616.79, 146.86885, 628.53674, 134.76614, 643.13116, 131.91844, 658.43756, 142.24081, 675.52826)
+uv = PackedVector2Array(185.31192, 685.84845, 249.74109, 675.5256, 289.2529, 654.16785, 294.94916, 627.4688, 287.47394, 615.7221, 230.51999, 609.31476, 172.14218, 616.79, 146.86885, 628.53674, 134.76614, 643.13116, 131.91844, 658.43756, 142.24081, 675.52826)
+bones = ["HIP", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/HEAD", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/RIGHT ARM", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/RIGHT ARM/RIGHT HAND", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/LEFT ARM", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/LEFT ARM/LEFT HAND", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/LEFT LEG", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/LEFT LEG/LEFT FOOT", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/RIGHT LEG", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/RIGHT LEG/RIGHT FOOT", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)]
+
+[node name="RIGHT FOOT" type="Polygon2D" parent="MAIN BODY/BASE SKELETON"]
+position = Vector2(62, -73)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("6_ojerm")
+skeleton = NodePath("../../SKELETON")
+polygon = PackedVector2Array(414.04102, 627.2494, 407.78702, 645.4902, 408.82935, 653.3076, 467.72095, 674.6754, 528.176, 674.6754, 556.31885, 661.64624, 555.7977, 643.4055, 550.06494, 631.41876, 527.65485, 615.7838, 447.9167, 612.1357)
+uv = PackedVector2Array(414.04102, 627.2494, 407.78702, 645.4902, 408.82935, 653.3076, 467.72095, 674.6754, 528.176, 674.6754, 556.31885, 661.64624, 555.7977, 643.4055, 550.06494, 631.41876, 527.65485, 615.7838, 447.9167, 612.1357)
+bones = ["HIP", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/HEAD", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/RIGHT ARM", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/RIGHT ARM/RIGHT HAND", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/LEFT ARM", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/LEFT ARM/LEFT HAND", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/LEFT LEG", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/LEFT LEG/LEFT FOOT", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "HIP/RIGHT LEG", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/RIGHT LEG/RIGHT FOOT", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="TORSO" type="Polygon2D" parent="MAIN BODY/BASE SKELETON"]
+position = Vector2(64, -73)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("6_ojerm")
+skeleton = NodePath("../../SKELETON")
+polygon = PackedVector2Array(193.77147, 551.907, 199.59781, 503.36606, 217.39981, 444.79245, 260.76334, 358.0658, 286.32877, 322.79153, 433.24417, 317.61392, 455.2499, 344.1493, 467.87018, 372.951, 475.63626, 416.31415, 478.54962, 450.61618, 485.9942, 476.18555, 490.5249, 504.66165, 495.05573, 528.28485, 495.3797, 568.0863, 489.55487, 575.5292, 438.42572, 587.17883, 314.80896, 586.85504, 269.82825, 582.32465, 232.2904, 572.6166, 199.60658, 558.37805)
+uv = PackedVector2Array(193.77147, 551.907, 199.59781, 503.36606, 217.39981, 444.79245, 260.76334, 358.0658, 286.32877, 322.79153, 433.24417, 317.61392, 455.2499, 344.1493, 467.87018, 372.951, 475.63626, 416.31415, 478.54962, 450.61618, 485.9942, 476.18555, 490.5249, 504.66165, 495.05573, 528.28485, 495.3797, 568.0863, 489.55487, 575.5292, 438.42572, 587.17883, 314.80896, 586.85504, 269.82825, 582.32465, 232.2904, 572.6166, 199.60658, 558.37805)
+bones = ["HIP", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "HIP/CHEST/HEAD", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/RIGHT ARM", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/RIGHT ARM/RIGHT HAND", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/LEFT ARM", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/LEFT ARM/LEFT HAND", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/LEFT LEG", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/LEFT LEG/LEFT FOOT", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/RIGHT LEG", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/RIGHT LEG/RIGHT FOOT", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="HEAD" type="Polygon2D" parent="MAIN BODY/BASE SKELETON"]
+position = Vector2(71, -63)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("6_ojerm")
+skeleton = NodePath("../../SKELETON")
+polygon = PackedVector2Array(292.94647, 294.75906, 369.16684, 295.56137, 463.50317, 255.47581, 503.0506, 221.80177, 524.1991, 172.46295, 523.81006, 139.17961, 510.49707, 85.53607, 482.6955, 48.33972, 426.30988, 20.538074, 334.29358, 24.845219, 295.52765, 36.589745, 207.42642, 132.91972, 192.15259, 175.20404, 192.54388, 217.49075, 216.03978, 264.47757, 244.62358, 282.09772)
+uv = PackedVector2Array(292.94647, 294.75906, 369.16684, 295.56137, 463.50317, 255.47581, 503.0506, 221.80177, 524.1991, 172.46295, 523.81006, 139.17961, 510.49707, 85.53607, 482.6955, 48.33972, 426.30988, 20.538074, 334.29358, 24.845219, 295.52765, 36.589745, 207.42642, 132.91972, 192.15259, 175.20404, 192.54388, 217.49075, 216.03978, 264.47757, 244.62358, 282.09772)
+bones = ["HIP", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/HEAD", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "HIP/CHEST/RIGHT ARM", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/RIGHT ARM/RIGHT HAND", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/LEFT ARM", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/LEFT ARM/LEFT HAND", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/LEFT LEG", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/LEFT LEG/LEFT FOOT", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/RIGHT LEG", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/RIGHT LEG/RIGHT FOOT", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="LEFT HAND" type="Polygon2D" parent="MAIN BODY/BASE SKELETON"]
+position = Vector2(68, -68)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("6_ojerm")
+skeleton = NodePath("../../SKELETON")
+polygon = PackedVector2Array(46.49048, 466.52142, 45.651154, 500.09503, 57.401917, 521.07855, 92.654205, 529.472, 123.70981, 524.4359, 153.08676, 505.97043, 162.31949, 483.30823, 163.15884, 440.50186, 143.85599, 421.19727, 86.78085, 422.03662, 59.08258, 442.1808)
+uv = PackedVector2Array(46.49048, 466.52142, 45.651154, 500.09503, 57.401917, 521.07855, 92.654205, 529.472, 123.70981, 524.4359, 153.08676, 505.97043, 162.31949, 483.30823, 163.15884, 440.50186, 143.85599, 421.19727, 86.78085, 422.03662, 59.08258, 442.1808)
+bones = ["HIP", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/HEAD", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/RIGHT ARM", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/RIGHT ARM/RIGHT HAND", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/LEFT ARM", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/LEFT ARM/LEFT HAND", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "HIP/LEFT LEG", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/LEFT LEG/LEFT FOOT", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/RIGHT LEG", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/RIGHT LEG/RIGHT FOOT", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="RIGHT HAND" type="Polygon2D" parent="MAIN BODY/BASE SKELETON"]
+position = Vector2(68, -70)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("6_ojerm")
+skeleton = NodePath("../../SKELETON")
+polygon = PackedVector2Array(544.07324, 499.71, 540.25806, 530.9945, 553.2297, 559.22687, 597.48584, 568.3833, 641.74194, 561.516, 655.4766, 550.07043, 667.68524, 518.0229, 666.1591, 485.21228, 644.795, 454.6924, 576.1217, 457.74457, 553.9936, 473.76834)
+uv = PackedVector2Array(544.07324, 499.71, 540.25806, 530.9945, 553.2297, 559.22687, 597.48584, 568.3833, 641.74194, 561.516, 655.4766, 550.07043, 667.68524, 518.0229, 666.1591, 485.21228, 644.795, 454.6924, 576.1217, 457.74457, 553.9936, 473.76834)
+bones = ["HIP", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/HEAD", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/RIGHT ARM", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/RIGHT ARM/RIGHT HAND", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "HIP/CHEST/LEFT ARM", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/LEFT ARM/LEFT HAND", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/LEFT LEG", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/LEFT LEG/LEFT FOOT", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/RIGHT LEG", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/RIGHT LEG/RIGHT FOOT", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="SKELETON" type="Skeleton2D" parent="MAIN BODY"]
+position = Vector2(-155, 0)
+
+[node name="HIP" type="Bone2D" parent="MAIN BODY/SKELETON"]
+position = Vector2(150, 71)
+rotation = -1.5707964
+rest = Transform2D(-4.371139e-08, -1, 1, -4.371139e-08, 150, 71)
+editor_settings/show_bone_gizmo = false
+
+[node name="CHEST" type="Bone2D" parent="MAIN BODY/SKELETON/HIP"]
+position = Vector2(15, 1.0000007)
+scale = Vector2(0.9999996, 0.9999996)
+rest = Transform2D(1, 0, 0, 1, 15, 0.99999833)
+editor_settings/show_bone_gizmo = false
+
+[node name="HEAD" type="Bone2D" parent="MAIN BODY/SKELETON/HIP/CHEST"]
+position = Vector2(48, 1.9999999)
+scale = Vector2(0.99999803, 0.99999803)
+rest = Transform2D(1, 0, 0, 1, 48, 1.9999999)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 60.0
+editor_settings/show_bone_gizmo = false
+
+[node name="RIGHT ARM" type="Bone2D" parent="MAIN BODY/SKELETON/HIP/CHEST"]
+position = Vector2(30, 30)
+scale = Vector2(0.99999964, 0.99999964)
+rest = Transform2D(1, 0, 0, 1, 30, 30)
+editor_settings/show_bone_gizmo = false
+
+[node name="RIGHT HAND" type="Bone2D" parent="MAIN BODY/SKELETON/HIP/CHEST/RIGHT ARM"]
+position = Vector2(-30, 24)
+scale = Vector2(0.9999997, 0.9999997)
+rest = Transform2D(1, 0, 0, 1, -35, 37.5)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 90.0
+editor_settings/show_bone_gizmo = false
+
+[node name="LEFT ARM" type="Bone2D" parent="MAIN BODY/SKELETON/HIP/CHEST"]
+position = Vector2(29.000002, -27)
+scale = Vector2(0.9999989, 0.9999989)
+rest = Transform2D(1, 0, 0, 1, 30, -30)
+editor_settings/show_bone_gizmo = false
+
+[node name="LEFT HAND" type="Bone2D" parent="MAIN BODY/SKELETON/HIP/CHEST/LEFT ARM"]
+position = Vector2(-25, -27.5)
+rest = Transform2D(1, 0, 0, 1, -25, -27.5)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = -90.0
+editor_settings/show_bone_gizmo = false
+
+[node name="LEFT LEG" type="Bone2D" parent="MAIN BODY/SKELETON/HIP"]
+position = Vector2(0, 25)
+rotation = 1.5707964
+rest = Transform2D(-4.371139e-08, 1, -1, -4.371139e-08, 0, 25)
+editor_settings/show_bone_gizmo = false
+
+[node name="LEFT FOOT" type="Bone2D" parent="MAIN BODY/SKELETON/HIP/LEFT LEG"]
+position = Vector2(0, 15)
+rest = Transform2D(1, 0, 0, 1, 0, 15)
+auto_calculate_length_and_angle = false
+length = 20.0
+bone_angle = 0.0
+editor_settings/show_bone_gizmo = false
+
+[node name="RIGHT LEG" type="Bone2D" parent="MAIN BODY/SKELETON/HIP"]
+position = Vector2(0, -25)
+rotation = -1.5707964
+scale = Vector2(0.99999976, 0.99999976)
+rest = Transform2D(-4.371139e-08, -1, 1, -4.371139e-08, 0, -25)
+editor_settings/show_bone_gizmo = false
+
+[node name="RIGHT FOOT" type="Bone2D" parent="MAIN BODY/SKELETON/HIP/RIGHT LEG"]
+position = Vector2(0, -15)
+rest = Transform2D(1, 0, 0, 1, 0, -15)
+auto_calculate_length_and_angle = false
+length = 20.0
+bone_angle = 0.0
+editor_settings/show_bone_gizmo = false
+
+[node name="SKELE-ANIM" type="AnimationPlayer" parent="MAIN BODY/SKELETON"]
+libraries = {
+&"": SubResource("AnimationLibrary_txfpl")
+}
+
+[node name="ATTACKTREE" type="AnimationTree" parent="MAIN BODY/SKELETON"]
+active = false
+tree_root = SubResource("AnimationNodeBlendTree_eevsv")
+anim_player = NodePath("../SKELE-ANIM")
+parameters/Add2/add_amount = 1.0
+"parameters/IDLE PROGRESS/seek_request" = -1.0
+parameters/ONESHOT/seek_request = -1.0
+parameters/TimeScale/scale = 1.5
+
+[node name="DEATHAUDIO2D" type="AudioStreamPlayer2D" parent="MAIN BODY"]
+stream = ExtResource("26_0eqxm")
+bus = &"SFX"
+
+[node name="HURTAUDIO1" type="AudioStreamPlayer2D" parent="MAIN BODY"]
+stream = ExtResource("27_b3h56")
+bus = &"SFX"
+
+[node name="HURTAUDIO2" type="AudioStreamPlayer2D" parent="MAIN BODY"]
+stream = ExtResource("28_inhu6")
+bus = &"SFX"
+
+[node name="HURTAUDIO3" type="AudioStreamPlayer2D" parent="MAIN BODY"]
+stream = ExtResource("29_3eytw")
+bus = &"SFX"
+
+[node name="PARRYIMPACT" type="AudioStreamPlayer2D" parent="MAIN BODY"]
+stream = ExtResource("64_3mokl")
+bus = &"SFX"
+
+[node name="HITSTOP" type="AudioStreamPlayer2D" parent="MAIN BODY"]
+process_mode = 2
+stream = ExtResource("65_3mokl")
+bus = &"SFX"
+
+[node name="HEARTGROW" type="AudioStreamPlayer2D" parent="MAIN BODY"]
+stream = ExtResource("37_ff0op")
+bus = &"SFX"
+
+[node name="BUTTON" type="AnimatedSprite2D" parent="."]
+z_index = -5
+position = Vector2(445, 37)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ts8vc")
+
+[node name="INTERACTAREA" type="Area2D" parent="BUTTON"]
+
+[node name="INTERACTQUERY" type="CollisionShape2D" parent="BUTTON/INTERACTAREA"]
+position = Vector2(0, -74)
+shape = SubResource("CircleShape2D_3ewym")
+
+[node name="E KEY" type="Sprite2D" parent="BUTTON"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(0, -300)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("59_wpjku")
+
+[node name="CLICKLACK" type="AudioStreamPlayer2D" parent="BUTTON"]
+stream = ExtResource("60_a5vu4")
+max_polyphony = 100
+bus = &"SFX"
+
+[connection signal="timeout" from="HUD/GUI/DEATH/INTERATION" to="MAIN BODY" method="_on_interation_timeout"]
+[connection signal="pressed" from="HUD/GUI/DEATH/RETRY" to="MAIN BODY" method="RETRY"]
+[connection signal="pressed" from="HUD/GUI/TABBER/GENERAL/IN THE NOISE/CENTRA/EXITBTN" to="HUD/GUI" method="_on_exitbtn_pressed"]
+[connection signal="toggled" from="HUD/GUI/TABBER/GENERAL/IN THE NOISE/SKIPCHECK" to="HUD/GUI" method="_on_skipcheck_toggled"]
+[connection signal="toggled" from="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBCONT/CHEKBOX" to="HUD/GUI" method="_on_chekbox_toggled"]
+[connection signal="value_changed" from="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBCONT/VOL SLIDER" to="HUD/GUI" method="_on_h_slider_value_changed"]
+[connection signal="toggled" from="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBSFX/SCHEKBOX" to="HUD/GUI" method="_on_msicchekbox_toggled"]
+[connection signal="value_changed" from="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBSFX/SVOL SLIDER" to="HUD/GUI" method="_on_mvol_slider_value_changed"]
+[connection signal="toggled" from="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBMUSIC/MCHEKBOX" to="HUD/GUI" method="_on_sfxchekbox_toggled"]
+[connection signal="value_changed" from="HUD/GUI/TABBER/SOUND SETTINGS/NOISEBACK/SCROLLING/VBCONT/HBMUSIC/MVOL SLIDER" to="HUD/GUI" method="_on_svol_slider_value_changed"]
+[connection signal="timeout" from="HUD/GUI/TITLE/COVERER/MOVEYMOVEY" to="HUD/GUI" method="_on_moveymovey_timeout"]
+[connection signal="timeout" from="HUD/GUI/TITLE/SHAKEWAVE" to="HUD/GUI" method="_on_shakewave_timeout"]
+[connection signal="pressed" from="HUD/GUI/TITLE/EXITBTN" to="HUD/GUI" method="_on_exitbtn_pressed"]
+[connection signal="pressed" from="HUD/GUI/TITLE/PLAY" to="MAIN BODY" method="GAME_ON"]
+[connection signal="timeout" from="MAIN BODY/HITSTOP TIMER" to="MAIN BODY" method="_on_hitstop_timer_timeout"]
+[connection signal="body_entered" from="BUTTON/INTERACTAREA" to="MAIN BODY" method="_on_interactarea_body_entered"]
+[connection signal="body_exited" from="BUTTON/INTERACTAREA" to="MAIN BODY" method="_on_interactarea_body_exited"]

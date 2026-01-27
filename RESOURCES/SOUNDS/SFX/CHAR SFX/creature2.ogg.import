@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cp88lqpwce8p2"
+path="res://.godot/imported/creature2.ogg-5e0480cf7dc897061812737c0ef72397.oggvorbisstr"
+
+[deps]
+
+source_file="res://RESOURCES/SOUNDS/SFX/CHAR SFX/creature2.ogg"
+dest_files=["res://.godot/imported/creature2.ogg-5e0480cf7dc897061812737c0ef72397.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

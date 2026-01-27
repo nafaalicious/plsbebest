@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dmmo7maby88x0"
+path="res://.godot/imported/252083__pepingrillin__spawn.ogg-b29ba3f6133e0cb2ce5930a3730c4ed7.oggvorbisstr"
+
+[deps]
+
+source_file="res://RESOURCES/SOUNDS/SFX/CHAR SFX/252083__pepingrillin__spawn.ogg"
+dest_files=["res://.godot/imported/252083__pepingrillin__spawn.ogg-b29ba3f6133e0cb2ce5930a3730c4ed7.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

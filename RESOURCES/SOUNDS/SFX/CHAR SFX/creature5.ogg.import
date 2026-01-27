@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://mv8efxyusskg"
+path="res://.godot/imported/creature5.ogg-d7cc6fb446b49cc06a5ee4d7e1c7f807.oggvorbisstr"
+
+[deps]
+
+source_file="res://RESOURCES/SOUNDS/SFX/CHAR SFX/creature5.ogg"
+dest_files=["res://.godot/imported/creature5.ogg-d7cc6fb446b49cc06a5ee4d7e1c7f807.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b36tk0tl1t3f5"
+path="res://.godot/imported/TEST PARRY RESPONSE.mp3-97c5eaa33927953064c5344167279455.mp3str"
+
+[deps]
+
+source_file="res://RESOURCES/SOUNDS/SFX/WEAPON SFX/TEST PARRY RESPONSE.mp3"
+dest_files=["res://.godot/imported/TEST PARRY RESPONSE.mp3-97c5eaa33927953064c5344167279455.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dn51aowvtw0en"
+path="res://.godot/imported/kr dead 2.mp3-c3c199590badd318bfcd3104f1be3827.mp3str"
+
+[deps]
+
+source_file="res://RESOURCES/SOUNDS/SFX/DEATH SFX/kr dead 2.mp3"
+dest_files=["res://.godot/imported/kr dead 2.mp3-c3c199590badd318bfcd3104f1be3827.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

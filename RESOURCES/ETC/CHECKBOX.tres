@@ -1,0 +1,10 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://u2s0ltwcsuf7"]
+
+[ext_resource type="Texture2D" uid="uid://ba3oj8aq6sw60" path="res://RESOURCES/SPRITES/GUI/SETTINGS/yescheck.png" id="1_irrlk"]
+[ext_resource type="Texture2D" uid="uid://636wr44pu75e" path="res://RESOURCES/SPRITES/GUI/SETTINGS/nocheck.png" id="2_f4qn7"]
+
+[resource]
+CheckBox/icons/checked = ExtResource("1_irrlk")
+CheckBox/icons/checked_disabled = ExtResource("1_irrlk")
+CheckBox/icons/unchecked = ExtResource("2_f4qn7")
+CheckBox/icons/unchecked_disabled = ExtResource("2_f4qn7")

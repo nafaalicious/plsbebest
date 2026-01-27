@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bymyn8efstmjg"
+path="res://.godot/imported/jake the dog.mp3-be379863c146e4e03a5525d2c8659811.mp3str"
+
+[deps]
+
+source_file="res://RESOURCES/SOUNDS/SFX/DEATH SFX/jake the dog.mp3"
+dest_files=["res://.godot/imported/jake the dog.mp3-be379863c146e4e03a5525d2c8659811.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

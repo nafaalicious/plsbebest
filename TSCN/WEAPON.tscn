@@ -1,0 +1,200 @@
+[gd_scene load_steps=9 format=3 uid="uid://7875hxry2oin"]
+
+[ext_resource type="Script" uid="uid://d25fxmxvllboh" path="res://SCRIPTS/WEAPON.gd" id="1_d5h4s"]
+[ext_resource type="Texture2D" uid="uid://bfbubr0pchpns" path="res://RESOURCES/SPRITES/CHARACTERS/rotatedSword.png" id="1_sdjuk"]
+[ext_resource type="AudioStream" uid="uid://dbdpj6mxrtky2" path="res://RESOURCES/SOUNDS/SFX/WEAPON SFX/sword10.ogg" id="2_shypw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d5h4s"]
+radius = 105.00001
+height = 470.00003
+
+[sub_resource type="Animation" id="Animation_shypw"]
+resource_name = "PARRY'"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.35, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.35),
+"transitions": PackedFloat32Array(0.8705506, 2.2973974, 0.8705506),
+"update": 0,
+"values": [-1.5707963267948966, -1.9198621771937625, -1.5707963267948966]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.35),
+"transitions": PackedFloat32Array(0.8408964, 2.07053, 0.8408964),
+"update": 0,
+"values": [Vector2(100, 10), Vector2(90, 0), Vector2(100, 10)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("WEAPON AREA/PARRY HITBOX:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.125, 0.35, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [true, false, true, true]
+}
+
+[sub_resource type="Animation" id="Animation_ojerm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("WEAPON AREA/PARRY HITBOX:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_t0o36"]
+resource_name = "SLASH"
+step = 30.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.6),
+"transitions": PackedFloat32Array(0.49999997, 0.37892917, 0.6597545),
+"update": 0,
+"values": [Vector2(120, 0), Vector2(135, -65), Vector2(180, 85)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.6),
+"transitions": PackedFloat32Array(0.43527538, 0.39229208, 0.7578583),
+"update": 0,
+"values": [0.0, -1.7697638615222495, 0.5235987755982988]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.6, 1, 1.0001),
+"transitions": PackedFloat32Array(2.82842, 0.30778638, 0.9659366, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2a5m4"]
+_data = {
+&"PARRY": SubResource("Animation_shypw"),
+&"RESET": SubResource("Animation_ojerm"),
+&"SLASH": SubResource("Animation_t0o36")
+}
+
+[node name="WEAPON" type="Node2D"]
+script = ExtResource("1_d5h4s")
+
+[node name="WEAPON SPRITE" type="Sprite2D" parent="."]
+z_index = 2
+scale = Vector2(0.19999996, 0.19999996)
+texture = ExtResource("1_sdjuk")
+
+[node name="WEAPON AREA" type="Area2D" parent="WEAPON SPRITE" groups=["PARRYCONTACT"]]
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="HITBOX" type="CollisionShape2D" parent="WEAPON SPRITE/WEAPON AREA"]
+position = Vector2(90, 0)
+rotation = 1.5707964
+scale = Vector2(0.6, 0.9)
+shape = SubResource("CapsuleShape2D_d5h4s")
+
+[node name="PARRY HITBOX" type="CollisionShape2D" parent="WEAPON SPRITE/WEAPON AREA"]
+position = Vector2(90, 0)
+rotation = 1.5707964
+scale = Vector2(0.6, 0.9)
+shape = SubResource("CapsuleShape2D_d5h4s")
+disabled = true
+debug_color = Color(0.6238795, 0.35182238, 1, 0.41960785)
+
+[node name="WEAPON ANIMATION" type="AnimationPlayer" parent="WEAPON SPRITE"]
+libraries = {
+&"": SubResource("AnimationLibrary_2a5m4")
+}
+
+[node name="CLANK" type="AudioStreamPlayer2D" parent="WEAPON SPRITE"]
+position = Vector2(25.000025, -500.0001)
+rotation = 1.5707964
+scale = Vector2(5.000001, 5.000001)
+stream = ExtResource("2_shypw")
+bus = &"SFX"
+
+[connection signal="area_entered" from="WEAPON SPRITE/WEAPON AREA" to="." method="_on_weapon_area_area_entered"]
+[connection signal="body_entered" from="WEAPON SPRITE/WEAPON AREA" to="." method="_on_weapon_area_body_entered"]
+[connection signal="animation_finished" from="WEAPON SPRITE/WEAPON ANIMATION" to="." method="_on_weapon_animation_animation_finished"]

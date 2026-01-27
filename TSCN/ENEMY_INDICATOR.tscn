@@ -1,0 +1,123 @@
+[gd_scene load_steps=9 format=3 uid="uid://buoi71xgmt576"]
+
+[ext_resource type="Script" uid="uid://f3hr4njjkffr" path="res://SCRIPTS/ENEMYINDICATOR.gd" id="1_0aoym"]
+[ext_resource type="Texture2D" uid="uid://d0ha12b4c47ms" path="res://RESOURCES/SPRITES/FX/BAD BLURB.png.png" id="1_oowo0"]
+[ext_resource type="Texture2D" uid="uid://ba1twl8vhs70b" path="res://RESOURCES/SPRITES/FX/ELITE BAD BLURB.png.png.png" id="3_0xyir"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0aoym"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_oowo0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0xyir")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_fonse"]
+resource_name = "BESPAWN"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BLURBS:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.75, 1.25, 2),
+"transitions": PackedFloat32Array(3.3796916, 0.6597539, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1.25, 1.25), Vector2(1.25, 1.25), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BLURBS:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1, 2),
+"transitions": PackedFloat32Array(1.5691682, 1),
+"update": 0,
+"values": [0.0, -12.566370614359172]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BLURBS:modulate")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_0aoym"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BLURBS:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 0.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BLURBS:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BLURBS:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_0xyir"]
+resource_name = "SPAWN"
+length = 2.0
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fonse"]
+_data = {
+&"BESPAWN": SubResource("Animation_fonse"),
+&"RESET": SubResource("Animation_0aoym"),
+&"SPAWN": SubResource("Animation_0xyir")
+}
+
+[node name="ENEMY INDICTIATOR" type="Node2D"]
+script = ExtResource("1_0aoym")
+
+[node name="BLURBS" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_0aoym")
+
+[node name="KABOOM" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_fonse")
+}

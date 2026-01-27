@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://breassx0itcy3"
+path="res://.godot/imported/BWAA.mp3-db2fadc5519e68d3a39918f03f90e771.mp3str"
+
+[deps]
+
+source_file="res://RESOURCES/SOUNDS/SFX/DEATH SFX/BWAA.mp3"
+dest_files=["res://.godot/imported/BWAA.mp3-db2fadc5519e68d3a39918f03f90e771.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
