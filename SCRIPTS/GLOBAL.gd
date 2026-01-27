@@ -2,9 +2,6 @@ extends Node
 
 # FAKE VARIABLES THE MEDIA WANTS YOU TO BELIEVE
 var ham = "meat"
-var ishammeat = true
-var checkychecky = false
-
 # REAL VARIABLES
 
 # DIRECTION DETERMINATION
