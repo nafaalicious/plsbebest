@@ -45,6 +45,7 @@ func _ready():
 		await timer.timeout
 		timer.queue_free()
 		%WOOF.emitting = true
+		mcheck()
 
 func _physics_process(delta):
 	# FADE OUT COLOUR
@@ -104,7 +105,7 @@ func HEALTHFUNC(newHealth):
 			timer.start()
 			await timer.timeout
 			SIGNALBUS.enemyDEATH.emit()
-			self.queue_free()
+			$"..".queue_free()
 
 func damaged():
 	self.modulate = Color(1.0, 0.0, 0.0, 1.0)
@@ -213,6 +214,7 @@ func _on_detect_range_body_entered(body):
 						timer.one_shot = true 
 						timer.start()
 						await timer.timeout
+						timer.queue_free()
 						if state != States.ATTACKING && AMDEAD == false:
 							SKELANIM.stop()
 							state = States.IDLE
@@ -226,9 +228,12 @@ func _on_skelanim_animation_finished(anim_name):
 		state = States.IDLE
 		ATTACKING = false
 		# CONTINUE CHASE IF MAIN CHARACTER IS STILL THERE[]
-		var checkifmcthere = $"DETECT RANGE".get_overlapping_bodies()
-		for i in checkifmcthere:
-			if i.is_in_group("ALLY"):
-				_on_detect_range_body_entered(i)
-				$"AGGRO RANGE/AGGROBOX".disabled = true
-				$"AGGRO RANGE/AGGROBOX".disabled = false
+		mcheck()
+
+func mcheck():
+	var checkifmcthere = $"DETECT RANGE".get_overlapping_bodies()
+	for i in checkifmcthere:
+		if i.is_in_group("ALLY"):
+			_on_detect_range_body_entered(i)
+			$"AGGRO RANGE/AGGROBOX".disabled = true
+			$"AGGRO RANGE/AGGROBOX".disabled = false

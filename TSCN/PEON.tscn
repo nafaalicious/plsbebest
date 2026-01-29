@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bsalfumwor6md"]
+[gd_scene format=3 uid="uid://bsalfumwor6md"]
 
 [ext_resource type="Texture2D" uid="uid://c1px8liy3btu8" path="res://RESOURCES/SPRITES/CHARACTERS/peon skeleton.png" id="1_a5rli"]
 [ext_resource type="Script" uid="uid://cag2fp5eu1y18" path="res://SCRIPTS/ENEMBOD.gd" id="1_bjgrh"]
@@ -245,6 +245,30 @@ tracks/17/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
 "values": [false, true, true, false, false]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("HIP/CHEST/NECK:rotation")
+tracks/18/interp = 2
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 1.25, 2),
+"transitions": PackedFloat32Array(3.0314324, 1, 1),
+"update": 0,
+"values": [-1.653204, -1.7889624832941877, -1.653204]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("HIP/CHEST:rotation")
+tracks/19/interp = 2
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0, 1.25, 2),
+"transitions": PackedFloat32Array(2.462289, 1, 1),
+"update": 0,
+"values": [0.020970164, -0.08726646259971647, 0.020970164]
 }
 
 [sub_resource type="Animation" id="Animation_5wh6f"]
@@ -1000,7 +1024,7 @@ tracks/7/keys = {
 "times": PackedFloat32Array(0, 0.31, 0.65),
 "transitions": PackedFloat32Array(0.7578583, 1, 1),
 "update": 0,
-"values": [-1.6580628, -1.7016960206944713, -1.6580628]
+"values": [-1.6580628, -1.7016960206944711, -1.6580628]
 }
 tracks/8/type = "value"
 tracks/8/imported = false
@@ -1026,66 +1050,66 @@ _data = {
 &"WALKER": SubResource("Animation_mai80")
 }
 
-[node name="PEON" type="Node2D"]
+[node name="PEON" type="Node2D" unique_id=2077645147]
 
-[node name="ENEMY BODY" type="CharacterBody2D" parent="." node_paths=PackedStringArray("knifebox") groups=["ENEMY"]]
+[node name="ENEMY BODY" type="CharacterBody2D" parent="." unique_id=306120046 node_paths=PackedStringArray("knifebox") groups=["ENEMY"]]
 unique_name_in_owner = true
 script = ExtResource("1_bjgrh")
 knifebox = NodePath("SKELETON/HIP/CHEST/R ARM/R HAND/KNIFE/KNIFEBOX")
 
-[node name="DEATH" type="AudioStreamPlayer2D" parent="ENEMY BODY"]
+[node name="DEATH" type="AudioStreamPlayer2D" parent="ENEMY BODY" unique_id=950906705]
 unique_name_in_owner = true
 stream = ExtResource("2_ykuha")
 pitch_scale = 0.5
 max_distance = 2500.0
 bus = &"SFX"
 
-[node name="WALLDEATH" type="AudioStreamPlayer2D" parent="ENEMY BODY"]
+[node name="WALLDEATH" type="AudioStreamPlayer2D" parent="ENEMY BODY" unique_id=313848387]
 unique_name_in_owner = true
 stream = ExtResource("3_mai80")
 pitch_scale = 1.1
 max_distance = 5000.0
 bus = &"SFX"
 
-[node name="PARRYINDICATOR" type="AudioStreamPlayer2D" parent="ENEMY BODY"]
+[node name="PARRYINDICATOR" type="AudioStreamPlayer2D" parent="ENEMY BODY" unique_id=1296186193]
 stream = ExtResource("6_mai80")
 bus = &"SFX"
 
-[node name="SPWANTA" type="AudioStreamPlayer2D" parent="ENEMY BODY"]
+[node name="SPWANTA" type="AudioStreamPlayer2D" parent="ENEMY BODY" unique_id=1517648161]
 unique_name_in_owner = true
 stream = ExtResource("7_7ab23")
 attenuation = 0.5547847
 bus = &"SFX"
 
-[node name="I-FRAMES" type="Timer" parent="ENEMY BODY"]
+[node name="I-FRAMES" type="Timer" parent="ENEMY BODY" unique_id=1254020716]
 wait_time = 0.5
 one_shot = true
 
-[node name="HITBOX" type="CollisionShape2D" parent="ENEMY BODY"]
+[node name="HITBOX" type="CollisionShape2D" parent="ENEMY BODY" unique_id=26617308]
 position = Vector2(5, 15)
 shape = SubResource("CapsuleShape2D_6e15o")
 debug_color = Color(0.67039865, 0.50864506, 0.06895712, 0.41960785)
 
-[node name="DETECT RANGE" type="Area2D" parent="ENEMY BODY"]
+[node name="DETECT RANGE" type="Area2D" parent="ENEMY BODY" unique_id=1537982463]
 
-[node name="DETECTBOX" type="CollisionShape2D" parent="ENEMY BODY/DETECT RANGE"]
+[node name="DETECTBOX" type="CollisionShape2D" parent="ENEMY BODY/DETECT RANGE" unique_id=1756749846]
 visible = false
 position = Vector2(-2, 12)
 shape = SubResource("RectangleShape2D_mai80")
 debug_color = Color(0.72517943, 0.24333659, 0.99999994, 0.41960785)
 
-[node name="AGGRO RANGE" type="Area2D" parent="ENEMY BODY"]
+[node name="AGGRO RANGE" type="Area2D" parent="ENEMY BODY" unique_id=1387748919]
 unique_name_in_owner = true
 
-[node name="AGGROBOX" type="CollisionShape2D" parent="ENEMY BODY/AGGRO RANGE"]
+[node name="AGGROBOX" type="CollisionShape2D" parent="ENEMY BODY/AGGRO RANGE" unique_id=797536463]
 visible = false
 position = Vector2(1, 12)
 shape = SubResource("RectangleShape2D_xs0en")
 debug_color = Color(0.9673057, 1.92523e-07, 0.47810715, 0.41960785)
 
-[node name="BODY" type="Node2D" parent="ENEMY BODY"]
+[node name="BODY" type="Node2D" parent="ENEMY BODY" unique_id=1382865720]
 
-[node name="KNIFE" type="Polygon2D" parent="ENEMY BODY/BODY"]
+[node name="KNIFE" type="Polygon2D" parent="ENEMY BODY/BODY" unique_id=1565275415]
 position = Vector2(-90.904015, -47.006935)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_a5rli")
@@ -1094,7 +1118,7 @@ polygon = PackedVector2Array(155.94974, 391.18463, 160.56613, 308.0899, 170.7209
 uv = PackedVector2Array(155.94974, 391.18463, 160.56613, 308.0899, 170.72092, 176.06108, 176.25937, 66.19037, 176.25937, 37.568855, 142.09818, 33.875755, 118.09305, 49.571423, 82.08533, 99.42826, 65.4664, 131.74287, 58.07898, 221.29745, 51.61606, 256.3819, 52.540283, 297.00876, 90.39453, 297.932, 102.397095, 342.2492, 103.32037, 393.0293, 127.32553, 396.7224)
 bones = ["HIP", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/NECK", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/L ARM", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/L ARM/L HAND", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/R ARM", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/R ARM/R HAND", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/R ARM/R HAND/KNIFE", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "HIP/R LEG", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/R LEG/R FOOT", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/L LEG", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/L LEG/L FOOT", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
 
-[node name="CHEST" type="Polygon2D" parent="ENEMY BODY/BODY"]
+[node name="CHEST" type="Polygon2D" parent="ENEMY BODY/BODY" unique_id=79827935]
 position = Vector2(-105, -77)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_a5rli")
@@ -1103,7 +1127,7 @@ polygon = PackedVector2Array(445.7574, 616.30585, 578.262, 599.23047, 615.1447, 
 uv = PackedVector2Array(445.7574, 616.30585, 578.262, 599.23047, 615.1447, 586.9363, 619.92584, 577.3741, 612.4128, 551.4206, 590.5564, 509.0738, 580.9944, 461.94727, 568.7002, 395.69574, 552.991, 345.1538, 533.86664, 337.64066, 331.69458, 346.5198, 315.98804, 364.27756, 281.83768, 455.1177, 265.44577, 507.70853, 245.63869, 560.29987, 263.39685, 581.47217, 311.20782, 603.32855, 367.21497, 615.6228)
 bones = ["HIP", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "HIP/CHEST", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0.5, 1, 1, 1), "HIP/CHEST/NECK", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/R LEG", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/R LEG/R FOOT", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/L LEG", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/L LEG/L FOOT", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/L ARM", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/L ARM/L HAND", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/R ARM", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/R ARM/R HAND", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/R ARM/R HAND/KNIFE", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
 
-[node name="HEAD" type="Polygon2D" parent="ENEMY BODY/BODY"]
+[node name="HEAD" type="Polygon2D" parent="ENEMY BODY/BODY" unique_id=1629163129]
 position = Vector2(-106.90401, -66.006935)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_a5rli")
@@ -1112,7 +1136,7 @@ polygon = PackedVector2Array(630.13947, 189.38104, 629.12384, 147.74136, 598.654
 uv = PackedVector2Array(630.13947, 189.38104, 629.12384, 147.74136, 598.65466, 85.792244, 550.9214, 49.230568, 508.2661, 36.02774, 401.62787, 37.043343, 355.92578, 52.277374, 314.28607, 83.76104, 273.6587, 133.5254, 257.40906, 181.2587, 266.54636, 233.05386, 283.8116, 264.53754, 318.34207, 288.912, 348.81015, 303.1304, 393.4966, 311.25522, 457.47952, 313.28644, 509.27524, 305.16162, 540.7589, 291.95877, 589.5078, 271.64673, 609.8198, 248.28789, 619.9758, 227.97585)
 bones = ["HIP", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/NECK", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "HIP/CHEST/L ARM", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/L ARM/L HAND", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/R ARM", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/R ARM/R HAND", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/R ARM/R HAND/KNIFE", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/R LEG", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/R LEG/R FOOT", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/L LEG", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/L LEG/L FOOT", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
 
-[node name="R HAND" type="Polygon2D" parent="ENEMY BODY/BODY"]
+[node name="R HAND" type="Polygon2D" parent="ENEMY BODY/BODY" unique_id=135550021]
 position = Vector2(-105, -79)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_a5rli")
@@ -1121,7 +1145,7 @@ polygon = PackedVector2Array(617.7794, 502.45557, 643.3639, 527.5662, 670.8434, 
 uv = PackedVector2Array(617.7794, 502.45557, 643.3639, 527.5662, 670.8434, 532.77783, 699.7444, 523.3021, 714.43176, 508.61478, 717.2744, 483.9779, 709.21875, 458.8659, 694.5314, 439.9145, 657.57605, 432.8077, 644.31006, 438.01935, 631.04407, 453.18048, 620.6207, 481.60764, 616.83044, 494.39984)
 bones = ["HIP", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/NECK", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/L ARM", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/L ARM/L HAND", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "HIP/CHEST/R ARM", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/R ARM/R HAND", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/R ARM/R HAND/KNIFE", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/R LEG", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/R LEG/R FOOT", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/L LEG", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/L LEG/L FOOT", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
 
-[node name="L HAND" type="Polygon2D" parent="ENEMY BODY/BODY"]
+[node name="L HAND" type="Polygon2D" parent="ENEMY BODY/BODY" unique_id=966112258]
 position = Vector2(-106.904015, -75.006935)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_a5rli")
@@ -1130,7 +1154,7 @@ polygon = PackedVector2Array(145.70886, 493.85397, 138.41257, 479.26135, 141.018
 uv = PackedVector2Array(145.70886, 493.85397, 138.41257, 479.26135, 141.01837, 447.9915, 148.83435, 428.1897, 198.34499, 419.32993, 213.9799, 422.4569, 237.95348, 448.51514, 243.68626, 466.2347, 241.60536, 486.0368, 224.92812, 502.71408, 207.72969, 511.57388, 158.21907, 509.48923)
 bones = ["HIP", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/NECK", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/L ARM", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/L ARM/L HAND", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/R ARM", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/R ARM/R HAND", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "HIP/CHEST/R ARM/R HAND/KNIFE", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/R LEG", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/R LEG/R FOOT", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/L LEG", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/L LEG/L FOOT", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
 
-[node name="L FOOT" type="Polygon2D" parent="ENEMY BODY/BODY"]
+[node name="L FOOT" type="Polygon2D" parent="ENEMY BODY/BODY" unique_id=306014247]
 position = Vector2(-101, -75)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_a5rli")
@@ -1139,7 +1163,7 @@ polygon = PackedVector2Array(167.73932, 625.833, 157.01898, 642.2288, 156.38837,
 uv = PackedVector2Array(167.73932, 625.833, 157.01898, 642.2288, 156.38837, 664.9308, 163.32507, 671.86743, 225.12473, 688.8939, 269.89798, 693.30817, 312.14877, 688.2633, 331.69766, 680.06537, 334.8507, 658.6247, 320.9773, 639.7064, 293.2305, 618.2657, 257.2858, 608.17596, 203.68402, 610.0678, 175.93723, 618.8963)
 bones = ["HIP", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/NECK", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/L ARM", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/L ARM/L HAND", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/R ARM", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/R ARM/R HAND", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/R ARM/R HAND/KNIFE", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/R LEG", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/R LEG/R FOOT", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/L LEG", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/L LEG/L FOOT", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)]
 
-[node name="R FOOT" type="Polygon2D" parent="ENEMY BODY/BODY"]
+[node name="R FOOT" type="Polygon2D" parent="ENEMY BODY/BODY" unique_id=621905499]
 position = Vector2(-118.904015, -71.006935)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_a5rli")
@@ -1148,20 +1172,20 @@ polygon = PackedVector2Array(592.6658, 636.6024, 591.13965, 654.1523, 600.29614,
 uv = PackedVector2Array(592.6658, 636.6024, 591.13965, 654.1523, 600.29614, 667.88696, 625.4763, 676.28033, 685.7562, 679.3325, 737.64276, 683.1477, 750.6144, 660.2566, 745.27313, 635.8394, 730.7754, 620.5787, 667.44336, 598.45056, 643.0262, 597.68756, 624.7133, 607.60706)
 bones = ["HIP", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/NECK", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/L ARM", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/L ARM/L HAND", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/R ARM", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/R ARM/R HAND", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/CHEST/R ARM/R HAND/KNIFE", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/R LEG", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/R LEG/R FOOT", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), "HIP/L LEG", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "HIP/L LEG/L FOOT", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
 
-[node name="SKELETON" type="Skeleton2D" parent="ENEMY BODY"]
+[node name="SKELETON" type="Skeleton2D" parent="ENEMY BODY" unique_id=1526323525]
 
-[node name="HIP" type="Bone2D" parent="ENEMY BODY/SKELETON"]
+[node name="HIP" type="Bone2D" parent="ENEMY BODY/SKELETON" unique_id=865916435]
 position = Vector2(1, 72)
-scale = Vector2(0.9999989, 0.9999989)
+scale = Vector2(0.9999988, 0.9999988)
 rest = Transform2D(1, 0, 0, 1, 1, 72)
 editor_settings/show_bone_gizmo = false
 
-[node name="CHEST" type="Bone2D" parent="ENEMY BODY/SKELETON/HIP"]
+[node name="CHEST" type="Bone2D" parent="ENEMY BODY/SKELETON/HIP" unique_id=975031770]
 position = Vector2(0, -15)
 rest = Transform2D(1, 0, 0, 1, 0, -15)
 editor_settings/show_bone_gizmo = false
 
-[node name="NECK" type="Bone2D" parent="ENEMY BODY/SKELETON/HIP/CHEST"]
+[node name="NECK" type="Bone2D" parent="ENEMY BODY/SKELETON/HIP/CHEST" unique_id=1584558608]
 position = Vector2(-1.0000001, -46)
 rotation = -1.6580628
 scale = Vector2(0.9999996, 0.9999996)
@@ -1171,33 +1195,33 @@ length = 16.0
 bone_angle = 0.0
 editor_settings/show_bone_gizmo = false
 
-[node name="L ARM" type="Bone2D" parent="ENEMY BODY/SKELETON/HIP/CHEST"]
+[node name="L ARM" type="Bone2D" parent="ENEMY BODY/SKELETON/HIP/CHEST" unique_id=811619099]
 position = Vector2(30, -46)
 rest = Transform2D(1, 0, 0, 1, 30, -46)
 editor_settings/show_bone_gizmo = false
 
-[node name="L HAND" type="Bone2D" parent="ENEMY BODY/SKELETON/HIP/CHEST/L ARM"]
+[node name="L HAND" type="Bone2D" parent="ENEMY BODY/SKELETON/HIP/CHEST/L ARM" unique_id=885135810]
 position = Vector2(32, 31)
-scale = Vector2(0.9999999, 0.9999999)
+scale = Vector2(0.99999875, 0.99999875)
 rest = Transform2D(1, 0, 0, 1, 32, 31)
 auto_calculate_length_and_angle = false
 length = 16.0
 bone_angle = 0.0
 editor_settings/show_bone_gizmo = false
 
-[node name="R ARM" type="Bone2D" parent="ENEMY BODY/SKELETON/HIP/CHEST"]
+[node name="R ARM" type="Bone2D" parent="ENEMY BODY/SKELETON/HIP/CHEST" unique_id=805018097]
 position = Vector2(-23, -44)
 rest = Transform2D(1, 0, 0, 1, -23, -44)
 editor_settings/show_bone_gizmo = false
 
-[node name="R HAND" type="Bone2D" parent="ENEMY BODY/SKELETON/HIP/CHEST/R ARM"]
+[node name="R HAND" type="Bone2D" parent="ENEMY BODY/SKELETON/HIP/CHEST/R ARM" unique_id=1167816529]
 position = Vector2(-38, 30)
 rotation = -1.5707964
-scale = Vector2(0.999999, 0.999999)
+scale = Vector2(0.99999887, 0.99999887)
 rest = Transform2D(-4.371139e-08, -1, 1, -4.371139e-08, -38, 30)
 editor_settings/show_bone_gizmo = false
 
-[node name="KNIFE" type="Bone2D" parent="ENEMY BODY/SKELETON/HIP/CHEST/R ARM/R HAND"]
+[node name="KNIFE" type="Bone2D" parent="ENEMY BODY/SKELETON/HIP/CHEST/R ARM/R HAND" unique_id=8190931]
 position = Vector2(13.457402, -2.2340777)
 rotation = -0.020427186
 scale = Vector2(0.9999995, 0.9999995)
@@ -1207,19 +1231,19 @@ length = 60.0
 bone_angle = 0.0
 editor_settings/show_bone_gizmo = false
 
-[node name="KNIFEBOX" type="Area2D" parent="ENEMY BODY/SKELETON/HIP/CHEST/R ARM/R HAND/KNIFE" groups=["WEAPONCONTACT"]]
+[node name="KNIFEBOX" type="Area2D" parent="ENEMY BODY/SKELETON/HIP/CHEST/R ARM/R HAND/KNIFE" unique_id=1281469136 groups=["WEAPONCONTACT"]]
 scale = Vector2(1.0000001, 1.0000001)
 monitoring = false
 metadata/PARRYABLE = false
 
-[node name="KNIFE SHAPE" type="CollisionShape2D" parent="ENEMY BODY/SKELETON/HIP/CHEST/R ARM/R HAND/KNIFE/KNIFEBOX"]
+[node name="KNIFE SHAPE" type="CollisionShape2D" parent="ENEMY BODY/SKELETON/HIP/CHEST/R ARM/R HAND/KNIFE/KNIFEBOX" unique_id=1594866876]
 visible = false
 position = Vector2(28.542603, -2.7659225)
 rotation = -1.6755161
 shape = SubResource("CapsuleShape2D_bjgrh")
 debug_color = Color(3.7541986e-06, 0.6308589, 0.4714908, 0.41960785)
 
-[node name="PARTICLE" type="CPUParticles2D" parent="ENEMY BODY/SKELETON/HIP/CHEST/R ARM/R HAND/KNIFE"]
+[node name="PARTICLE" type="CPUParticles2D" parent="ENEMY BODY/SKELETON/HIP/CHEST/R ARM/R HAND/KNIFE" unique_id=20702951]
 position = Vector2(53.730953, -8.670248)
 emitting = false
 amount = 2
@@ -1234,7 +1258,7 @@ scale_amount_max = 0.2
 color = Color(1, 0.7921569, 0, 1)
 color_ramp = SubResource("Gradient_xos42")
 
-[node name="BLING" type="PointLight2D" parent="ENEMY BODY/SKELETON/HIP/CHEST/R ARM/R HAND/KNIFE/PARTICLE"]
+[node name="BLING" type="PointLight2D" parent="ENEMY BODY/SKELETON/HIP/CHEST/R ARM/R HAND/KNIFE/PARTICLE" unique_id=556025169]
 position = Vector2(-0.61524963, 0.5278015)
 scale = Vector2(0.23582491, 0.23582491)
 enabled = false
@@ -1243,12 +1267,12 @@ energy = 5.0
 texture = ExtResource("8_mai80")
 texture_scale = 3.0
 
-[node name="R LEG" type="Bone2D" parent="ENEMY BODY/SKELETON/HIP"]
+[node name="R LEG" type="Bone2D" parent="ENEMY BODY/SKELETON/HIP" unique_id=1852730220]
 position = Vector2(39, -3)
 rest = Transform2D(1, 0, 0, 1, 39, -3)
 editor_settings/show_bone_gizmo = false
 
-[node name="R FOOT" type="Bone2D" parent="ENEMY BODY/SKELETON/HIP/R LEG"]
+[node name="R FOOT" type="Bone2D" parent="ENEMY BODY/SKELETON/HIP/R LEG" unique_id=495922281]
 position = Vector2(4, 22)
 rest = Transform2D(1, 0, 0, 1, 4, 22)
 auto_calculate_length_and_angle = false
@@ -1256,12 +1280,12 @@ length = 16.0
 bone_angle = 0.0
 editor_settings/show_bone_gizmo = false
 
-[node name="L LEG" type="Bone2D" parent="ENEMY BODY/SKELETON/HIP"]
+[node name="L LEG" type="Bone2D" parent="ENEMY BODY/SKELETON/HIP" unique_id=1440624841]
 position = Vector2(-31, -4)
 rest = Transform2D(1, 0, 0, 1, -31, -4)
 editor_settings/show_bone_gizmo = false
 
-[node name="L FOOT" type="Bone2D" parent="ENEMY BODY/SKELETON/HIP/L LEG"]
+[node name="L FOOT" type="Bone2D" parent="ENEMY BODY/SKELETON/HIP/L LEG" unique_id=265486975]
 position = Vector2(-4, 22)
 rotation = 3.1415925
 rest = Transform2D(-1, 1.509958e-07, -1.509958e-07, -1, -4, 22)
@@ -1270,13 +1294,11 @@ length = 16.0
 bone_angle = 0.0
 editor_settings/show_bone_gizmo = false
 
-[node name="SKELANIM" type="AnimationPlayer" parent="ENEMY BODY/SKELETON"]
+[node name="SKELANIM" type="AnimationPlayer" parent="ENEMY BODY/SKELETON" unique_id=524486581]
 unique_name_in_owner = true
-libraries = {
-&"": SubResource("AnimationLibrary_5wh6f")
-}
+libraries/ = SubResource("AnimationLibrary_5wh6f")
 
-[node name="WOOF" type="CPUParticles2D" parent="ENEMY BODY"]
+[node name="WOOF" type="CPUParticles2D" parent="ENEMY BODY" unique_id=769391858]
 unique_name_in_owner = true
 emitting = false
 amount = 15

@@ -170,6 +170,8 @@ func DOITAGAIN():
 	STAGECHECK()
 	BUTTONSTATE = "YES"
 	%BUTTON.frame = 0
+	GLOBAL.WAVECURRENT = 0
+	GLOBAL.ENEMIESLEFT = 0
 	globalization.visible = true
 	globalization.modulate = Color(1.0, 1.0, 1.0, 1.0)
 	globanim.play("FADE OUTS")
@@ -467,8 +469,7 @@ func _input(_event):
 				i.HEALTH = 0
 
 	if Input.is_action_just_pressed("SPACE"):
-		print(GLOBAL.LOCATION)
-		print(GLOBAL.PROGRESSION)
+		HEALTH = 0
 
 # ==========================================
 
