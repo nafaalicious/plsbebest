@@ -5,3 +5,4 @@ gitattributes
 editorconfig
 export_presets.cfg
 project.godot
+.gitignore
