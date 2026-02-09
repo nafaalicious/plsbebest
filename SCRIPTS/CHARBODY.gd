@@ -237,16 +237,16 @@ func HEALTHFUNC(newHealth):
 			var tween = create_tween()
 			tween.set_trans(Tween.TRANS_BOUNCE)
 			tween.tween_property(HEALTHSPRITE, "modulate", Color(1.0, 0.728, 0.684, 1.0), 0.1)
-			tween.tween_property(HEALTHSPRITE, "scale", Vector2(0.75,0.75), 0.5)
-			tween.tween_property(HEALTHSPRITE, "scale", Vector2(0.5,0.5), 0.5)
+			tween.tween_property(HEALTHSPRITE, "scale", Vector2(1.5,1.5), 0.5)
+			tween.tween_property(HEALTHSPRITE, "scale", Vector2(1,1), 0.5)
 			tween.tween_property(HEALTHSPRITE, "modulate", Color(1.0, 1.0, 1.0, 1.0), 0.5)
 		elif HEALTH < oldhealth && HEALTH >= 1:
 		# EFFECT AS IF "HIT"
 			var tween = create_tween()
 			tween.set_trans(Tween.TRANS_EXPO)
 			tween.tween_property(HEALTHSPRITE, "modulate", Color(0.788, 0.788, 0.788, 1.0), 0.1)
-			tween.tween_property(HEALTHSPRITE, "scale", Vector2(0.4,0.4), 0.2)
-			tween.tween_property(HEALTHSPRITE, "scale", Vector2(0.5,0.5), 0.2)
+			tween.tween_property(HEALTHSPRITE, "scale", Vector2(0.75,0.75), 0.2)
+			tween.tween_property(HEALTHSPRITE, "scale", Vector2(1,1), 0.2)
 			tween.tween_property(HEALTHSPRITE, "modulate", Color(1.0, 1.0, 1.0, 1.0), 0.25)
 
 	if HEALTH >=1:
@@ -391,7 +391,7 @@ func _input(_event):
 		state = States.WALKING
 
 	if Input.is_action_just_pressed("Q"):
-		pass
+		HEALTH = HEALTH + 1
 
 	if Input.is_action_just_pressed("E"):
 		if GLOBAL.WAVECANDIDATE == true && GLOBAL.WAVECURRENT <= GLOBAL.WAVEMAX:
